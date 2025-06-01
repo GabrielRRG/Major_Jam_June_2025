@@ -18,7 +18,7 @@ public class LoadingSceneManager : MonoBehaviour
             return;
         }
 
-        string targetSceneName = PlayerPrefs.GetString("SceneToLoad");
+        string targetSceneName = "Level " + PlayerPrefs.GetInt("SceneToLoad");
         // If you wish, you can delete this key immediately so that it does not interfere in the future:
         // PlayerPrefs.DeleteKey(kSceneToLoadKey);
         // PlayerPrefs.Save();
