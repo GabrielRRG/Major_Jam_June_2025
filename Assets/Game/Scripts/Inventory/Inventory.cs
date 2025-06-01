@@ -1,10 +1,11 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 
 public sealed class Inventory : MonoBehaviour
 {
-    [SerializeField] private Tool[] backpack = new Tool[3]; // Backpack Size
-    private int currentToolIndex = 0;
+    [SerializeField] private Tool[] _backpack = new Tool[3];
+    private int _currentToolIndex = 0;
 
     private void Start()
     {
@@ -14,9 +15,9 @@ public sealed class Inventory : MonoBehaviour
 
     public void UseCurrentTool()
     {
-        if (backpack[currentToolIndex] != null)
+        if (_backpack[_currentToolIndex] != null)
         {
-            backpack[currentToolIndex].Use();
+            _backpack[_currentToolIndex].Use();
         }
         else
         {
