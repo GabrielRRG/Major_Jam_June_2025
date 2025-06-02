@@ -182,7 +182,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 4007a1d0e9c0ef645b41d9dd03a79750, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -305,7 +305,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 4007a1d0e9c0ef645b41d9dd03a79750, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -758,7 +758,7 @@ CapsuleCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.5000001
   m_Height: 2
@@ -787,7 +787,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 4007a1d0e9c0ef645b41d9dd03a79750, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1066,6 +1066,8 @@ GameObject:
   - component: {fileID: 1341520733}
   - component: {fileID: 1341520732}
   - component: {fileID: 1341520731}
+  - component: {fileID: 1341520735}
+  - component: {fileID: 1341520736}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -1168,6 +1170,48 @@ Transform:
   - {fileID: 1324940241}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1341520735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1341520730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb439ff656ae446189d403de1d151636, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerModel: {fileID: 882997958}
+  _animalForms:
+  - {fileID: 11400000, guid: e31bc188d370b36409fe3464b3ad3d68, type: 2}
+  - {fileID: 11400000, guid: bcfa9984774fd57409cc65469b67fa33, type: 2}
+  - {fileID: 11400000, guid: c6d2bbf364fa91240a3704d915aedca2, type: 2}
+  _timeBetweenTransforms: 2
+  _transformationDuration: 5
+--- !u!136 &1341520736
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1341520730}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1348081828
 GameObject:
   m_ObjectHideFlags: 0
@@ -1246,7 +1290,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 4007a1d0e9c0ef645b41d9dd03a79750, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1427,7 +1471,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 4007a1d0e9c0ef645b41d9dd03a79750, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1532,6 +1576,7 @@ Transform:
   - {fileID: 978946092}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 2.091, z: 0}
+>>>>>>>> main:Assets/Game/Scenes/Level 1.unity
 --- !u!1 &1650909352
 GameObject:
   m_ObjectHideFlags: 0
@@ -1545,6 +1590,7 @@ GameObject:
   - component: {fileID: 1650909355}
   - component: {fileID: 1650909354}
   m_Layer: 7
+>>>>>>>> main:Assets/Game/Scenes/Level 1.unity
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1610,7 +1656,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 4007a1d0e9c0ef645b41d9dd03a79750, type: 2}
+>>>>>>>> main:Assets/Game/Scenes/Level 1.unity
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
