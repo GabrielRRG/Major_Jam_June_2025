@@ -1,11 +1,10 @@
 using TMPro;
 using UnityEngine;
-using UnityEngine.Events;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public sealed class ArrowOptionSelector : MonoBehaviour
 {
+    //This script needs to be modified for SO
     [Header("UI")]
     [SerializeField] private TMP_Text _optionLabel;
     [SerializeField] private Button _leftArrow;
@@ -19,9 +18,10 @@ public sealed class ArrowOptionSelector : MonoBehaviour
 
     private int _currentIndex = 0;
 
-    private void Awake()
+    private void Start()
     {
-        _currentIndex = Mathf.Clamp(_defaultIndex, 0, _options.Length - 1);
+        Debug.Log("Current Index: " + _currentIndex);
+        //_currentIndex = Mathf.Clamp(_defaultIndex, 0, _options.Length - 1);
         UpdateUI();
         _leftArrow.onClick.AddListener(SelectPrevious);
         _rightArrow.onClick.AddListener(SelectNext);

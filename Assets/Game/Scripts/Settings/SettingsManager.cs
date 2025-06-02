@@ -3,6 +3,8 @@ using UnityEngine.UI;
 
 public sealed class SettingsManager : MonoBehaviour
 {
+    //This script needs to be modified for SO
+    
     [SerializeField] private ArrowOptionSelector[] _selectors;
     [SerializeField] private Button _saveButton;
     [SerializeField] private Button _resetButton;
@@ -113,14 +115,16 @@ public sealed class SettingsManager : MonoBehaviour
 
     // Enable or disable the Save button based on whether any active selector
     // differs from its initial (loaded) value
-    private void CheckSaveButton()
+    public void CheckSaveButton()
     {
+        if (_initialIndices == null || _initialIndices.Length != _selectors.Length)
+            return;
+        Debug.Log("Checking Save button");
         bool anyChanged = false;
         for (int i = 0; i < _selectors.Length; i++)
         {
             var selector = _selectors[i];
-            if (selector.gameObject.activeInHierarchy &&
-                selector.GetSelectedIndex() != _initialIndices[i])
+            if (selector.GetSelectedIndex() != _initialIndices[i])
             {
                 anyChanged = true;
                 break;
@@ -133,7 +137,7 @@ public sealed class SettingsManager : MonoBehaviour
 
     // Enable or disable the Reset button based on whether any active selector
     // is not at its default value
-    private void CheckResetButton()
+    public void CheckResetButton()
     {
         bool anyNonDefault = false;
         for (int i = 0; i < _selectors.Length; i++)
