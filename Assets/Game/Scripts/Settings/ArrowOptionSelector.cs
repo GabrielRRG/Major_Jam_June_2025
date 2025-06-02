@@ -21,7 +21,6 @@ public sealed class ArrowOptionSelector : MonoBehaviour
     private void Start()
     {
         Debug.Log("Current Index: " + _currentIndex);
-        //_currentIndex = Mathf.Clamp(_defaultIndex, 0, _options.Length - 1);
         UpdateUI();
         _leftArrow.onClick.AddListener(SelectPrevious);
         _rightArrow.onClick.AddListener(SelectNext);
