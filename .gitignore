@@ -73,27 +73,3 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
-ProjectSettings/XRSettings.asset
-ProjectSettings/VFXManager.asset
-ProjectSettings/VersionControlSettings.asset
-ProjectSettings/URPProjectSettings.asset
-ProjectSettings/UnityConnectSettings.asset
-ProjectSettings/TimeManager.asset
-ProjectSettings/TagManager.asset
-ProjectSettings/ShaderGraphSettings.asset
-ProjectSettings/QualitySettings.asset
-ProjectSettings/ProjectVersion.txt
-ProjectSettings/ProjectSettings.asset
-ProjectSettings/PresetManager.asset
-ProjectSettings/Physics2DSettings.asset
-ProjectSettings/PackageManagerSettings.asset
-ProjectSettings/NavMeshAreas.asset
-ProjectSettings/MultiplayerManager.asset
-ProjectSettings/MemorySettings.asset
-ProjectSettings/InputManager.asset
-ProjectSettings/GraphicsSettings.asset
-ProjectSettings/EditorSettings.asset
-ProjectSettings/EditorBuildSettings.asset
-ProjectSettings/DynamicsManager.asset
-ProjectSettings/ClusterInputManager.asset
-ProjectSettings/AudioManager.asset

@@ -9,11 +9,6 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: M_PR_Artifact
     second: {fileID: 2100000, guid: effa71b7c8fac9e46b9c8c5549cb35d4, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: M_PR_Artifact.001
-    second: {fileID: 2100000, guid: effa71b7c8fac9e46b9c8c5549cb35d4, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
