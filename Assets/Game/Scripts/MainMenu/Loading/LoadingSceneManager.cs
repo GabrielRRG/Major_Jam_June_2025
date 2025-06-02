@@ -4,21 +4,24 @@ using UnityEngine.SceneManagement;
 using System.Collections;
 using TMPro;
 
-public class LoadingSceneManager : MonoBehaviour
+public sealed class LoadingSceneManager : MonoBehaviour
 {
     [Header("UI")]
     [SerializeField] private Slider progressBar;
     [SerializeField] private TMP_Text progressText;
+    
+    private const string LOADING_KEY = "SceneToLoad";
 
     private void Start()
     {
-        if (!PlayerPrefs.HasKey("SceneToLoad"))
+        if (!PlayerPrefs.HasKey(LOADING_KEY))
         {
             Debug.LogError("There is no SceneToLoad key in PlayerPrefs. Nothing to load!");
             return;
         }
 
-        string targetSceneName = "Level " + PlayerPrefs.GetInt("SceneToLoad");
+        Debug.Log("Loading scene " + PlayerPrefs.GetInt(LOADING_KEY));
+        string targetSceneName = "Level " + PlayerPrefs.GetInt(LOADING_KEY);
         // If you wish, you can delete this key immediately so that it does not interfere in the future:
         // PlayerPrefs.DeleteKey(kSceneToLoadKey);
         // PlayerPrefs.Save();

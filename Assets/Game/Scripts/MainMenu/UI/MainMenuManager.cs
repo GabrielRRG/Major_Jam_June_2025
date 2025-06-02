@@ -2,13 +2,15 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class MainMenuManager : MonoBehaviour
+public sealed class MainMenuManager : MonoBehaviour
 {
     [SerializeField] private Button _loadGameButton;
     [SerializeField] private GameObject _warningPopup;
+    
+    private const string LOADING_KEY = "SceneToLoad";
     private void Awake()
     {
-        if (PlayerPrefs.HasKey("SceneToLoad"))
+        if (PlayerPrefs.HasKey(LOADING_KEY))
         {
             _loadGameButton.interactable = true;
         }
@@ -16,7 +18,7 @@ public class MainMenuManager : MonoBehaviour
 
     public void TryNewGame()
     {
-        if (PlayerPrefs.HasKey("SceneToLoad"))
+        if (PlayerPrefs.HasKey(LOADING_KEY))
         {
             _warningPopup.SetActive(true);
         }
@@ -28,23 +30,23 @@ public class MainMenuManager : MonoBehaviour
 
     public void NewGame()
     {
-        PlayerPrefs.DeleteKey("SceneToLoad");
-        PlayerPrefs.SetInt("SceneToLoad", 1);
+        PlayerPrefs.DeleteKey(LOADING_KEY);
+        PlayerPrefs.SetInt(LOADING_KEY, 1);
         PlayerPrefs.Save();
-        SceneManager.LoadScene($"LoadingScene");
+        SceneManager.LoadScene("LoadingScene");
     }
     
     public void LoadGame()
     {
-        if (!PlayerPrefs.HasKey("SceneToLoad"))
+        if (!PlayerPrefs.HasKey(LOADING_KEY))
         {
             Debug.LogWarning("There is no save itself, Load Game is not available yet.");
             return;
         }
-        int savedIndex = PlayerPrefs.GetInt("SceneToLoad");
-        PlayerPrefs.SetInt("SceneToLoad", savedIndex);
+        int savedIndex = PlayerPrefs.GetInt(LOADING_KEY);
+        PlayerPrefs.SetInt(LOADING_KEY, savedIndex);
         PlayerPrefs.Save();
-        SceneManager.LoadScene($"LoadingScene");
+        SceneManager.LoadScene("LoadingScene");
     }
     
     public void OpenMenu(GameObject menu)
