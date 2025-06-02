@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Shapeshifting : MonoBehaviour
+public sealed class Shapeshifting : MonoBehaviour
 {
     [Header("Player")] 
     [SerializeField] private GameObject _playerModel;

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fb4b98d6674800f47b0464801109d466, type: 3}
-  m_Name: Tiger
+  m_Name: Jaguar
   m_EditorClassIdentifier: 
   animalPrefab: {fileID: 919132149155446097, guid: 20be25aac4e22ee49a7db76fb3df6de2, type: 3}
   animalName: 
