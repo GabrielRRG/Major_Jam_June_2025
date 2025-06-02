@@ -28,6 +28,7 @@ public class TabManager : MonoBehaviour
 
     public void ShowTab(int index)
     {
+        Debug.Log($"Showing tab: {index}");
         if (_tabButtons == null || index < 0 || index >= _tabButtons.Length)
             return;
 

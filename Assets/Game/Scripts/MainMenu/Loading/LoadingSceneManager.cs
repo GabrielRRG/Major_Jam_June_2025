@@ -20,6 +20,7 @@ public sealed class LoadingSceneManager : MonoBehaviour
             return;
         }
 
+        Debug.Log("Loading scene " + PlayerPrefs.GetInt(LOADING_KEY));
         string targetSceneName = "Level " + PlayerPrefs.GetInt(LOADING_KEY);
         // If you wish, you can delete this key immediately so that it does not interfere in the future:
         // PlayerPrefs.DeleteKey(kSceneToLoadKey);

@@ -33,7 +33,7 @@ public sealed class MainMenuManager : MonoBehaviour
         PlayerPrefs.DeleteKey(LOADING_KEY);
         PlayerPrefs.SetInt(LOADING_KEY, 1);
         PlayerPrefs.Save();
-        SceneManager.LoadScene(LOADING_KEY);
+        SceneManager.LoadScene("LoadingScene");
     }
     
     public void LoadGame()
@@ -46,7 +46,7 @@ public sealed class MainMenuManager : MonoBehaviour
         int savedIndex = PlayerPrefs.GetInt(LOADING_KEY);
         PlayerPrefs.SetInt(LOADING_KEY, savedIndex);
         PlayerPrefs.Save();
-        SceneManager.LoadScene(LOADING_KEY);
+        SceneManager.LoadScene("LoadingScene");
     }
     
     public void OpenMenu(GameObject menu)
