@@ -17,6 +17,6 @@ MonoBehaviour:
   fireRate: 0.2
   spread: 0.1
   reloadTime: 5
-  damage: 10
+  damage: 20
   bulletsPerShot: 1
   magazineCap: 30

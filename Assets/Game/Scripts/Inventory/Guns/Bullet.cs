@@ -6,6 +6,10 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        if (collision.gameObject.GetComponent<IDamagable>() != null)
+        {
+            collision.gameObject.GetComponent<IDamagable>().TakeDamage(damage);
+        }
         Destroy(gameObject);
     }
 }

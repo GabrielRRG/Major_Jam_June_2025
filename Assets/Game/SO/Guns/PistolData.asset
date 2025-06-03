@@ -15,8 +15,8 @@ MonoBehaviour:
   gunName: Pistol
   fireMode: 0
   fireRate: 0.2
-  spread: 0.1
+  spread: 0
   reloadTime: 1
-  damage: 10
+  damage: 30
   bulletsPerShot: 1
   magazineCap: 6
