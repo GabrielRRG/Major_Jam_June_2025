@@ -10,6 +10,7 @@ public sealed class SettingsManager : MonoBehaviour
     [SerializeField] private Button _resetButton;
 
     private const string KEY_PREFIX = "Setting ";
+    
     private int[] _initialIndices;
 
     private void Awake()
@@ -56,6 +57,10 @@ public sealed class SettingsManager : MonoBehaviour
                 int savedIndex = PlayerPrefs.GetInt(key);
                 selector.SetIndex(savedIndex);
             }
+            else
+            {
+                selector.ResetToDefault();
+            }
         }
 
         Debug.Log("Settings loaded");
@@ -68,6 +73,7 @@ public sealed class SettingsManager : MonoBehaviour
             string key = KEY_PREFIX + selector.name;
             int idx = selector.GetSelectedIndex();
             PlayerPrefs.SetInt(key, idx);
+            
             _initialIndices[i] = idx;
         }
 
@@ -84,11 +90,13 @@ public sealed class SettingsManager : MonoBehaviour
             if (selector.gameObject.activeInHierarchy)
                 selector.ResetToDefault();
         }
+        
         SaveAll();
         
         CheckResetButton();
         Debug.Log("Settings reset to defaults and saved");
     }
+    
     public void CheckSaveButton()
     {
         if (_initialIndices == null || _initialIndices.Length != _selectors.Length)

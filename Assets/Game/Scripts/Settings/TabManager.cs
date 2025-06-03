@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class TabManager : MonoBehaviour
+public sealed class TabManager : MonoBehaviour
 {
     [SerializeField] private SettingsManager _settingsManager;
     [SerializeField] private Button[] _tabButtons;
