@@ -4,7 +4,6 @@ using UnityEngine.UI;
 
 public sealed class ArrowOptionSelector : MonoBehaviour
 {
-    //This script needs to be modified for SO
     [Header("UI")]
     [SerializeField] private TMP_Text _optionLabel;
     [SerializeField] private Button _leftArrow;

@@ -57,6 +57,10 @@ public sealed class SettingsManager : MonoBehaviour
                 int savedIndex = PlayerPrefs.GetInt(key);
                 selector.SetIndex(savedIndex);
             }
+            else
+            {
+                selector.ResetToDefault();
+            }
         }
 
         Debug.Log("Settings loaded");

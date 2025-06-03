@@ -1,16 +1,15 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &11400000
+--- !u!114 &1
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 61
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb4b98d6674800f47b0464801109d466, type: 3}
-  m_Name: Tiger
+  m_Script: {fileID: 11500000, guid: 247994e1f5a72c2419c26a37e9334c01, type: 3}
+  m_Name: 
   m_EditorClassIdentifier: 
-  animalPrefab: {fileID: 919132149155446097, guid: 20be25aac4e22ee49a7db76fb3df6de2, type: 3}
-  animalName: 
+  m_LastMaterialVersion: 9
