@@ -49,9 +49,8 @@ public sealed class Inventory : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        //if (!other.gameObject.GetComponent<Tool>()) { return; }
+        if (!other.gameObject.GetComponent<Tool>()) { return; }
         _toolInRange = other.gameObject.GetComponent<Tool>();
-        print("Press E to equip");
     }
     private void OnTriggerExit(Collider other)
     {

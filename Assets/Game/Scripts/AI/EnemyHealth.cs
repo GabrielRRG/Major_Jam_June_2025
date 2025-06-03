@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class EnemyHealth : MonoBehaviour , IDamagable
+public sealed class EnemyHealth : MonoBehaviour , IDamagable
 {
     [SerializeField] private ParticleSystem _deathEffectPrefab;
     [SerializeField] private Slider _healthSlider;

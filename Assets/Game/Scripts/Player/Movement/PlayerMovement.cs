@@ -16,6 +16,8 @@ public sealed class PlayerMovement : MonoBehaviour
     private Vector2 _moveDirection;
     private Vector3 _mouseWorldPoint;
 
+    public float MoveSpeed { get => _moveSpeed; set => _moveSpeed = value; }
+
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody>();
@@ -103,4 +105,6 @@ public sealed class PlayerMovement : MonoBehaviour
             Gizmos.DrawLine(_headPoint.position, _mouseWorldPoint);
         }
     }
+
+    
 }

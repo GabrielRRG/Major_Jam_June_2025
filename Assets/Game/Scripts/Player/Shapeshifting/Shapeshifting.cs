@@ -15,7 +15,7 @@ public class Shapeshifting : MonoBehaviour
     [SerializeField] private float _transformationDuration = 20f;
 
     private GameObject _currentAnimalInstance;
-    private bool _isTransformed = false;
+    public bool _isTransformed = false;
     private float _timer;
 
     private void Start()
