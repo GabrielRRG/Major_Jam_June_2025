@@ -8,18 +8,19 @@ public class Gun : Tool
     [SerializeField] private GunData _gunData;
     [SerializeField] private GameObject _bulletPrefab;
     [SerializeField] private InputActionReference _reloadInput;
+    [SerializeField] private bool _enemyGun;
 
     private bool _isFiring = false;
     private bool _isReloading = false;
     private float _nextTimeToFire = 0f;
-    private int ammoLeft = 0;
+    private int _ammoLeft = 0;
 
     [Header("Effects")]
     [SerializeField] private ParticleSystem _muzzleFlash;
 
     private void Start()
     {
-        ammoLeft = _gunData.magazineCap;
+        _ammoLeft = _gunData.magazineCap;
     }
 
     public override void Use()
@@ -34,7 +35,16 @@ public class Gun : Tool
     public override void Update()
     {
         base.Update();
-        if(_isFiring && Time.time >= _nextTimeToFire && ammoLeft != 0 && !_isReloading)
+        if (_enemyGun)
+        {
+            if (_ammoLeft <= 0)
+            {
+                _isReloading = true;
+                _ammoLeft = _gunData.magazineCap;
+                Invoke(nameof(SetReloadingState), _gunData.reloadTime);
+            }
+        }
+        if(_isFiring && Time.time >= _nextTimeToFire && _ammoLeft != 0 && !_isReloading)
         {
             switch (_gunData.fireMode)
             {
@@ -53,9 +63,9 @@ public class Gun : Tool
     }
     private void ReloadGun(InputAction.CallbackContext obj)
     {
-        if(!isPossessed) { return; }
+        if(!isPossessed && !_enemyGun) { return; }
         _isReloading = true;
-        ammoLeft = _gunData.magazineCap;
+        _ammoLeft = _gunData.magazineCap;
         Invoke(nameof(SetReloadingState), _gunData.reloadTime);
     }
     private void SetReloadingState()
@@ -73,7 +83,7 @@ public class Gun : Tool
             Rigidbody rb = bullet.GetComponent<Rigidbody>();
             if (rb != null) rb.linearVelocity = spreadDir.normalized * 30;
         }
-        ammoLeft -= _gunData.bulletsPerShot; //We subtract the amount of bullets used!
+        _ammoLeft -= _gunData.bulletsPerShot; //We subtract the amount of bullets used!
         if (_muzzleFlash) _muzzleFlash.Play();
     }
 

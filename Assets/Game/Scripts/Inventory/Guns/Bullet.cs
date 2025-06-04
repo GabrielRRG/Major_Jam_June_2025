@@ -4,11 +4,11 @@ public class Bullet : MonoBehaviour
 {
     public int damage;
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.GetComponent<IDamagable>() != null)
+        if (other.gameObject.GetComponent<IDamagable>() != null)
         {
-            collision.gameObject.GetComponent<IDamagable>().TakeDamage(damage);
+            other.gameObject.GetComponent<IDamagable>().TakeDamage(damage);
         }
         Destroy(gameObject);
     }
