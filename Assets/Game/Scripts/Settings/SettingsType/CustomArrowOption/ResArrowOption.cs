@@ -65,11 +65,11 @@ public class ResArrowOption : ArrowOption
             int.TryParse(parts[1], out int height))
         {
             Screen.SetResolution(width, height, true);
-            Debug.Log($"Установлено разрешение: {width}x{height}");
+            Debug.Log($"Permission has been granted: {width}x{height}");
         }
         else
         {
-            Debug.LogWarning($"Невозможно распарсить разрешение: {options[currentIndex]}");
+            Debug.LogWarning($"Unable to unparser the resolution: {options[currentIndex]}");
         }
     }
 }
