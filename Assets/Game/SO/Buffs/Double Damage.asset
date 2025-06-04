@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effectName: Double Damage
   effectIcon: {fileID: 0}
-  effectDuration: 5
-  allGunData:
-  - {fileID: 11400000, guid: e2d0109385966c048b8c0b6326a1904f, type: 2}
-  - {fileID: 11400000, guid: 6efc96b7fe0508043a5e4d589601f1be, type: 2}
+  effectDuration: 4
+  allGunsSO: {fileID: 11400000, guid: 1b01c21df9dce1840b36f73d099238ae, type: 2}
+  multiplier: 2

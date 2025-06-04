@@ -6821,6 +6821,7 @@ GameObject:
   - component: {fileID: 1341520735}
   - component: {fileID: 1341520737}
   - component: {fileID: 1341520736}
+  - component: {fileID: 1341520738}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -6985,6 +6986,21 @@ MonoBehaviour:
   _interact: {fileID: 1781555164194001046, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   _useTool: {fileID: 1120369429361536294, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   _cycleTools: {fileID: -7383063986470616470, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+--- !u!114 &1341520738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1341520730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e00d7fec9120fb94b95092ceef05201d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHealth: 100
+  _deathEffectPrefab: {fileID: 497446590}
+  _healthSlider: {fileID: 0}
 --- !u!1 &1348081828
 GameObject:
   m_ObjectHideFlags: 0
@@ -7416,9 +7432,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e00d7fec9120fb94b95092ceef05201d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MaxHealth: 100
   _deathEffectPrefab: {fileID: 497446590}
   _healthSlider: {fileID: 563866104}
-  _health: 100
 --- !u!1 &1620791733
 GameObject:
   m_ObjectHideFlags: 0
@@ -7781,8 +7797,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _allEffects:
-  - {fileID: 11400000, guid: 3b86536e84f20fa4ca15c8af9159ac49, type: 2}
+  - {fileID: 11400000, guid: 7ff692ae25bcc9e49b2b382d90d11422, type: 2}
   - {fileID: 11400000, guid: 0cfa3503ea78d44499666aa883697258, type: 2}
+  - {fileID: 11400000, guid: 2da440e44cd89344da89bf705519df87, type: 2}
+  - {fileID: 11400000, guid: 742acd4e1d9fb6245b4bcf6538eee967, type: 2}
+  - {fileID: 11400000, guid: 3ad2636b4bd7e164eafc2c4ee735954b, type: 2}
+  - {fileID: 11400000, guid: 3a4b3c3778f562e48afa5a947db4d5c3, type: 2}
+  - {fileID: 11400000, guid: fb11b420c91a9214b94cb73947c5b304, type: 2}
+  - {fileID: 11400000, guid: 3b86536e84f20fa4ca15c8af9159ac49, type: 2}
   _minDuration: 10
   _maxDuration: 20
   applyForPlayer: 1
