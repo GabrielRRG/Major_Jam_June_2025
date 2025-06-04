@@ -50,8 +50,7 @@ public class EnemyAIBase : MonoBehaviour
         if (playerObj != null)
             _playerTransform = playerObj.transform;
         else
-            Debug.LogError("Player object not found. Убедитесь, что у игрока есть тег 'Player'.");
-
+            Debug.LogError("Player object not found. Make sure the player has the tag 'Player'.");
         _currentState = EnemyState.Patrol;
         _agent.speed = _patrolSpeed;
 
