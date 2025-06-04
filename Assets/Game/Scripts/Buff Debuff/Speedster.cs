@@ -7,11 +7,11 @@ public class Speedster : BuffDebuff
     public int multiplier = 2;
     public override void Apply(GameObject target)
     {
-        target.GetComponent<PlayerMovement>().MoveSpeed *= multiplier;
+        target.GetComponent<PlayerMovement>().moveSpeed *= multiplier;
     }
 
     public override void Remove(GameObject target)
     {
-        target.GetComponent<PlayerMovement>().MoveSpeed /= multiplier;
+        target.GetComponent<PlayerMovement>().moveSpeed /= multiplier;
     }
 }

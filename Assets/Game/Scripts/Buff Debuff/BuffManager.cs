@@ -27,7 +27,7 @@ public class BuffManager : MonoBehaviour
         {
             yield return new WaitForSeconds(Random.Range(_minDuration,_maxDuration));
 
-            if(_player.GetComponent<Shapeshifting>()._isTransformed) { continue; }
+            if(_player.GetComponent<Shapeshifting>().isTransformed) { continue; }
 
             if(applyForPlayer) { ApplyEffect(_player); }
             if(applyForEnemy)
