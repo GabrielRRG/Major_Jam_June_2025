@@ -45,7 +45,7 @@ public sealed class Shapeshifting : MonoBehaviour
         _playerModel.SetActive(false);
         
         _currentAnimalInstance = Instantiate(
-            selectedForm.animalPrefab,
+            selectedForm.prefab,
             transform.position,
             transform.rotation,
             transform

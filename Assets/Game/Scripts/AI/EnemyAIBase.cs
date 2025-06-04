@@ -3,29 +3,33 @@ using UnityEngine.AI;
 
 public class EnemyAIBase : MonoBehaviour
 {
-    [Header("Patrol Settings")]
-    [Tooltip("A list of patrol points (which AI will walk on).")]
-    [SerializeField] protected Transform[] _patrolPoints;
-    [Tooltip("How many seconds to wait at each point before moving on.")]
-    [SerializeField] protected float _patrolWaitTime = 2f;
+    [Header("Patrol Settings")] [Tooltip("A list of patrol points (which AI will walk on).")] [SerializeField]
+    protected Transform[] _patrolPoints;
 
-    [Header("Vision Settings")]
-    [Tooltip("Maximum detection distance of the player.")]
-    [SerializeField] protected float _viewDistance = 10f;
-    [Tooltip("Semi-horizontal angle of the field of view (in degrees). For example, 45 => FOV = 90°.")]
-    [SerializeField] protected float _viewAngle = 45f;
-    [Tooltip("Layers that are considered obstacles (walls, etc.).")]
-    [SerializeField] protected LayerMask _obstacleMask;
-    [Tooltip("Player layer (to quickly find the collider player).")]
-    [SerializeField] protected LayerMask _playerMask;
+    [Tooltip("How many seconds to wait at each point before moving on.")] [SerializeField]
+    protected float _patrolWaitTime = 2f;
 
-    [Header("Chase/ Search Settings")]
-    [Tooltip("Movement speed when chasing a player.")]
-    [SerializeField] protected float _chaseSpeed = 5f;
-    [Tooltip("Speed of movement when patrolling.")]
-    [SerializeField] protected float _patrolSpeed = 2f;
+    [Header("Vision Settings")] [Tooltip("Maximum detection distance of the player.")] [SerializeField]
+    protected float _viewDistance = 10f;
+
+    [Tooltip("Semi-horizontal angle of the field of view (in degrees). For example, 45 => FOV = 90°.")] [SerializeField]
+    protected float _viewAngle = 45f;
+
+    [Tooltip("Layers that are considered obstacles (walls, etc.).")] [SerializeField]
+    protected LayerMask _obstacleMask;
+
+    [Tooltip("Player layer (to quickly find the collider player).")] [SerializeField]
+    protected LayerMask _playerMask;
+
+    [Header("Chase/ Search Settings")] [Tooltip("Movement speed when chasing a player.")] [SerializeField]
+    protected float _chaseSpeed = 5f;
+
+    [Tooltip("Speed of movement when patrolling.")] [SerializeField]
+    protected float _patrolSpeed = 2f;
+
     [Tooltip("Pause at the location where the player was last detected before returning to patrolling.")]
-    [SerializeField] protected float _searchWaitTime = 3f;
+    [SerializeField]
+    protected float _searchWaitTime = 3f;
 
     protected NavMeshAgent _agent;
     protected Transform _playerTransform;
@@ -50,8 +54,7 @@ public class EnemyAIBase : MonoBehaviour
         if (playerObj != null)
             _playerTransform = playerObj.transform;
         else
-            Debug.LogError("Player object not found. Убедитесь, что у игрока есть тег 'Player'.");
-
+            Debug.LogError("Player object not found. Make sure the player has the tag 'Player'.");
         _currentState = EnemyState.Patrol;
         _agent.speed = _patrolSpeed;
 
@@ -71,6 +74,7 @@ public class EnemyAIBase : MonoBehaviour
                 {
                     EnterChaseState();
                 }
+
                 break;
 
             case EnemyState.Chase:
@@ -83,6 +87,7 @@ public class EnemyAIBase : MonoBehaviour
                 {
                     EnterChaseState();
                 }
+
                 break;
         }
     }
@@ -93,7 +98,8 @@ public class EnemyAIBase : MonoBehaviour
         if (_patrolPoints.Length == 0)
             return;
 
-        if (!_agent.pathPending && _agent.remainingDistance < 0.5f)
+        RotateTowards(_patrolPoints[_currentPatrolIndex].position);
+        if (!_agent.pathPending && _agent.remainingDistance < 1.1f)
         {
             _waitTimer += Time.deltaTime;
             if (_waitTimer >= _patrolWaitTime)
@@ -112,8 +118,8 @@ public class EnemyAIBase : MonoBehaviour
             return;
 
         _agent.SetDestination(_playerTransform.position);
-        
-        RotateTowardsPlayer();
+
+        RotateTowards(_playerTransform.position);
 
         if (PlayerStillVisible())
         {
@@ -125,13 +131,13 @@ public class EnemyAIBase : MonoBehaviour
             EnterSearchState();
         }
     }
-    
-    private void RotateTowardsPlayer()
+
+    private void RotateTowards(Vector3 target)
     {
-        if (_playerTransform == null)
+        if (target == null)
             return;
 
-        Vector3 direction = _playerTransform.position - transform.position;
+        Vector3 direction = target - transform.position;
         direction.y = 0;
 
         if (direction.sqrMagnitude > 0.001f)
@@ -145,9 +151,12 @@ public class EnemyAIBase : MonoBehaviour
     // --- SEARCH ---
     protected virtual void HandleSearch()
     {
-        if (!_agent.pathPending && _agent.remainingDistance < 0.5f)
+        if (!_agent.pathPending && _agent.remainingDistance < 1.1f)
         {
+            RotateTowards(_lastKnownPlayerPos);
+
             _waitTimer += Time.deltaTime;
+
             if (_waitTimer >= _searchWaitTime)
             {
                 _waitTimer = 0f;
@@ -155,6 +164,7 @@ public class EnemyAIBase : MonoBehaviour
             }
         }
     }
+
 
     // --- STATES SWITCHING ---
     protected virtual void EnterPatrolState()
@@ -190,7 +200,22 @@ public class EnemyAIBase : MonoBehaviour
 
         Vector3 directionToPlayer = _playerTransform.position - transform.position;
         float distanceToPlayer = directionToPlayer.magnitude;
+        float closeRadius = 2f;
+        Collider[] hits = Physics.OverlapSphere(transform.position, closeRadius, _playerMask);
+        foreach (var hit in hits)
+        {
+            Vector3 origin = transform.position + Vector3.up * 1.5f;
+            Vector3 target = hit.transform.position + Vector3.up * 0.5f;
+            Vector3 dir = (target - origin).normalized;
+            float dist = Vector3.Distance(origin, target);
 
+            if (!Physics.Raycast(origin, dir, dist, _obstacleMask))
+            {
+                Debug.Log("Player detected in close range");
+                return true;
+            }
+        }
+        
         if (distanceToPlayer > _viewDistance)
             return false;
 
@@ -198,14 +223,22 @@ public class EnemyAIBase : MonoBehaviour
         if (angleToPlayer > _viewAngle)
             return false;
 
-        Ray ray = new Ray(transform.position, directionToPlayer.normalized);
-        if (Physics.Raycast(ray, out RaycastHit hit, _viewDistance, ~0, QueryTriggerInteraction.Ignore))
+        Vector3 eye = transform.position + Vector3.up * 1.5f;
+        Vector3 targetPoint = _playerTransform.position + Vector3.up * 0.5f;
+        Vector3 rayDir = (targetPoint - eye).normalized;
+
+        if (Physics.Raycast(eye, rayDir, out RaycastHit rayHit, _viewDistance))
         {
-            return ((1 << hit.collider.gameObject.layer) & _playerMask) != 0;
+            if (((1 << rayHit.collider.gameObject.layer) & _playerMask) != 0)
+            {
+                Debug.Log("Player sighted");
+                return true;
+            }
         }
 
         return false;
     }
+
 
     protected virtual bool PlayerStillVisible()
     {
