@@ -143,7 +143,7 @@ public class EnemyAIBase : MonoBehaviour
         if (direction.sqrMagnitude > 0.001f)
         {
             Quaternion targetRotation = Quaternion.LookRotation(direction);
-            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 5f);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 100f);
         }
     }
 
@@ -261,5 +261,8 @@ public class EnemyAIBase : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawLine(_lastKnownPlayerPos + Vector3.up * 0.5f, _lastKnownPlayerPos + Vector3.down * 0.5f);
         Gizmos.DrawLine(_lastKnownPlayerPos + Vector3.left * 0.5f, _lastKnownPlayerPos + Vector3.right * 0.5f);
+
+        Gizmos.color = Color.magenta;
+        Gizmos.DrawWireSphere(transform.position, 2f);
     }
 }

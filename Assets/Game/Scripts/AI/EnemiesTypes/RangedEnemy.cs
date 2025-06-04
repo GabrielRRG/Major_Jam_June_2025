@@ -2,8 +2,8 @@
 
 public sealed class RangedEnemy : EnemyAIBase
 {
+    [SerializeField] private Gun _gun;
     [SerializeField] private float _shootRange = 10f;
-    [SerializeField] private float _shootCooldown = 2f;
     [SerializeField] private GameObject _projectilePrefab;
     [SerializeField] private Transform _shootPoint;
 
@@ -17,12 +17,8 @@ public sealed class RangedEnemy : EnemyAIBase
         if (distanceToPlayer <= _shootRange)
         {
             _agent.isStopped = true;
-            _shootTimer += Time.deltaTime;
-            if (_shootTimer >= _shootCooldown)
-            {
-                _shootTimer = 0f;
+            _shootTimer = 0f;
                 ShootProjectile();
-            }
         }
         else
         {
@@ -34,7 +30,7 @@ public sealed class RangedEnemy : EnemyAIBase
     {
         if (_projectilePrefab != null && _shootPoint != null)
         {
-            Instantiate(_projectilePrefab, _shootPoint.position, Quaternion.LookRotation(_playerTransform.position - _shootPoint.position));
+            _gun.Use();
             Debug.Log("Ranged attack!");
         }
     }

@@ -2085,7 +2085,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9073124175233249787}
-  - component: {fileID: 4180708229540412372}
+  - component: {fileID: 9001411411641360896}
   m_Layer: 7
   m_Name: Wolf
   m_TagString: Player
@@ -2112,14 +2112,14 @@ Transform:
   - {fileID: 6514589514478370398}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &4180708229540412372
-BoxCollider:
+--- !u!136 &9001411411641360896
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3856360137821693100}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: a13df302404148a448094103c38a147e, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -2130,9 +2130,11 @@ BoxCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.49, y: 1, z: 1.87}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  serializedVersion: 2
+  m_Radius: 0.5229751
+  m_Height: 1.4867988
+  m_Direction: 2
+  m_Center: {x: 0, y: 0.42702496, z: 0.15815341}
 --- !u!1 &3959400459151833060
 GameObject:
   m_ObjectHideFlags: 0
