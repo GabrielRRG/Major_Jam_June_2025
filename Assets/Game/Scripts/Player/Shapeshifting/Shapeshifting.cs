@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Shapeshifting : MonoBehaviour
+public sealed class Shapeshifting : MonoBehaviour
 {
     [Header("Player")] 
     [SerializeField] private GameObject _playerModel;
@@ -10,8 +10,10 @@ public class Shapeshifting : MonoBehaviour
     [Header("Animal Forms")]
     [SerializeField] private List<AnimalFormData> _animalForms;
 
-    [Header("Timing")]
-    [SerializeField] private float _timeBetweenTransforms = 10f;
+    [Header("Settings")]
+    [SerializeField] private Transform _spawnPostion;
+    [SerializeField] private float _transformsChance = 10f;
+    [SerializeField] private float _timeBetweenTransforms = 1f;
     [SerializeField] private float _transformationDuration = 20f;
 
     private GameObject _currentAnimalInstance;
@@ -29,6 +31,7 @@ public class Shapeshifting : MonoBehaviour
         {
             yield return new WaitForSeconds(_timeBetweenTransforms);
             TransformIntoAnimal();
+            if (!_isTransformed) continue;
 
             yield return new WaitForSeconds(_transformationDuration);
             RevertToOriginal();
@@ -39,17 +42,20 @@ public class Shapeshifting : MonoBehaviour
     {
         if (_isTransformed || _animalForms.Count == 0) return;
 
+        if(Random.Range(0, 101) > _transformsChance) return;
+        
         _isTransformed = true;
         
         var selectedForm = _animalForms[Random.Range(0, _animalForms.Count)];
-        _playerModel.SetActive(false);
         
         _currentAnimalInstance = Instantiate(
-            selectedForm.animalPrefab,
-            transform.position,
+            selectedForm.prefab,
+            _spawnPostion.position,
             transform.rotation,
             transform
         );
+        
+        _playerModel.SetActive(false);
     }
 
     private void RevertToOriginal()
@@ -58,9 +64,10 @@ public class Shapeshifting : MonoBehaviour
 
         _isTransformed = false;
         
+        _playerModel.SetActive(true);
+        
         if (_currentAnimalInstance != null)
             Destroy(_currentAnimalInstance);
         
-        _playerModel.SetActive(true);
     }
 }
