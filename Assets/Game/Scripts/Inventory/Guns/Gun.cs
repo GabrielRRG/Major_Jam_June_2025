@@ -31,8 +31,9 @@ public class Gun : Tool
         _isFiring = false;
     }
 
-    private void Update()
+    public override void Update()
     {
+        base.Update();
         if(_isFiring && Time.time >= _nextTimeToFire && ammoLeft != 0 && !_isReloading)
         {
             switch (_gunData.fireMode)
