@@ -6579,6 +6579,7 @@ GameObject:
   - component: {fileID: 1341520735}
   - component: {fileID: 1341520737}
   - component: {fileID: 1341520738}
+  - component: {fileID: 1341520739}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -6694,7 +6695,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: bcfa9984774fd57409cc65469b67fa33, type: 2}
   - {fileID: 11400000, guid: c6d2bbf364fa91240a3704d915aedca2, type: 2}
   _spawnPostion: {fileID: 531351894}
-  _transformsChance: 50
+  _transformsChance: 10
   _timeBetweenTransforms: 1
   _transformationDuration: 5
   isTransformed: 0
@@ -6748,6 +6749,18 @@ MonoBehaviour:
   MaxHealth: 100
   _deathEffectPrefab: {fileID: 497446590}
   _healthSlider: {fileID: 0}
+--- !u!114 &1341520739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1341520730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d5ff261306324c49a6d88bd253c54de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1348081828
 GameObject:
   m_ObjectHideFlags: 0
