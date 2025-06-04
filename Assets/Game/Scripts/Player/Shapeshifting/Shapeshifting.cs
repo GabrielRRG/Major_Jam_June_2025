@@ -45,6 +45,7 @@ public sealed class Shapeshifting : MonoBehaviour
         if(Random.Range(0, 101) > _transformsChance) return;
         
         isTransformed = true;
+        InventoryBehavior.DisableInventory(); //This
         
         var selectedForm = _animalForms[Random.Range(0, _animalForms.Count)];
         
@@ -63,7 +64,8 @@ public sealed class Shapeshifting : MonoBehaviour
         if (!isTransformed) return;
 
         isTransformed = false;
-        
+        InventoryBehavior.EnableInventory(); //This
+
         _playerModel.SetActive(true);
         
         if (_currentAnimalInstance != null)
