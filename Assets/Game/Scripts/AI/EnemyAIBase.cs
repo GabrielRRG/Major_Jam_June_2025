@@ -192,8 +192,6 @@ public class EnemyAIBase : MonoBehaviour
         if (_playerTransform == null)
             return false;
 
-        Debug.Log(lastKnownPlayerPos);
-
         Vector3 directionToPlayer = _playerTransform.position - transform.position;
         float distanceToPlayer = directionToPlayer.magnitude;
         float angleToPlayer = Vector3.Angle(transform.forward, directionToPlayer);

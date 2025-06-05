@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Backpack
   - Inventory
+  - UIBackground
   layers:
   - Default
   - TransparentFX

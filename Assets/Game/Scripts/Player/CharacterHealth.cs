@@ -29,7 +29,15 @@ public sealed class CharacterHealth : MonoBehaviour , IDamagable
         }
         if(_health <= 0) 
         { 
-            Destroy(gameObject); 
+            if(gameObject.CompareTag("Player"))
+            {
+                GameObject.FindGameObjectWithTag("UIBackground").GetComponent<CanvasGroup>().alpha = 1;
+                return;
+            }
+            else
+            {
+                Destroy(gameObject); 
+            }
         }
     }
 }
