@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3824f3031b8ea51418b667c5f65e938c
+guid: 24210c7494c2c694894316bf635183f8
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -60,7 +60,7 @@ ModelImporter:
     skinWeightsMode: 0
     maxBonesPerVertex: 4
     minBoneWeight: 0.001
-    optimizeBones: 1
+    optimizeBones: 0
     meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
@@ -440,7 +440,7 @@ ModelImporter:
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
-  animationType: 2
+  animationType: 3
   humanoidOversampling: 1
   avatarSetup: 1
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
