@@ -116,9 +116,7 @@ public class EnemyAIBase : MonoBehaviour
     // --- CHASE ---
     protected virtual void HandleChase()
     {
-        if (_playerTransform == null)
-            return;
-
+        if(_playerTransform == null) return;
         _agent.SetDestination(lastKnownPlayerPos);
 
         RotateTowards(lastKnownPlayerPos);

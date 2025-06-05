@@ -140,7 +140,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 18
-        y: 469
+        y: 569
         width: 1884
         height: 993
       alignment: 0
@@ -162,7 +162,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 131
-        y: 258
+        y: 358
         width: 310
         height: 109
       alignment: 0
@@ -184,7 +184,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 587
-        y: 257
+        y: 357
         width: 417
         height: 109
       alignment: 0
@@ -206,7 +206,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1142
-        y: 271
+        y: 371
         width: 381
         height: 93
       alignment: 0
@@ -228,7 +228,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1624
-        y: 278
+        y: 378
         width: 36
         height: 51
       alignment: 0
@@ -250,7 +250,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1745
-        y: 277
+        y: 377
         width: 35
         height: 53
       alignment: 0
@@ -272,7 +272,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 131
-        y: 56
+        y: 156
         width: 1442
         height: 118
       alignment: 0
@@ -285,6 +285,72 @@ TextureImporter:
       bones: []
       spriteID: 13cd8228d66bb4b439c2e5be523617a7
       internalID: 930368834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_SpriteSheet_Settings_7
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 66
+        width: 682
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c1c70e50b5780441b0f7f31d883a596
+      internalID: 345181253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_SpriteSheet_Settings_8
+      rect:
+        serializedVersion: 2
+        x: 872
+        y: 48
+        width: 55
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b039557c36bc46e40bb6ebe37cb24fb2
+      internalID: -2011957605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_SpriteSheet_Settings_9
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 66
+        width: 682
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e3f8c51e251f6044b68b5e73837e427
+      internalID: -1368278093
       vertices: []
       indices: 
       edges: []
@@ -310,6 +376,9 @@ TextureImporter:
       UI_SpriteSheet_Settings_4: -1908924931
       UI_SpriteSheet_Settings_5: 1133087514
       UI_SpriteSheet_Settings_6: 930368834
+      UI_SpriteSheet_Settings_7: 345181253
+      UI_SpriteSheet_Settings_8: -2011957605
+      UI_SpriteSheet_Settings_9: -1368278093
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

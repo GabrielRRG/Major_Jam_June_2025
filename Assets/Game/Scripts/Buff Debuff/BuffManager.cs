@@ -27,8 +27,14 @@ public class BuffManager : MonoBehaviour
     {
         while(true)
         {
+
             yield return new WaitForSeconds(Random.Range(_minDuration,_maxDuration));
 
+            if (_player == null)
+            {
+                break;
+            }
+            
             if(_player.GetComponent<Shapeshifting>().isTransformed) { continue; }
 
             if(applyForPlayer) 

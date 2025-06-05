@@ -11,6 +11,12 @@ public sealed class MeleeEnemy : EnemyAIBase
     {
         base.HandleChase();
         
+        if (_playerTransform == null)
+        {
+            EnterPatrolState();
+            return;
+        }
+        
         float distanceToPlayer = Vector3.Distance(transform.position, _playerTransform.position);
         if (distanceToPlayer <= _attackRange)
         {
