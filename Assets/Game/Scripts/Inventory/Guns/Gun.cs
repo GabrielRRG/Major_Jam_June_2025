@@ -32,8 +32,9 @@ public class Gun : Tool
         _isFiring = false;
     }
 
-    private void Update()
+    public override void Update()
     {
+        base.Update();
         if (_enemyGun)
         {
             if (_ammoLeft <= 0)

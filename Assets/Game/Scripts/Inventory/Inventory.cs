@@ -13,7 +13,7 @@ public sealed class Inventory : MonoBehaviour
     private Tool _toolInRange = null;
 
     private void SwitchTools(int _newToolIndex)
-    { 
+    {
         _backpack[_currentToolIndex].gameObject.SetActive(false);
         _currentToolIndex = _newToolIndex;
         _backpack[_currentToolIndex].gameObject.SetActive(true);

@@ -5,7 +5,7 @@ public abstract class Tool : MonoBehaviour
     public bool isPossessed = false;
 
     private float _rotSpeed = 30f;
-    private void Update()
+    public virtual void Update()
     {
         if(isPossessed) { return; }
         transform.Rotate(0, _rotSpeed * Time.deltaTime, 0);
@@ -26,6 +26,7 @@ public abstract class Tool : MonoBehaviour
         transform.Rotate(_player.transform.forward);
 
         _playerInventory.AddToBackpack(this);
-        transform.localPosition -= Vector3.right * 0.2f;
+        transform.localPosition += new Vector3(-0.2f, 1, 0);
+        
     }
 }
