@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb4b98d6674800f47b0464801109d466, type: 3}
   m_Name: Bear
   m_EditorClassIdentifier: 
-  animalPrefab: {fileID: 919132149155446097, guid: 39857cfad1651644682ff5b772e6e697, type: 3}
-  animalName: 
+  prefab: {fileID: 2606162838812730539, guid: 3edf33cc2939e6244b4c8ef2c9a09e27, type: 3}
+  maxHP: 0
