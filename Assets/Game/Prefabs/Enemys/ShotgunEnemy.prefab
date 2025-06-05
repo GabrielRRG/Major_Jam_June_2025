@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 9129104029029443854}
   - component: {fileID: 7401930901539312655}
   - component: {fileID: 6973320004116405207}
+  - component: {fileID: 448370472604705296}
   m_Layer: 0
   m_Name: ShotgunEnemy
   m_TagString: Untagged
@@ -91,6 +92,21 @@ MonoBehaviour:
   _shootRange: 10
   _projectilePrefab: {fileID: 919132149155446097, guid: db0e0f3c71e57f3449d7a10c6b7fff49, type: 3}
   _shootPoint: {fileID: 9129104029029443854}
+--- !u!114 &448370472604705296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4928533284579933428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 726c1a6ff5e63604c9274caad787728a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHealth: 100
+  _deathEffectPrefab: {fileID: 0}
+  _healthSlider: {fileID: 0}
 --- !u!1001 &3263393417499975149
 PrefabInstance:
   m_ObjectHideFlags: 0

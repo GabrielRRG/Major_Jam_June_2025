@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5791350116473488662}
   - component: {fileID: 3453664009399585174}
   - component: {fileID: 7905776580687819836}
+  - component: {fileID: 714527675412617450}
   m_Layer: 0
   m_Name: PistolEnemy
   m_TagString: Untagged
@@ -91,6 +92,21 @@ MonoBehaviour:
   _shootRange: 10
   _projectilePrefab: {fileID: 919132149155446097, guid: db0e0f3c71e57f3449d7a10c6b7fff49, type: 3}
   _shootPoint: {fileID: 5791350116473488662}
+--- !u!114 &714527675412617450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5357998007734735391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 726c1a6ff5e63604c9274caad787728a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHealth: 100
+  _deathEffectPrefab: {fileID: 0}
+  _healthSlider: {fileID: 0}
 --- !u!1001 &6499037043522427995
 PrefabInstance:
   m_ObjectHideFlags: 0
