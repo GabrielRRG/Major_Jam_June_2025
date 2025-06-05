@@ -9,16 +9,41 @@ public sealed class RangedEnemy : EnemyAIBase
 
     private float _shootTimer = 0f;
 
-    protected override void HandleChase()
+    protected override void Update()
     {
+        base.Update();
+        if (!CheckForPlayer())
+        {
+            _gun.StopFire();
+        }
+    }
+
+    protected override void HandleChase()
+    { 
+        Debug.Log("RangedEnemy");
         base.HandleChase();
 
         float distanceToPlayer = Vector3.Distance(transform.position, _playerTransform.position);
-        if (distanceToPlayer <= _shootRange)
+        if (distanceToPlayer <= _shootRange && _playerInSight)
         {
-            _agent.isStopped = true;
-            _shootTimer = 0f;
-                ShootProjectile();
+            ShootProjectile();
+            if (distanceToPlayer <= _shootRange / 2)
+            {
+                _agent.isStopped = false;
+                Vector3 directionAwayFromPlayer = (transform.position - _playerTransform.position).normalized;
+                float retreatDistance = 5f;
+
+                Vector3 retreatPosition = transform.position + directionAwayFromPlayer * retreatDistance;
+
+                _agent.SetDestination(retreatPosition);
+                
+                Debug.Log("Retreat");
+                Debug.Log(retreatPosition + " " + directionAwayFromPlayer);
+            }
+            else
+            {
+                _agent.isStopped = true;
+            }
         }
         else
         {

@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: AssaultRifle
   m_EditorClassIdentifier: 
   gunName: Scar
+  gunIcon: {fileID: 2092494399, guid: 9969f27e4c32fcd40907bfd31e3618a1, type: 3}
   fireMode: 1
   fireRate: 0.2
   spread: 0.1
   reloadTime: 5
-  damage: 0
+  damage: 10
   bulletsPerShot: 1
-  magazineCap: 14
+  magazineCap: 12

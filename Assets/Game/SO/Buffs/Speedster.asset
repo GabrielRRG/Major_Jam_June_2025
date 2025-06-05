@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Speedster
   m_EditorClassIdentifier: 
   effectName: Speedster
-  effectIcon: {fileID: 0}
+  effectIcon: {fileID: -319133650, guid: f966bd8cff2b7054b9525f2f2e6d4249, type: 3}
   effectDuration: 4
-  speedMultiplier: 2
+  multiplier: 2
