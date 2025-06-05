@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb4b98d6674800f47b0464801109d466, type: 3}
   m_Name: WireWolf
   m_EditorClassIdentifier: 
-  animalPrefab: {fileID: 919132149155446097, guid: 9e1c97fc44f9a8744b61b58f72c56de4, type: 3}
-  animalName: 
+  prefab: {fileID: 3856360137821693100, guid: d40cf051a3bf11843915d5336487bf61, type: 3}
+  maxHP: 0
