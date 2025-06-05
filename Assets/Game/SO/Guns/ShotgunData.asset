@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: ShotgunData
   m_EditorClassIdentifier: 
   gunName: Shotgun
+  gunIcon: {fileID: 2096793803, guid: 9969f27e4c32fcd40907bfd31e3618a1, type: 3}
   fireMode: 0
   fireRate: 0.2
   spread: 0.4

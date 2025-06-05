@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Half Health
   m_EditorClassIdentifier: 
   effectName: Half Health
-  effectIcon: {fileID: 0}
+  effectIcon: {fileID: -1474079074, guid: f966bd8cff2b7054b9525f2f2e6d4249, type: 3}
   effectDuration: 4
