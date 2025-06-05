@@ -17,7 +17,7 @@ public sealed class Shapeshifting : MonoBehaviour
     [SerializeField] private float _transformationDuration = 20f;
 
     private GameObject _currentAnimalInstance;
-    private bool _isTransformed = false;
+    public bool isTransformed = false;
     private float _timer;
 
     private void Start()
@@ -31,7 +31,7 @@ public sealed class Shapeshifting : MonoBehaviour
         {
             yield return new WaitForSeconds(_timeBetweenTransforms);
             TransformIntoAnimal();
-            if (!_isTransformed) continue;
+            if (!isTransformed) continue;
 
             yield return new WaitForSeconds(_transformationDuration);
             RevertToOriginal();
@@ -40,11 +40,12 @@ public sealed class Shapeshifting : MonoBehaviour
 
     private void TransformIntoAnimal()
     {
-        if (_isTransformed || _animalForms.Count == 0) return;
+        if (isTransformed || _animalForms.Count == 0) return;
 
         if(Random.Range(0, 101) > _transformsChance) return;
         
-        _isTransformed = true;
+        isTransformed = true;
+        InventoryBehavior.DisableInventory(); //This
         
         var selectedForm = _animalForms[Random.Range(0, _animalForms.Count)];
         
@@ -60,10 +61,11 @@ public sealed class Shapeshifting : MonoBehaviour
 
     private void RevertToOriginal()
     {
-        if (!_isTransformed) return;
+        if (!isTransformed) return;
 
-        _isTransformed = false;
-        
+        isTransformed = false;
+        InventoryBehavior.EnableInventory(); //This
+
         _playerModel.SetActive(true);
         
         if (_currentAnimalInstance != null)
