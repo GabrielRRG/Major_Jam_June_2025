@@ -102,8 +102,9 @@ public class Gun : Tool
         for (int i = 0; i < _gunData.bulletsPerShot; i++)
         {
             Vector3 spreadDir = transform.forward + Random.insideUnitSphere * _gunData.spread;
-            GameObject bullet = Instantiate(_bulletPrefab, transform.position, Quaternion.LookRotation(spreadDir));
-            bullet.GetComponent<Bullet>().damage = _gunData.damage;
+            Bullet bullet = Instantiate(_bulletPrefab, transform.position, Quaternion.LookRotation(spreadDir)).GetComponent<Bullet>();
+            bullet.damage = _gunData.damage;
+            bullet.enemyBullet = _enemyGun;
             Rigidbody rb = bullet.GetComponent<Rigidbody>();
             if (rb != null) rb.linearVelocity = spreadDir.normalized * 30;
         }

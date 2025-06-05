@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net;
 using UnityEngine.UI;
 
 public class BuffManager : MonoBehaviour
@@ -27,8 +28,14 @@ public class BuffManager : MonoBehaviour
     {
         while(true)
         {
+
             yield return new WaitForSeconds(Random.Range(_minDuration,_maxDuration));
 
+            if (_player == null)
+            {
+                break;
+            }
+            
             if(_player.GetComponent<Shapeshifting>().isTransformed) { continue; }
 
             if(applyForPlayer) 
@@ -68,7 +75,8 @@ public class BuffManager : MonoBehaviour
     private IEnumerator RemoveAfterDelay(BuffDebuff _effect, GameObject target, int delay)
     {
         yield return new WaitForSeconds(delay);
-        _effect.Remove(target);
+        if (_player == null) yield break;
+            _effect.Remove(target);
         print($"Removing {_effect.effectName} from {target.name}");
     }
     private IEnumerator RemoveBuffIcon(BuffDebuff _effect)
