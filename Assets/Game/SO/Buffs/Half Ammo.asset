@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Half Ammo
   m_EditorClassIdentifier: 
   effectName: Half Ammo
-  effectIcon: {fileID: 0}
+  effectIcon: {fileID: -2138448450, guid: f966bd8cff2b7054b9525f2f2e6d4249, type: 3}
   effectDuration: 4
   allGunsSO: {fileID: 11400000, guid: 1b01c21df9dce1840b36f73d099238ae, type: 2}
   multiplier: 2

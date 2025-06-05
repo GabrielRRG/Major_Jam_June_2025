@@ -6,6 +6,7 @@ public enum FireMode { Single, Auto }
 public class GunData : ScriptableObject
 {
     public string gunName;
+    public Sprite gunIcon;
     public FireMode fireMode = FireMode.Single;
 
     [Header("Shooting Stats")]

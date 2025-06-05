@@ -51,6 +51,10 @@ MonoBehaviour:
   _bulletPrefab: {fileID: 9079524557305973991, guid: cd4754ef2e7f6814fa48eb40a77e1370, type: 3}
   _reloadInput: {fileID: 4210030843415687448, guid: 7993c538d382ed84da2e8ddf2e133f76, type: 3}
   _enemyGun: 0
+  inventoryGroup: {fileID: 6883104720448362832, guid: 4a674f40fcc5b754cae7acc922ef8a44, type: 3}
+  gunIcon: {fileID: 0}
+  ammoCountText: {fileID: 0}
+  magazineCapText: {fileID: 0}
   _muzzleFlash: {fileID: 0}
 --- !u!135 &4442960853740144663
 SphereCollider:
