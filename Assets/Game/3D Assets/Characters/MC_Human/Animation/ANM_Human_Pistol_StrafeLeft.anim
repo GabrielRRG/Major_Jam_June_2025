@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ANM_Human_Pistol_Strafe
+  m_Name: ANM_Human_Pistol_StrafeLeft
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
