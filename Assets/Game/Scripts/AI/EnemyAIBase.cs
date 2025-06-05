@@ -192,8 +192,6 @@ public class EnemyAIBase : MonoBehaviour
         if (_playerTransform == null)
             return false;
 
-        Debug.Log(lastKnownPlayerPos);
-
         Vector3 directionToPlayer = _playerTransform.position - transform.position;
         float distanceToPlayer = directionToPlayer.magnitude;
         float angleToPlayer = Vector3.Angle(transform.forward, directionToPlayer);
@@ -211,7 +209,7 @@ public class EnemyAIBase : MonoBehaviour
                 if (!Physics.Raycast(origin, dir, dist, _obstacleMask))
                 {
                     Debug.Log("Player detected in close range");
-                    _playerInSight = true;
+                    //_playerInSight = true;
                     _roomManager.SetAlarm(lastKnownPlayerPos);
                 }
                 else
