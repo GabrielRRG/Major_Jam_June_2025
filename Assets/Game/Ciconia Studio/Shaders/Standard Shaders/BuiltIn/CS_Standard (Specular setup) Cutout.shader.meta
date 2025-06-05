@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 1f53b2e079258874d987bc2948630b78
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 23087
+  packageName: Free Double Sided Shaders
+  packageVersion: 2020.2
+  assetPath: Assets/Ciconia Studio/Shaders/Standard Shaders/BuiltIn/CS_Standard (Specular
+    setup) Cutout.shader
+  uploadId: 641283

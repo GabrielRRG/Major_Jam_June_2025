@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Double Health
   m_EditorClassIdentifier: 
   effectName: Double Health
-  effectIcon: {fileID: 0}
-  effectDuration: 0
+  effectIcon: {fileID: -587559676, guid: f966bd8cff2b7054b9525f2f2e6d4249, type: 3}
+  effectDuration: 4

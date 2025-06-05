@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
+using UnityEngine.UI;
 
 public sealed class Inventory : MonoBehaviour
 {
@@ -16,6 +17,10 @@ public sealed class Inventory : MonoBehaviour
     {
         _backpack[_currentToolIndex].gameObject.SetActive(false);
         _currentToolIndex = _newToolIndex;
+        if (_backpack[_currentToolIndex].gameObject.GetComponent<Gun>()) //If tool is a gun
+        {
+            _backpack[_currentToolIndex].gameObject.GetComponent<Gun>().ShowGunUI();
+        }
         _backpack[_currentToolIndex].gameObject.SetActive(true);
     }
 
@@ -38,6 +43,10 @@ public sealed class Inventory : MonoBehaviour
             { 
                 _backpack[i] = tool;
                 _currentToolIndex = i;
+                if (tool.gameObject.GetComponent<Gun>()) //If tool is a gun
+                {
+                    tool.GetComponent<Gun>().ShowGunUI();
+                }
                 return;
             }
             else

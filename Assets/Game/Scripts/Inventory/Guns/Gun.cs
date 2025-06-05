@@ -1,6 +1,8 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class Gun : Tool
 {
@@ -9,6 +11,12 @@ public class Gun : Tool
     [SerializeField] private GameObject _bulletPrefab;
     [SerializeField] private InputActionReference _reloadInput;
     [SerializeField] private bool _enemyGun;
+
+    [Header("UI")]
+    private CanvasGroup _inventoryGroup;
+    private Image _gunImage;
+    private TMP_Text _ammoCountText;
+
 
     private bool _isFiring = false;
     private bool _isReloading = false;
@@ -21,6 +29,16 @@ public class Gun : Tool
     private void Start()
     {
         _ammoLeft = _gunData.magazineCap;
+        _inventoryGroup = GameObject.FindGameObjectWithTag("Inventory").GetComponent<CanvasGroup>();
+        _gunImage = _inventoryGroup.transform.Find("GunImage").GetComponent<Image>();
+        _ammoCountText = _inventoryGroup.transform.Find("AmmoCount").GetComponent<TMP_Text>();
+    }
+
+    public void ShowGunUI()
+    {
+        _inventoryGroup.alpha = 1;
+        _gunImage.sprite = _gunData.gunIcon;
+        _ammoCountText.text = _ammoLeft + "/" + _gunData.magazineCap;
     }
 
     public override void Use()
@@ -40,7 +58,6 @@ public class Gun : Tool
             if (_ammoLeft <= 0)
             {
                 _isReloading = true;
-                _ammoLeft = _gunData.magazineCap;
                 Invoke(nameof(SetReloadingState), _gunData.reloadTime);
             }
         }
@@ -65,12 +82,14 @@ public class Gun : Tool
     {
         if(!isPossessed && !_enemyGun) { return; }
         _isReloading = true;
-        _ammoLeft = _gunData.magazineCap;
+        _ammoCountText.text = "Reloading";
         Invoke(nameof(SetReloadingState), _gunData.reloadTime);
     }
     private void SetReloadingState()
     {
+        _ammoLeft = _gunData.magazineCap;
         _isReloading = false;
+        _ammoCountText.text = _ammoLeft + "/" + _gunData.magazineCap;
     }
 
     private void Shoot()
@@ -84,6 +103,7 @@ public class Gun : Tool
             if (rb != null) rb.linearVelocity = spreadDir.normalized * 30;
         }
         _ammoLeft -= _gunData.bulletsPerShot; //We subtract the amount of bullets used!
+        _ammoCountText.text = _ammoLeft + "/" + _gunData.magazineCap;
         if (_muzzleFlash) _muzzleFlash.Play();
     }
 
