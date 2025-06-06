@@ -12,7 +12,7 @@ public class Bullet : MonoBehaviour
             other.gameObject.GetComponent<IDamagable>().TakeDamage(damage);
             Destroy(gameObject);
         }
-        else if(other.gameObject.GetComponent<IDamagable>() != null && !enemyBullet)
+        else if(other.gameObject.GetComponent<IDamagable>() != null && !enemyBullet && !other.gameObject.CompareTag("Player"))
         {
             other.gameObject.GetComponent<IDamagable>().TakeDamage(damage);
             Destroy(gameObject);

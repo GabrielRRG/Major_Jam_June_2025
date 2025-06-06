@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d23eb7032002b246b6f67b59173473d, type: 3}
   m_Name: AssaultRifle
   m_EditorClassIdentifier: 
-  gunName: Scar
+  gunName: AssaultRifle
   gunIcon: {fileID: 2092494399, guid: 9969f27e4c32fcd40907bfd31e3618a1, type: 3}
   fireMode: 1
   fireRate: 0.2
   spread: 0.1
   reloadTime: 5
-  damage: 10
+  damage: 8
   bulletsPerShot: 1
-  magazineCap: 12
+  magazineCap: 24
