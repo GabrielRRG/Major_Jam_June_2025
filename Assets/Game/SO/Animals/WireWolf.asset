@@ -15,3 +15,4 @@ MonoBehaviour:
   prefab: {fileID: 3856360137821693100, guid: d40cf051a3bf11843915d5336487bf61, type: 3}
   maxHP: 150
   moveSpeed: 5
+  damage: 45

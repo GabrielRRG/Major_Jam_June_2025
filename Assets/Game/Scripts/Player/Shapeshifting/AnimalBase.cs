@@ -69,6 +69,15 @@ public class AnimalBase : MonoBehaviour
 
     private void Update()
     {
+        Animator animator = GameObject.FindGameObjectWithTag("Animal").GetComponent<Animator>();
+        if(transform.parent.GetComponent<Rigidbody>().linearVelocity.magnitude > 1)
+        {
+            animator.SetBool("Run",true);
+        }
+        else
+        {
+            animator.SetBool("Run", false);
+        }
         if (_attackCooldown > 0f)
             _attackCooldown -= Time.deltaTime;
     }
@@ -88,6 +97,8 @@ public class AnimalBase : MonoBehaviour
 
         Collider[] hitColliders = Physics.OverlapSphere(attackOrigin, _sphereRadius, _attackMask);
         bool hitSomething = false;
+        Animator animator = GameObject.FindGameObjectWithTag("Animal").GetComponent<Animator>();
+        animator.SetTrigger("Attack");
 
         foreach (var hit in hitColliders)
         {
