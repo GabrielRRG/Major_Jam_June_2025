@@ -1259,9 +1259,10 @@ GameObject:
   m_Component:
   - component: {fileID: 3258371238482057948}
   - component: {fileID: 7206962711695285038}
+  - component: {fileID: -3651645351047734798}
   m_Layer: 7
   m_Name: Bear
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1308,6 +1309,26 @@ CapsuleCollider:
   m_Height: 1.605246
   m_Direction: 2
   m_Center: {x: 0, y: 0.42702496, z: 0.217377}
+--- !u!114 &-3651645351047734798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2606162838812730539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13a571dc1e6d42568f8f80bae3c5ac6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animalFormData: {fileID: 11400000, guid: e31bc188d370b36409fe3464b3ad3d68, type: 2}
+  _timeBetweenAttack: 1
+  _atack: {fileID: 1120369429361536294, guid: 7993c538d382ed84da2e8ddf2e133f76, type: 3}
+  _sphereRadius: 1.5
+  _attackDistance: 1.5
+  _attackMask:
+    serializedVersion: 2
+    m_Bits: 375
 --- !u!1 &2813433959710326577
 GameObject:
   m_ObjectHideFlags: 0

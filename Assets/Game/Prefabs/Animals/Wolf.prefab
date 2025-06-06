@@ -2086,9 +2086,10 @@ GameObject:
   m_Component:
   - component: {fileID: 9073124175233249787}
   - component: {fileID: 9001411411641360896}
+  - component: {fileID: 8611200157729579218}
   m_Layer: 7
   m_Name: Wolf
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2131,10 +2132,30 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5229751
+  m_Radius: 0.48327395
   m_Height: 1.4867988
   m_Direction: 2
-  m_Center: {x: 0, y: 0.42702496, z: 0.15815341}
+  m_Center: {x: 0, y: 0.4667261, z: 0.15815341}
+--- !u!114 &8611200157729579218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3856360137821693100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13a571dc1e6d42568f8f80bae3c5ac6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animalFormData: {fileID: 11400000, guid: c6d2bbf364fa91240a3704d915aedca2, type: 2}
+  _timeBetweenAttack: 1
+  _atack: {fileID: 1120369429361536294, guid: 7993c538d382ed84da2e8ddf2e133f76, type: 3}
+  _sphereRadius: 1.5
+  _attackDistance: 1.5
+  _attackMask:
+    serializedVersion: 2
+    m_Bits: 375
 --- !u!1 &3959400459151833060
 GameObject:
   m_ObjectHideFlags: 0

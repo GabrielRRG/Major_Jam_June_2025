@@ -5,4 +5,6 @@ public sealed class AnimalFormData : ScriptableObject
 {
     public GameObject prefab;
     public int maxHP;
+    public float moveSpeed;
+    public int damage;
 }
