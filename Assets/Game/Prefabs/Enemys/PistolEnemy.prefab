@@ -180,7 +180,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   health: 100
-  _deathEffectPrefab: {fileID: 0}
+  _deathEffectPrefab: {fileID: 6526853395447287458, guid: 61c8203d57e05be46bdd1eed6ec351d0, type: 3}
   _healthSlider: {fileID: 8053554263802328217}
 --- !u!136 &4533119923444190803
 CapsuleCollider:
