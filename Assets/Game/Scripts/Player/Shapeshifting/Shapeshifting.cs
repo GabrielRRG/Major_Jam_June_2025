@@ -46,7 +46,9 @@ public sealed class Shapeshifting : MonoBehaviour
         
         isTransformed = true;
         InventoryBehavior.DisableInventory();
-        
+        Animator animator = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().animator;
+        animator.SetBool("Gun", false);
+
         var selectedForm = _animalForms[Random.Range(0, _animalForms.Count)];
         
         _currentAnimalInstance = Instantiate(
@@ -67,6 +69,9 @@ public sealed class Shapeshifting : MonoBehaviour
         InventoryBehavior.EnableInventory();
 
         _playerModel.SetActive(true);
+        Animator animator = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().animator;
+        animator.SetBool("Gun", true);
+        print("Setting gun to true");
         
         if (_currentAnimalInstance != null)
             Destroy(_currentAnimalInstance);

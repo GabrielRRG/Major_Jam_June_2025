@@ -3,34 +3,35 @@ using UnityEngine.UI;
 
 public sealed class CharacterHealth : MonoBehaviour , IDamagable
 {
-    public int MaxHealth = 100;
+    public int maxHealth = 100;
+    public int health = 100;
     [SerializeField] private ParticleSystem _deathEffectPrefab;
     [SerializeField] private Slider _healthSlider;
-    private int _health = 100;
 
     private ParticleSystem _deathEffect;
 
-    public int Health { get => _health; set => _health = value; }
+    public int Health { get => health; set => health = value; }
 
     void Start()
     {
-        _health = MaxHealth;
-        if(_healthSlider) _healthSlider.value = _health;
+        _healthSlider.value = (float)health / maxHealth;
+        if(_healthSlider) _healthSlider.value = health;
         _deathEffect = Instantiate(_deathEffectPrefab, transform.position, Quaternion.identity);
         _deathEffect.transform.SetParent(gameObject.transform);
     }
     public void TakeDamage(int amount)
     {
-        _health -= amount;
-        if (_healthSlider) _healthSlider.value = _health;
+        health -= amount;
+        if (_healthSlider) _healthSlider.value = (float)health / maxHealth;
         if (_deathEffect)
         {
             _deathEffect.Play(); 
         }
-        if(_health <= 0) 
+        if(health <= 0) 
         { 
             if(gameObject.CompareTag("Player"))
             {
+                GameObject.FindGameObjectWithTag("Inventory").GetComponent<CanvasGroup>().alpha = 0;
                 GameObject.FindGameObjectWithTag("UIBackground").GetComponent<CanvasGroup>().alpha = 1;
                 return;
             }

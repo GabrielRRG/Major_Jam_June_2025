@@ -36,16 +36,14 @@ public abstract class Tool : MonoBehaviour
             Debug.LogError($"[Tool.EquipTool] На объекте Player отсутствует компонент Inventory (для {name})");
             return;
         }
-
-        // Если всё найдено — продолжаем:
+        
         transform.SetParent(_backpack.transform);
 
-        transform.localPosition = Vector3.right;
-        transform.localRotation = Quaternion.identity;
-        transform.Rotate(_player.transform.forward);
+        //transform.Rotate(_player.transform.forward);
 
         _playerInventory.AddToBackpack(this);
-        transform.localPosition += new Vector3(-0.2f, 1, 0);
+        transform.position = _playerInventory.gunsTarget.position;
+        transform.localRotation = Quaternion.Euler(-90,0,90);
     }
 
 }

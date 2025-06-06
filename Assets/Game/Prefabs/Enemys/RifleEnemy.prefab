@@ -389,7 +389,7 @@ NavMeshAgent:
   m_AngularSpeed: 120
   m_StoppingDistance: 1
   m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
+  m_AutoBraking: 0
   m_AutoRepath: 1
   m_Height: 1.84
   m_BaseOffset: 0
@@ -441,7 +441,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 726c1a6ff5e63604c9274caad787728a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 100
+  maxHealth: 100
+  health: 100
   _deathEffectPrefab: {fileID: 6526853395447287458, guid: 61c8203d57e05be46bdd1eed6ec351d0, type: 3}
   _healthSlider: {fileID: 8089878896297925084}
 --- !u!136 &7680128105047287062
@@ -584,6 +585,14 @@ PrefabInstance:
     - target: {fileID: 5638320329330280533, guid: 6bdda6c4fd7d5da439b81f5a670ff51a, type: 3}
       propertyPath: m_Name
       value: Rifle
+      objectReference: {fileID: 0}
+    - target: {fileID: 7290097959676708712, guid: 6bdda6c4fd7d5da439b81f5a670ff51a, type: 3}
+      propertyPath: _enemyGun
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7290097959676708712, guid: 6bdda6c4fd7d5da439b81f5a670ff51a, type: 3}
+      propertyPath: isPossessed
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public sealed class Inventory : MonoBehaviour
 {
+    public Transform gunsTarget;
     [SerializeField] private Tool[] _backpack = new Tool[3];
     [SerializeField] private InputActionReference _interact;
     [SerializeField] private InputActionReference _useTool;
