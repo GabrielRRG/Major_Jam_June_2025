@@ -190,35 +190,31 @@ public class EnemyAIBase : MonoBehaviour
         if (_playerTransform == null)
             return false;
 
-        Debug.Log(lastKnownPlayerPos);
-
         Vector3 directionToPlayer = _playerTransform.position - transform.position;
         float distanceToPlayer = directionToPlayer.magnitude;
         float angleToPlayer = Vector3.Angle(transform.forward, directionToPlayer);
+        float closeRadius = 2f;
+        Collider[] hits = Physics.OverlapSphere(transform.position, closeRadius, _playerMask);
+        foreach (var currentHit in hits)
+        {
+            Vector3 origin = transform.position + Vector3.up * 1.5f;
+            Vector3 target = currentHit.transform.position + Vector3.up * 0.5f;
+            Vector3 dir = (target - origin).normalized;
+            float dist = Vector3.Distance(origin, target);
+
+            if (!Physics.Raycast(origin, dir, dist, _obstacleMask))
+            {
+                Debug.Log("Player detected in close range");
+                _playerInSight = true;
+                _roomManager.SetAlarm(lastKnownPlayerPos);
+            }
+            else
+            {
+                _playerInSight = false;
+            }
+        }
         if (distanceToPlayer <= _viewDistance && angleToPlayer <= _viewAngle)
         {
-            float closeRadius = 2f;
-            Collider[] hits = Physics.OverlapSphere(transform.position, closeRadius, _playerMask);
-            foreach (var currentHit in hits)
-            {
-                Vector3 origin = transform.position + Vector3.up * 1.5f;
-                Vector3 target = currentHit.transform.position + Vector3.up * 0.5f;
-                Vector3 dir = (target - origin).normalized;
-                float dist = Vector3.Distance(origin, target);
-
-                if (!Physics.Raycast(origin, dir, dist, _obstacleMask))
-                {
-                    Debug.Log("Player detected in close range");
-                    //_playerInSight = true;
-                    _roomManager.SetAlarm(lastKnownPlayerPos);
-                }
-                else
-                {
-                    _playerInSight = false;
-                }
-            }
-
-
             Vector3 eye = transform.position + Vector3.up * 1.5f;
             Vector3 targetPoint = _playerTransform.position + Vector3.up * 0.5f;
             Vector3 rayDir = (targetPoint - eye).normalized;
