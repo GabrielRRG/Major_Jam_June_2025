@@ -9,6 +9,7 @@ public class Gun : Tool
 {
     [Header("References")]
     public GunData gunData;
+    [SerializeField] private Transform _shootPos;
     [SerializeField] private GameObject _bulletPrefab;
     [SerializeField] private InputActionReference _reloadInput;
     [SerializeField] private bool _enemyGun;
@@ -27,7 +28,7 @@ public class Gun : Tool
     [Header("Effects")]
     [SerializeField] private ParticleSystem _muzzleFlash;
 
-    private void Start()
+    private void Awake()
     {
         _ammoLeft = gunData.magazineCap;
         _inventoryGroup = GameObject.FindGameObjectWithTag("Inventory").GetComponent<CanvasGroup>();
@@ -126,7 +127,7 @@ public class Gun : Tool
         for (int i = 0; i < gunData.bulletsPerShot; i++)
         {
             Vector3 spreadDir = transform.forward + Random.insideUnitSphere * gunData.spread;
-            Bullet bullet = Instantiate(_bulletPrefab, transform.position, Quaternion.LookRotation(spreadDir)).GetComponent<Bullet>();
+            Bullet bullet = Instantiate(_bulletPrefab, _shootPos.position, Quaternion.LookRotation(spreadDir)).GetComponent<Bullet>();
             bullet.damage = gunData.damage;
             bullet.enemyBullet = _enemyGun;
             Rigidbody rb = bullet.GetComponent<Rigidbody>();

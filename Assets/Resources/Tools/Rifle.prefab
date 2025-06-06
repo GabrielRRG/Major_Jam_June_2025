@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5137363033590942890
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6130918604736925916}
+  m_Layer: 8
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6130918604736925916
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5137363033590942890}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.273, z: 0.59}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2999904706946652627}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5638320329330280533
 GameObject:
   m_ObjectHideFlags: 0
@@ -27,11 +58,12 @@ Transform:
   m_GameObject: {fileID: 5638320329330280533}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.02, y: 0.87, z: 0.54}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7302609657994563135}
+  - {fileID: 6130918604736925916}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7290097959676708712
@@ -46,8 +78,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 957ec0f6573b51f4dbaf3c6d93bd549c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isPossessed: 0
+  toolName: Rifle
+  isPossessed: 1
   gunData: {fileID: 11400000, guid: 6efc96b7fe0508043a5e4d589601f1be, type: 2}
+  _shootPos: {fileID: 6130918604736925916}
   _bulletPrefab: {fileID: 9079524557305973991, guid: cd4754ef2e7f6814fa48eb40a77e1370, type: 3}
   _reloadInput: {fileID: 4210030843415687448, guid: 7993c538d382ed84da2e8ddf2e133f76, type: 3}
   _enemyGun: 0
@@ -83,15 +117,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 0a63ae02f3c219447a1eacb2833be46e, type: 3}
       propertyPath: m_LocalScale.x
-      value: 200
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0a63ae02f3c219447a1eacb2833be46e, type: 3}
       propertyPath: m_LocalScale.y
-      value: 200
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0a63ae02f3c219447a1eacb2833be46e, type: 3}
       propertyPath: m_LocalScale.z
-      value: 200
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0a63ae02f3c219447a1eacb2833be46e, type: 3}
       propertyPath: m_LocalPosition.x
