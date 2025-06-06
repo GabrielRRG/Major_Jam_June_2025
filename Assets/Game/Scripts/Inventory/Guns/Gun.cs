@@ -1,3 +1,4 @@
+using RadiantTools.AudioSystem;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Audio;
@@ -83,13 +84,17 @@ public class Gun : Tool
         if(!isPossessed && !_enemyGun) { return; }
         _isReloading = true;
         _ammoCountText.text = "Reloading";
+
+        AudioPlayer soundSFX = AudioManager.Instance.GetAudioPlayer("SoundSFX");
+        soundSFX.PlayAudioOnce(SoundTypes.Reload);
+
         Invoke(nameof(SetReloadingState), _gunData.reloadTime);
     }
     private void SetReloadingState()
     {
         _ammoLeft = _gunData.magazineCap;
         _isReloading = false;
-        _ammoCountText.text = _ammoLeft + "/" + _gunData.magazineCap;
+        if(!_enemyGun) _ammoCountText.text = _ammoLeft + "/" + _gunData.magazineCap;
     }
 
     private void Shoot()
@@ -97,13 +102,20 @@ public class Gun : Tool
         for (int i = 0; i < _gunData.bulletsPerShot; i++)
         {
             Vector3 spreadDir = transform.forward + Random.insideUnitSphere * _gunData.spread;
-            GameObject bullet = Instantiate(_bulletPrefab, transform.position, Quaternion.LookRotation(spreadDir));
-            bullet.GetComponent<Bullet>().damage = _gunData.damage;
+            Bullet bullet = Instantiate(_bulletPrefab, transform.position, Quaternion.LookRotation(spreadDir)).GetComponent<Bullet>();
+            bullet.damage = _gunData.damage;
+            bullet.enemyBullet = _enemyGun;
             Rigidbody rb = bullet.GetComponent<Rigidbody>();
             if (rb != null) rb.linearVelocity = spreadDir.normalized * 30;
         }
         _ammoLeft -= _gunData.bulletsPerShot; //We subtract the amount of bullets used!
-        _ammoCountText.text = _ammoLeft + "/" + _gunData.magazineCap;
+
+        if (!_enemyGun)
+        {
+            AudioPlayer soundSFX = AudioManager.Instance.GetAudioPlayer("SoundSFX");
+            soundSFX.PlayAudioOnce((SoundTypes)SoundTypes.ToObject(typeof(SoundTypes), Random.Range(3,5)));
+            _ammoCountText.text = _ammoLeft + "/" + _gunData.magazineCap;
+        }
         if (_muzzleFlash) _muzzleFlash.Play();
     }
 

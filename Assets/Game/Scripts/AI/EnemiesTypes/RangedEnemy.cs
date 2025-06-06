@@ -19,10 +19,15 @@ public sealed class RangedEnemy : EnemyAIBase
     }
 
     protected override void HandleChase()
-    { 
-        Debug.Log("RangedEnemy");
+    {
         base.HandleChase();
 
+        if (_playerTransform == null)
+        {
+            _agent.isStopped = false;
+            EnterPatrolState();
+            return;
+        }
         float distanceToPlayer = Vector3.Distance(transform.position, _playerTransform.position);
         if (distanceToPlayer <= _shootRange && _playerInSight)
         {
@@ -36,9 +41,6 @@ public sealed class RangedEnemy : EnemyAIBase
                 Vector3 retreatPosition = transform.position + directionAwayFromPlayer * retreatDistance;
 
                 _agent.SetDestination(retreatPosition);
-                
-                Debug.Log("Retreat");
-                Debug.Log(retreatPosition + " " + directionAwayFromPlayer);
             }
             else
             {

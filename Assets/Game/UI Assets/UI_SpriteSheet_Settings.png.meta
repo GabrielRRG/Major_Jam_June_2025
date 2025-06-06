@@ -140,151 +140,19 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 18
-        y: 469
-        width: 1884
-        height: 993
+        y: 0
+        width: 0
+        height: 0
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 4b0cf8c23078edb43b8a15f733e7d176
-      internalID: 1109505051
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI_SpriteSheet_Settings_1
-      rect:
-        serializedVersion: 2
-        x: 131
-        y: 258
-        width: 310
-        height: 109
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d36ec88ab2bb3d246a66f723f7774753
-      internalID: 1995479235
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI_SpriteSheet_Settings_2
-      rect:
-        serializedVersion: 2
-        x: 587
-        y: 257
-        width: 417
-        height: 109
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 67147284212b41f478094376a06a02f3
-      internalID: 2061883061
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI_SpriteSheet_Settings_3
-      rect:
-        serializedVersion: 2
-        x: 1142
-        y: 271
-        width: 381
-        height: 93
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ae9694dff386808438b973c6db42161d
-      internalID: 1021136719
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI_SpriteSheet_Settings_4
-      rect:
-        serializedVersion: 2
-        x: 1624
-        y: 278
-        width: 36
-        height: 51
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 377393bb9d12ddd4393b154bc13ea51f
-      internalID: -1908924931
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI_SpriteSheet_Settings_5
-      rect:
-        serializedVersion: 2
-        x: 1745
-        y: 277
-        width: 35
-        height: 53
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 25819eebdeba2ed4ea157129b2484c6a
-      internalID: 1133087514
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI_SpriteSheet_Settings_6
-      rect:
-        serializedVersion: 2
-        x: 131
-        y: 56
-        width: 1442
-        height: 118
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 13cd8228d66bb4b439c2e5be523617a7
-      internalID: 930368834
+      spriteID: 7ad8dcea98b3dfb00800000000000000
+      internalID: 863912166054268327
       vertices: []
       indices: 
       edges: []
@@ -293,7 +161,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 1235f8cb1142eac4ea660302fbf66e91
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -303,13 +171,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      UI_SpriteSheet_Settings_0: 1109505051
-      UI_SpriteSheet_Settings_1: 1995479235
-      UI_SpriteSheet_Settings_2: 2061883061
-      UI_SpriteSheet_Settings_3: 1021136719
-      UI_SpriteSheet_Settings_4: -1908924931
-      UI_SpriteSheet_Settings_5: 1133087514
-      UI_SpriteSheet_Settings_6: 930368834
+      UI_SpriteSheet_Settings_0: 863912166054268327
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
