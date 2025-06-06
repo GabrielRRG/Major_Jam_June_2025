@@ -14,6 +14,7 @@ public class Gun : Tool
     public int _damage;
     public int _magazineSize;
 
+    [SerializeField] private Transform _shootPos;
     [SerializeField] private GameObject _bulletPrefab;
     [SerializeField] private InputActionReference _reloadInput;
     [SerializeField] private bool _enemyGun;
@@ -133,7 +134,7 @@ public class Gun : Tool
         GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().animator.SetTrigger("Attack");
         for (int i = 0; i < gunData.bulletsPerShot; i++)
         {
-            Vector3 spreadDir = transform.forward + Random.insideUnitSphere * gunData.spread;
+            Vector3 spreadDir = transform.forward + UnityEngine.Random.insideUnitSphere * gunData.spread;
             Bullet bullet = Instantiate(_bulletPrefab, _shootPos.position, Quaternion.LookRotation(spreadDir)).GetComponent<Bullet>();
             bullet.damage = gunData.damage;
             bullet.enemyBullet = _enemyGun;
