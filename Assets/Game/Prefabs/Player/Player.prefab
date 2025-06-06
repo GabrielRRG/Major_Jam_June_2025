@@ -206,6 +206,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8729e3017958b704eb2384e33553c2da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startSpeed: 10
   moveSpeed: 5
   _move: {fileID: -1680190386980627800, guid: 7993c538d382ed84da2e8ddf2e133f76, type: 3}
 --- !u!114 &4056907519505539439
@@ -221,7 +222,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerCamera: {fileID: 0}
-  _rotationSpeed: 15
+  _minLookDistance: 0.5
   _headPoint: {fileID: 4262802338613135415}
   _rayLength: 100
 --- !u!114 &2755464985482301819
@@ -239,12 +240,10 @@ MonoBehaviour:
   _playerModel: {fileID: 4874759754663921436}
   _animalForms:
   - {fileID: 11400000, guid: e31bc188d370b36409fe3464b3ad3d68, type: 2}
-  - {fileID: 11400000, guid: bcfa9984774fd57409cc65469b67fa33, type: 2}
-  - {fileID: 11400000, guid: c6d2bbf364fa91240a3704d915aedca2, type: 2}
   _spawnPostion: {fileID: 997724747486493923}
-  _transformsChance: 10
+  _transformsChance: 100
   _timeBetweenTransforms: 1
-  _transformationDuration: 5
+  _transformationDuration: 2
   isTransformed: 0
 --- !u!114 &8219430952326969747
 MonoBehaviour:
@@ -277,7 +276,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 726c1a6ff5e63604c9274caad787728a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 100
+  maxHealth: 100
+  health: 100
   _deathEffectPrefab: {fileID: 0}
   _healthSlider: {fileID: 0}
 --- !u!114 &1591548653572125281
@@ -307,7 +307,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -370,6 +370,10 @@ PrefabInstance:
     - target: {fileID: 8518847968979133273, guid: 1ae9be19aab8387409703de5fcc63a5e, type: 3}
       propertyPath: m_Name
       value: PlayerModel
+      objectReference: {fileID: 0}
+    - target: {fileID: 8518847968979133273, guid: 1ae9be19aab8387409703de5fcc63a5e, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

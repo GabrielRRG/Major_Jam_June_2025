@@ -10,11 +10,12 @@ public class Bullet : MonoBehaviour
         if (other.gameObject.GetComponent<IDamagable>() != null && enemyBullet && !other.gameObject.CompareTag("Enemy"))
         {
             other.gameObject.GetComponent<IDamagable>().TakeDamage(damage);
+            Destroy(gameObject);
         }
-        else if(other.gameObject.GetComponent<IDamagable>() != null)
+        else if(other.gameObject.GetComponent<IDamagable>() != null && !enemyBullet)
         {
             other.gameObject.GetComponent<IDamagable>().TakeDamage(damage);
+            Destroy(gameObject);
         }
-        Destroy(gameObject);
     }
 }

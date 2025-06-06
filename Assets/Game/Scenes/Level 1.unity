@@ -1283,9 +1283,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 100
-  m_WholeNumbers: 1
-  m_Value: 100
+  m_MaxValue: 1
+  m_WholeNumbers: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -2141,6 +2141,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 660953041}
+  - {fileID: 571272338}
   m_Father: {fileID: 1134522193}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2748,24 +2749,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2755464985482301819, guid: 9a44c12d036227243b47c7e671d3bb36, type: 3}
       propertyPath: _transformsChance
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 2755464985482301819, guid: 9a44c12d036227243b47c7e671d3bb36, type: 3}
-      propertyPath: _animalForms.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2755464985482301819, guid: 9a44c12d036227243b47c7e671d3bb36, type: 3}
-      propertyPath: _transformationDuration
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4056907519505539439, guid: 9a44c12d036227243b47c7e671d3bb36, type: 3}
       propertyPath: _playerCamera
       value: 
       objectReference: {fileID: 330585545}
-    - target: {fileID: 4874759754663921436, guid: 9a44c12d036227243b47c7e671d3bb36, type: 3}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
     - target: {fileID: 6105352105386080833, guid: 9a44c12d036227243b47c7e671d3bb36, type: 3}
       propertyPath: _healthSlider
       value: 
@@ -2774,10 +2763,6 @@ PrefabInstance:
       propertyPath: _deathEffectPrefab
       value: 
       objectReference: {fileID: 497446590}
-    - target: {fileID: 7699888629973052033, guid: 9a44c12d036227243b47c7e671d3bb36, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7980714475689117944, guid: 9a44c12d036227243b47c7e671d3bb36, type: 3}
       propertyPath: m_Name
       value: Player
@@ -3007,38 +2992,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1896573461}
     m_Modifications:
-    - target: {fileID: 314213263011314388, guid: cb18914892fbc4d41b3859b55322dbad, type: 3}
-      propertyPath: m_AutoBraking
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2385317113223018938, guid: cb18914892fbc4d41b3859b55322dbad, type: 3}
       propertyPath: m_Name
       value: KnifeEnemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 2385317113223018938, guid: cb18914892fbc4d41b3859b55322dbad, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2385317113223018938, guid: cb18914892fbc4d41b3859b55322dbad, type: 3}
-      propertyPath: m_TagString
-      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 2642560633631457240, guid: cb18914892fbc4d41b3859b55322dbad, type: 3}
       propertyPath: _deathEffectPrefab
       value: 
       objectReference: {fileID: 497446590}
-    - target: {fileID: 3349647718879973964, guid: cb18914892fbc4d41b3859b55322dbad, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3349647718879973964, guid: cb18914892fbc4d41b3859b55322dbad, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3349647718879973964, guid: cb18914892fbc4d41b3859b55322dbad, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3658014523350050956, guid: cb18914892fbc4d41b3859b55322dbad, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.54
@@ -3497,30 +3458,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1443613897919961046, guid: e9514cee2cb3763448bb23313211c058, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1443613897919961046, guid: e9514cee2cb3763448bb23313211c058, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1443613897919961046, guid: e9514cee2cb3763448bb23313211c058, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2370536782455264894, guid: e9514cee2cb3763448bb23313211c058, type: 3}
       propertyPath: _deathEffectPrefab
       value: 
       objectReference: {fileID: 497446590}
-    - target: {fileID: 3915820849230330111, guid: e9514cee2cb3763448bb23313211c058, type: 3}
-      propertyPath: _enemyGun
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3915820849230330111, guid: e9514cee2cb3763448bb23313211c058, type: 3}
-      propertyPath: isPossessed
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5587446198773130802, guid: e9514cee2cb3763448bb23313211c058, type: 3}
       propertyPath: _roomManager
       value: 
@@ -3544,18 +3485,6 @@ PrefabInstance:
     - target: {fileID: 6030370489567687667, guid: e9514cee2cb3763448bb23313211c058, type: 3}
       propertyPath: m_Name
       value: RifleEnemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 6030370489567687667, guid: e9514cee2cb3763448bb23313211c058, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6030370489567687667, guid: e9514cee2cb3763448bb23313211c058, type: 3}
-      propertyPath: m_TagString
-      value: Enemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 6924272970791216078, guid: e9514cee2cb3763448bb23313211c058, type: 3}
-      propertyPath: m_AutoBraking
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3586,21 +3515,9 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3453664009399585174, guid: 6e1ffb37d939d484db2dab0aa321e26c, type: 3}
-      propertyPath: m_AutoBraking
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5357998007734735391, guid: 6e1ffb37d939d484db2dab0aa321e26c, type: 3}
       propertyPath: m_Name
       value: PistolEnemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 5357998007734735391, guid: 6e1ffb37d939d484db2dab0aa321e26c, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5357998007734735391, guid: 6e1ffb37d939d484db2dab0aa321e26c, type: 3}
-      propertyPath: m_TagString
-      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 5791350116473488662, guid: 6e1ffb37d939d484db2dab0aa321e26c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3642,6 +3559,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7465181040775500876, guid: 6e1ffb37d939d484db2dab0aa321e26c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7905776580687819836, guid: 6e1ffb37d939d484db2dab0aa321e26c, type: 3}
       propertyPath: _roomManager
       value: 
@@ -3662,6 +3583,18 @@ PrefabInstance:
       propertyPath: '_patrolPoints.Array.data[3]'
       value: 
       objectReference: {fileID: 2014912889}
+    - target: {fileID: 8053554263802328217, guid: 6e1ffb37d939d484db2dab0aa321e26c, type: 3}
+      propertyPath: m_Value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8053554263802328217, guid: 6e1ffb37d939d484db2dab0aa321e26c, type: 3}
+      propertyPath: m_MaxValue
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8053554263802328217, guid: 6e1ffb37d939d484db2dab0aa321e26c, type: 3}
+      propertyPath: m_WholeNumbers
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3679,29 +3612,9 @@ PrefabInstance:
       propertyPath: _deathEffectPrefab
       value: 
       objectReference: {fileID: 497446590}
-    - target: {fileID: 3889562710965247133, guid: 708dec44248ad6d42989c922d3b9a887, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3889562710965247133, guid: 708dec44248ad6d42989c922d3b9a887, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3889562710965247133, guid: 708dec44248ad6d42989c922d3b9a887, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4928533284579933428, guid: 708dec44248ad6d42989c922d3b9a887, type: 3}
       propertyPath: m_Name
       value: ShotgunEnemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 4928533284579933428, guid: 708dec44248ad6d42989c922d3b9a887, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4928533284579933428, guid: 708dec44248ad6d42989c922d3b9a887, type: 3}
-      propertyPath: m_TagString
-      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 6973320004116405207, guid: 708dec44248ad6d42989c922d3b9a887, type: 3}
       propertyPath: _roomManager
@@ -3723,14 +3636,6 @@ PrefabInstance:
       propertyPath: '_patrolPoints.Array.data[3]'
       value: 
       objectReference: {fileID: 2014912889}
-    - target: {fileID: 7401930901539312655, guid: 708dec44248ad6d42989c922d3b9a887, type: 3}
-      propertyPath: m_AutoBraking
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7496498479195365692, guid: 708dec44248ad6d42989c922d3b9a887, type: 3}
-      propertyPath: _bulletPrefab
-      value: 
-      objectReference: {fileID: 9079524557305973991, guid: cd4754ef2e7f6814fa48eb40a77e1370, type: 3}
     - target: {fileID: 9129104029029443854, guid: 708dec44248ad6d42989c922d3b9a887, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.9861608
