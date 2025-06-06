@@ -38,7 +38,10 @@ public class Gun : Tool
     public void ShowGunUI()
     {
         Animator animator = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().animator;
-        animator.SetBool("Gun", true);
+        if(GameObject.FindGameObjectWithTag("Backpack").transform.childCount > 0)
+        {
+            animator.SetBool("Gun", true);
+        }
         switch (gunData.gunName)
         {
             case "Pistol":

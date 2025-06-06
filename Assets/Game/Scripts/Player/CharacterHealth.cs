@@ -31,6 +31,7 @@ public sealed class CharacterHealth : MonoBehaviour , IDamagable
         { 
             if(gameObject.CompareTag("Player"))
             {
+                GameObject.FindGameObjectWithTag("Inventory").GetComponent<CanvasGroup>().alpha = 0;
                 GameObject.FindGameObjectWithTag("UIBackground").GetComponent<CanvasGroup>().alpha = 1;
                 return;
             }

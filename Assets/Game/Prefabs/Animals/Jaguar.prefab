@@ -1790,9 +1790,10 @@ GameObject:
   - component: {fileID: 4871898731323208392}
   - component: {fileID: 3808534536848815340}
   - component: {fileID: 8467047606348426309}
+  - component: {fileID: 5248074520710291072}
   m_Layer: 7
   m_Name: Jaguar
-  m_TagString: Untagged
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1859,6 +1860,28 @@ MonoBehaviour:
   _attackMask:
     serializedVersion: 2
     m_Bits: 375
+--- !u!95 &5248074520710291072
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4025986160481908304}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d5562ae6c50e3e8409ad9038159b8ef1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &4034815243853411893
 GameObject:
   m_ObjectHideFlags: 0
