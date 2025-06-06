@@ -1,4 +1,5 @@
 using RadiantTools.AudioSystem;
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Audio;
@@ -9,6 +10,10 @@ public class Gun : Tool
 {
     [Header("References")]
     public GunData gunData;
+
+    public int _damage;
+    public int _magazineSize;
+
     [SerializeField] private GameObject _bulletPrefab;
     [SerializeField] private InputActionReference _reloadInput;
     [SerializeField] private bool _enemyGun;
@@ -29,7 +34,10 @@ public class Gun : Tool
 
     private void Start()
     {
-        _ammoLeft = gunData.magazineCap;
+        _damage = gunData.damage;
+        _magazineSize = gunData.magazineCap;
+
+        _ammoLeft = _magazineSize;
         _inventoryGroup = GameObject.FindGameObjectWithTag("Inventory").GetComponent<CanvasGroup>();
         _gunImage = _inventoryGroup.transform.Find("GunImage").GetComponent<Image>();
         _ammoCountText = _inventoryGroup.transform.Find("AmmoCount").GetComponent<TMP_Text>();
@@ -62,7 +70,7 @@ public class Gun : Tool
         }
         _inventoryGroup.alpha = 1;
         _gunImage.sprite = gunData.gunIcon;
-        _ammoCountText.text = _ammoLeft + "/" + gunData.magazineCap;
+        _ammoCountText.text = _ammoLeft + "/" + _magazineSize;
     }
 
     public override void Use()
@@ -115,9 +123,9 @@ public class Gun : Tool
     }
     private void SetReloadingState()
     {
-        _ammoLeft = gunData.magazineCap;
+        _ammoLeft = _magazineSize;
         _isReloading = false;
-        if(!_enemyGun) _ammoCountText.text = _ammoLeft + "/" + gunData.magazineCap;
+        if(!_enemyGun) _ammoCountText.text = _ammoLeft + "/" + _magazineSize;
     }
 
     private void Shoot()
@@ -125,9 +133,9 @@ public class Gun : Tool
         GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().animator.SetTrigger("Attack");
         for (int i = 0; i < gunData.bulletsPerShot; i++)
         {
-            Vector3 spreadDir = transform.forward + Random.insideUnitSphere * gunData.spread;
+            Vector3 spreadDir = transform.forward + UnityEngine.Random.insideUnitSphere * gunData.spread;
             Bullet bullet = Instantiate(_bulletPrefab, transform.position, Quaternion.LookRotation(spreadDir)).GetComponent<Bullet>();
-            bullet.damage = gunData.damage;
+            bullet.damage = _damage;
             bullet.enemyBullet = _enemyGun;
             Rigidbody rb = bullet.GetComponent<Rigidbody>();
             if (rb != null) rb.linearVelocity = spreadDir.normalized * 30;
@@ -137,8 +145,8 @@ public class Gun : Tool
         if (!_enemyGun)
         {
             AudioPlayer soundSFX = AudioManager.Instance.GetAudioPlayer("SoundSFX");
-            soundSFX.PlayAudioOnce((SoundTypes)SoundTypes.ToObject(typeof(SoundTypes), Random.Range(3,5)));
-            _ammoCountText.text = _ammoLeft + "/" + gunData.magazineCap;
+            soundSFX.PlayAudioOnce((SoundTypes)SoundTypes.ToObject(typeof(SoundTypes), UnityEngine.Random.Range(3,5)));
+            _ammoCountText.text = _ammoLeft + "/" + _magazineSize;
         }
         if (_muzzleFlash) _muzzleFlash.Play();
     }
