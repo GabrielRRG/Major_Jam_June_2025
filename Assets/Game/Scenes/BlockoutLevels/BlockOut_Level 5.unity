@@ -25299,7 +25299,7 @@ PrefabInstance:
     - target: {fileID: 4056907519505539439, guid: 9a44c12d036227243b47c7e671d3bb36, type: 3}
       propertyPath: _playerCamera
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2144815151}
     - target: {fileID: 6105352105386080833, guid: 9a44c12d036227243b47c7e671d3bb36, type: 3}
       propertyPath: _healthSlider
       value: 

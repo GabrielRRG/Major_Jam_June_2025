@@ -19,6 +19,10 @@ public sealed class CharacterHealth : MonoBehaviour , IDamagable
         _deathEffect = Instantiate(_deathEffectPrefab, transform.position, Quaternion.identity);
         _deathEffect.transform.SetParent(gameObject.transform);
     }
+    public void UpdateSlider()
+    {
+        if (_healthSlider) _healthSlider.value = health;
+    }
     public void TakeDamage(int amount)
     {
         health -= amount;

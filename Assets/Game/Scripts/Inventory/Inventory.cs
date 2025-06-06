@@ -5,7 +5,7 @@ public sealed class Inventory : MonoBehaviour
 {
     public static Inventory instance;
     public Transform gunsTarget;
-    public Tool[] backpack;
+    public Tool[] backpack = new Tool[3];
     [SerializeField] private InputActionReference _interact;
     [SerializeField] private InputActionReference _useTool;
     [SerializeField] private InputActionReference _cycleTools;

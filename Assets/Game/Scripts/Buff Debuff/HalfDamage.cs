@@ -3,22 +3,21 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Buffs | Debuffs/HalfDamage")]
 public class HalfDamage : BuffDebuff
 {
-    public AllGuns allGunsSO;
-    [Header("Buff Settings")]
-    public int multiplier = 2;
+    int originalDamage;
     public override void Apply(GameObject target)
     {
-        foreach (GunData gunData in allGunsSO.allGuns)
+        foreach (Gun gun in target.GetComponentsInChildren<Gun>())
         {
-            gunData.damage /= multiplier;
+            originalDamage = gun._damage;
+            gun._damage /= 2;
         }
     }
 
     public override void Remove(GameObject target)
     {
-        foreach (GunData gunData in allGunsSO.allGuns)
+        foreach (Gun gun in target.GetComponentsInChildren<Gun>())
         {
-            gunData.damage *= multiplier;
+            gun._damage = originalDamage;
         }
     }
 }
