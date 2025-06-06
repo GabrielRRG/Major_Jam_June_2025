@@ -32,7 +32,7 @@ public class Gun : Tool
     [Header("Effects")]
     [SerializeField] private ParticleSystem _muzzleFlash;
 
-    private void Start()
+    private void Awake()
     {
         _damage = gunData.damage;
         _magazineSize = gunData.magazineCap;
@@ -133,9 +133,9 @@ public class Gun : Tool
         GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().animator.SetTrigger("Attack");
         for (int i = 0; i < gunData.bulletsPerShot; i++)
         {
-            Vector3 spreadDir = transform.forward + UnityEngine.Random.insideUnitSphere * gunData.spread;
-            Bullet bullet = Instantiate(_bulletPrefab, transform.position, Quaternion.LookRotation(spreadDir)).GetComponent<Bullet>();
-            bullet.damage = _damage;
+            Vector3 spreadDir = transform.forward + Random.insideUnitSphere * gunData.spread;
+            Bullet bullet = Instantiate(_bulletPrefab, _shootPos.position, Quaternion.LookRotation(spreadDir)).GetComponent<Bullet>();
+            bullet.damage = gunData.damage;
             bullet.enemyBullet = _enemyGun;
             Rigidbody rb = bullet.GetComponent<Rigidbody>();
             if (rb != null) rb.linearVelocity = spreadDir.normalized * 30;

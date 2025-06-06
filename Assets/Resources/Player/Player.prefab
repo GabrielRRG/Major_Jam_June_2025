@@ -107,9 +107,7 @@ GameObject:
   - component: {fileID: 5137618798437111693}
   - component: {fileID: 4056907519505539439}
   - component: {fileID: 2755464985482301819}
-  - component: {fileID: 8219430952326969747}
   - component: {fileID: 6105352105386080833}
-  - component: {fileID: 1591548653572125281}
   - component: {fileID: 7699888629973052033}
   m_Layer: 7
   m_Name: Player
@@ -280,18 +278,6 @@ MonoBehaviour:
   health: 100
   _deathEffectPrefab: {fileID: 0}
   _healthSlider: {fileID: 0}
---- !u!114 &1591548653572125281
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7980714475689117944}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d5ff261306324c49a6d88bd253c54de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!136 &7699888629973052033
 CapsuleCollider:
   m_ObjectHideFlags: 0

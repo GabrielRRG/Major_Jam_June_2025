@@ -6,7 +6,6 @@ public sealed class RangedEnemy : EnemyAIBase
     [SerializeField] private float _shootRange = 10f;
     [SerializeField] private GameObject _projectilePrefab;
     [SerializeField] private Transform _shootPoint;
-
     private float _shootTimer = 0f;
 
     protected override void Update()
