@@ -55,8 +55,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6194472150260211183}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.47535697, y: 0.51892513, z: -0.53131974, w: -0.47164804}
-  m_LocalPosition: {x: 0.07485956, y: -0.7182877, z: 1.4738852}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: 0.1, z: 0.05}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -107,9 +107,7 @@ GameObject:
   - component: {fileID: 5137618798437111693}
   - component: {fileID: 4056907519505539439}
   - component: {fileID: 2755464985482301819}
-  - component: {fileID: 8219430952326969747}
   - component: {fileID: 6105352105386080833}
-  - component: {fileID: 1591548653572125281}
   - component: {fileID: 7699888629973052033}
   m_Layer: 7
   m_Name: Player
@@ -207,7 +205,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   _move: {fileID: -1680190386980627800, guid: 7993c538d382ed84da2e8ddf2e133f76, type: 3}
-  animator: {fileID: 0}
+  animator: {fileID: 5197800389710035350}
 --- !u!114 &4056907519505539439
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -244,26 +242,6 @@ MonoBehaviour:
   _timeBetweenTransforms: 1
   _transformationDuration: 2
   isTransformed: 0
---- !u!114 &8219430952326969747
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7980714475689117944}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1772cb678d2150478b8b0d57614f36a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gunsTarget: {fileID: 0}
-  _backpack:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  _interact: {fileID: 1781555164194001046, guid: 7993c538d382ed84da2e8ddf2e133f76, type: 3}
-  _useTool: {fileID: 1120369429361536294, guid: 7993c538d382ed84da2e8ddf2e133f76, type: 3}
-  _cycleTools: {fileID: -7383063986470616470, guid: 7993c538d382ed84da2e8ddf2e133f76, type: 3}
 --- !u!114 &6105352105386080833
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -280,18 +258,6 @@ MonoBehaviour:
   health: 100
   _deathEffectPrefab: {fileID: 0}
   _healthSlider: {fileID: 0}
---- !u!114 &1591548653572125281
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7980714475689117944}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d5ff261306324c49a6d88bd253c54de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!136 &7699888629973052033
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -367,6 +333,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5083956554116321033, guid: 1ae9be19aab8387409703de5fcc63a5e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.863
+      objectReference: {fileID: 0}
     - target: {fileID: 8518847968979133273, guid: 1ae9be19aab8387409703de5fcc63a5e, type: 3}
       propertyPath: m_Name
       value: PlayerModel
@@ -374,6 +344,18 @@ PrefabInstance:
     - target: {fileID: 8518847968979133273, guid: 1ae9be19aab8387409703de5fcc63a5e, type: 3}
       propertyPath: m_TagString
       value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 9060658432605920723, guid: 1ae9be19aab8387409703de5fcc63a5e, type: 3}
+      propertyPath: m_Avatar
+      value: 
+      objectReference: {fileID: 9000000, guid: 105c0d8fb7e14c449bd4a42951466a01, type: 2}
+    - target: {fileID: 9060658432605920723, guid: 1ae9be19aab8387409703de5fcc63a5e, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: bbb1fce9668a52d48b2c3e4d989dbaef, type: 2}
+    - target: {fileID: 9060658432605920723, guid: 1ae9be19aab8387409703de5fcc63a5e, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -391,6 +373,11 @@ Transform:
 --- !u!1 &4874759754663921436 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8518847968979133273, guid: 1ae9be19aab8387409703de5fcc63a5e, type: 3}
+  m_PrefabInstance: {fileID: 3863990884006765637}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &5197800389710035350 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9060658432605920723, guid: 1ae9be19aab8387409703de5fcc63a5e, type: 3}
   m_PrefabInstance: {fileID: 3863990884006765637}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &5217326994792138567 stripped

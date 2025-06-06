@@ -2,6 +2,8 @@ using UnityEngine;
 
 public abstract class Tool : MonoBehaviour
 {
+    public string toolName;
+    
     public bool isPossessed = false;
 
     private float _rotSpeed = 30f;
@@ -29,9 +31,7 @@ public abstract class Tool : MonoBehaviour
             Debug.LogError($"[Tool.EquipTool] Объект с тегом \"Player\" не найден в сцене для {name}");
             return;
         }
-
-        Inventory _playerInventory = _player.GetComponent<Inventory>();
-        if (_playerInventory == null)
+        if (Inventory.instance == null)
         {
             Debug.LogError($"[Tool.EquipTool] На объекте Player отсутствует компонент Inventory (для {name})");
             return;
@@ -41,8 +41,8 @@ public abstract class Tool : MonoBehaviour
 
         //transform.Rotate(_player.transform.forward);
 
-        _playerInventory.AddToBackpack(this);
-        transform.position = _playerInventory.gunsTarget.position;
+        Inventory.instance.AddToBackpack(this);
+        transform.position = Inventory.instance.gunsTarget.position;
         transform.localRotation = Quaternion.Euler(-90,0,90);
     }
 
