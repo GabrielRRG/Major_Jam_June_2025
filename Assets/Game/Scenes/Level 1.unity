@@ -2820,10 +2820,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: KnifeEnemy
       objectReference: {fileID: 0}
-    - target: {fileID: 2642560633631457240, guid: cb18914892fbc4d41b3859b55322dbad, type: 3}
-      propertyPath: _deathEffectPrefab
-      value: 
-      objectReference: {fileID: 497446590}
     - target: {fileID: 3349647718879973964, guid: cb18914892fbc4d41b3859b55322dbad, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0

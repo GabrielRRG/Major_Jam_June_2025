@@ -217,7 +217,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 10
   health: 10
-  _deathEffectPrefab: {fileID: 0}
+  _deathEffectPrefab: {fileID: 6526853395447287458, guid: 61c8203d57e05be46bdd1eed6ec351d0, type: 3}
   _healthSlider: {fileID: 475157241348314774}
 --- !u!1 &2409815200638584532
 GameObject:
@@ -523,13 +523,7 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: bbb1fce9668a52d48b2c3e4d989dbaef, type: 2}
     - target: {fileID: 5866666021909216657, guid: 53c83879273f9bb49bbaedbb5d98097f, type: 3}
       propertyPath: m_WarningMessage
-      value: "\nBinding warning: Some generic clip(s) animate transforms that are
-        already bound by a Humanoid avatar. These transforms can only be changed
-        by Humanoid clips.\n\tTransform 'mixamorig:Hips'\n\tTransform 'mixamorig:LeftFoot'\n\tTransform
-        'mixamorig:LeftHandIndex1'\n\tTransform 'mixamorig:LeftHandPinky2'\n\tTransform
-        'mixamorig:Spine1'\n\tTransform 'mixamorig:LeftToeBase'\n\tTransform 'mixamorig:RightArm'\n\tTransform
-        'mixamorig:LeftLeg'\n\tTransform 'mixamorig:LeftHandMiddle3'\n\tTransform
-        'mixamorig:LeftShoulder'\n\tand more ...\n\tFrom animation clip 'ANM_Human_Gun_Run_Backwards'"
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: 53c83879273f9bb49bbaedbb5d98097f, type: 3}
       propertyPath: m_ApplyRootMotion
