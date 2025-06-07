@@ -4,20 +4,15 @@ public class InventoryBehavior : MonoBehaviour
 {
     private static Transform _savedTool = null;
     private static GameObject _backpack;
-    private static Inventory _inventory;
-
-    private void Start()
-    {
-        _backpack = GameObject.FindGameObjectWithTag("Backpack");
-        _inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
-    }
 
     public static void DisableInventory()
     {
-        _inventory.enabled = false;
+        if (!_backpack) _backpack = GameObject.FindGameObjectWithTag("Backpack");
+        Inventory.instance.enabled = false;
+        Inventory.instance.gunsTarget = _backpack.transform;
         foreach (Transform toolTransform in _backpack.transform)
         {
-            if (toolTransform.gameObject.activeSelf) //That means this is the tool
+            if (toolTransform.gameObject.activeSelf)
             {
                 _savedTool = toolTransform;
                 toolTransform.gameObject.SetActive(false);
@@ -30,6 +25,6 @@ public class InventoryBehavior : MonoBehaviour
         {
             _savedTool.gameObject.SetActive(true);
         }
-        _inventory.enabled = true;
+        Inventory.instance.enabled = true;
     }
 }

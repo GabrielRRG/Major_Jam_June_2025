@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net;
 using UnityEngine.UI;
+using Unity.VisualScripting;
 
 public class BuffManager : MonoBehaviour
 {
@@ -39,37 +40,54 @@ public class BuffManager : MonoBehaviour
             if(_player.GetComponent<Shapeshifting>().isTransformed) { continue; }
 
             if(applyForPlayer) 
-            { 
-                BuffDebuff _effect = ApplyEffect(_player);
+            {
+                BuffDebuff _effect = GetRandomEffect();
+                ApplyEffect(_effect, _player);
                 _buffImage.gameObject.SetActive(true);
                 _buffImage.sprite = _effect.effectIcon;
+                StartCoroutine(RemoveBuffIcon(_effect));
             }
             if(applyForEnemy)
             {
                 GameObject[] _enemies = GameObject.FindGameObjectsWithTag("Enemy");
                 if(_enemies != null)
                 {
-                    foreach(GameObject _enemy in _enemies)
+                    foreach (GameObject _enemy in _enemies)
                     {
-                        ApplyEffect(_enemy);
+                        BuffDebuff _effect = GetRandomEffect();
+                        if(_effect.name == "Slowpoke" || _effect.name == "Speedster") { continue; }
+                        ApplyEffect(_effect,_enemy);
+                        Image iconImage = _enemy.GetComponentInChildren<Image>(true);
+                        if(iconImage)
+                        {
+                            iconImage.gameObject.SetActive(true);
+                            iconImage.sprite = _effect.effectIcon;
+                            StartCoroutine(RemoveEnemyBuffIcon(_effect,iconImage));
+                        }
                     }
                 }
             }
         }
     }
-
-    private BuffDebuff ApplyEffect(GameObject _target)
+    private BuffDebuff GetRandomEffect()
     {
-        BuffDebuff _effect = _allEffects[Random.Range(0, _allEffects.Count)];
+        return _allEffects[Random.Range(0, _allEffects.Count)];
+    }
+    private void ApplyEffect(BuffDebuff _effect,GameObject _target)
+    {
         print($"Applying {_effect.effectName} to {_target.name}");
 
         _effect.Apply(_target);
+        if (_target.CompareTag("Player"))
+        {
+            if(_target.GetComponentInChildren<Gun>()) _target.GetComponentInChildren<Gun>().ShowGunUI();
+            _target.GetComponent<CharacterHealth>().UpdateSlider();
+        }
 
         if (_effect.effectDuration > 0)
         {
             StartCoroutine(RemoveAfterDelay(_effect, _target, _effect.effectDuration));
         }
-        return _effect;
     }
 
     private IEnumerator RemoveAfterDelay(BuffDebuff _effect, GameObject target, int delay)
@@ -77,7 +95,17 @@ public class BuffManager : MonoBehaviour
         yield return new WaitForSeconds(delay);
         if (_player == null) yield break;
             _effect.Remove(target);
+        if (target.CompareTag("Player"))
+        {
+            //if(target.GetComponentInChildren<Gun>()) target.GetComponentInChildren<Gun>().ShowGunUI();
+            target.GetComponent<CharacterHealth>().UpdateSlider();
+        }
         print($"Removing {_effect.effectName} from {target.name}");
+    }
+    private IEnumerator RemoveEnemyBuffIcon(BuffDebuff _effect, Image iconImage)
+    {
+        yield return new WaitForSeconds(_effect.effectDuration);
+        iconImage.gameObject.SetActive(false);
     }
     private IEnumerator RemoveBuffIcon(BuffDebuff _effect)
     {
