@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Bear
   m_EditorClassIdentifier: 
   prefab: {fileID: 2606162838812730539, guid: 3edf33cc2939e6244b4c8ef2c9a09e27, type: 3}
-  maxHP: 200
+  maxHP: 4000
   moveSpeed: 2
   damage: 45

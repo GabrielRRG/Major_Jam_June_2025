@@ -5,7 +5,7 @@ public sealed class Inventory : MonoBehaviour
 {
     public static Inventory instance;
     public Transform gunsTarget;
-    public Tool[] backpack;
+    public Tool[] backpack = new Tool[3];
     [SerializeField] private InputActionReference _interact;
     [SerializeField] private InputActionReference _useTool;
     [SerializeField] private InputActionReference _cycleTools;
@@ -61,7 +61,7 @@ public sealed class Inventory : MonoBehaviour
     {
         if (!PlayerPrefs.HasKey(PREFS_BACKPACK))
         {
-            Debug.Log("Inventory: данных для загрузки нет.");
+            Debug.Log("Inventory: no data to load.");
             return;
         }
 

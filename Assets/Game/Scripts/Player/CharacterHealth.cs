@@ -4,45 +4,55 @@ using UnityEngine.UI;
 public sealed class CharacterHealth : MonoBehaviour , IDamagable
 {
     public int maxHealth = 100;
-    public int health = 100;
+    private int health = 100;
     [SerializeField] private ParticleSystem _deathEffectPrefab;
     [SerializeField] private Slider _healthSlider;
 
     private ParticleSystem _deathEffect;
 
-    public int Health { get => health; set => health = value; }
+    public int Health
+    {
+        get => health;
+        set
+        {
+            health = value;
+            UpdateSlider();
+
+            if (health > 0) return;
+            if (CompareTag("Player"))
+            {
+                GameObject.FindGameObjectWithTag("Inventory").GetComponent<CanvasGroup>().alpha = 0;
+                GameObject.FindGameObjectWithTag("UIBackground").GetComponent<CanvasGroup>().alpha = 1;
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
+        }
+    }
 
     void Start()
     {
-        _healthSlider.value = (float)health / maxHealth;
-        if(_healthSlider) _healthSlider.value = health;
+        health = maxHealth;
+        _healthSlider.value = (float)Health / maxHealth;
         _deathEffect = Instantiate(_deathEffectPrefab, transform.position, Quaternion.identity);
         _deathEffect.transform.SetParent(gameObject.transform);
     }
     public void UpdateSlider()
     {
-        if (_healthSlider) _healthSlider.value = health;
+        if (_healthSlider) _healthSlider.value = (float)Health / maxHealth;
     }
     public void TakeDamage(int amount)
     {
-        health -= amount;
-        if (_healthSlider) _healthSlider.value = (float)health / maxHealth;
-        if (_deathEffect)
+        Health -= amount;
+
+        if (CompareTag("Enemy"))
         {
-            _deathEffect.Play(); 
+            EnemyAIBase enemyAI = GetComponent<EnemyAIBase>();
+            enemyAI.roomManager.SetAlarm(enemyAI.playerTransform.position);
         }
-        if(health <= 0) 
-        { 
-            if(gameObject.CompareTag("Player"))
-            {
-                GameObject.FindGameObjectWithTag("Inventory").GetComponent<CanvasGroup>().alpha = 0;
-                GameObject.FindGameObjectWithTag("UIBackground").GetComponent<CanvasGroup>().alpha = 1;
-                return;
-            }
-            else
-            {
-                Destroy(gameObject); 
-            }
-        }
+        
+        if (_deathEffect)
+            _deathEffect.Play();
     }
 }

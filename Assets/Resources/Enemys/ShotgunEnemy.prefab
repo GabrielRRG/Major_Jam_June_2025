@@ -291,7 +291,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8107d2e747e042eea4ec44c897bbe605, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _roomManager: {fileID: 0}
+  roomManager: {fileID: 0}
   _patrolPoints:
   - {fileID: 0}
   - {fileID: 0}
@@ -309,6 +309,7 @@ MonoBehaviour:
   _chaseSpeed: 3
   _patrolSpeed: 2
   _searchWaitTime: 3
+  playerTransform: {fileID: 0}
   _gun: {fileID: 7496498479195365692}
   _shootRange: 10
   _projectilePrefab: {fileID: 919132149155446097, guid: db0e0f3c71e57f3449d7a10c6b7fff49, type: 3}
@@ -326,7 +327,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
-  health: 100
   _deathEffectPrefab: {fileID: 6526853395447287458, guid: 61c8203d57e05be46bdd1eed6ec351d0, type: 3}
   _healthSlider: {fileID: 4026039188639993569}
 --- !u!136 &1467622499107801366
@@ -538,9 +538,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 1
   m_MinValue: 0
-  m_MaxValue: 100
-  m_WholeNumbers: 1
-  m_Value: 80
+  m_MaxValue: 1
+  m_WholeNumbers: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -680,7 +680,7 @@ PrefabInstance:
     - target: {fileID: 5866666021909216657, guid: 80da12cd627dc3a4aafde92e1240293f, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 17276b9a4cfc02e4497858b828d946b6, type: 2}
+      objectReference: {fileID: 9100000, guid: bbb1fce9668a52d48b2c3e4d989dbaef, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
