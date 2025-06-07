@@ -258,6 +258,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+  health: 100
   _deathEffectPrefab: {fileID: 6526853395447287458, guid: 61c8203d57e05be46bdd1eed6ec351d0, type: 3}
   _healthSlider: {fileID: 0}
 --- !u!136 &7699888629973052033
@@ -370,14 +371,20 @@ PrefabInstance:
     - target: {fileID: 9060658432605920723, guid: 1ae9be19aab8387409703de5fcc63a5e, type: 3}
       propertyPath: m_Avatar
       value: 
-      objectReference: {fileID: 9000000, guid: 24210c7494c2c694894316bf635183f8, type: 3}
+      objectReference: {fileID: 9000000, guid: 105c0d8fb7e14c449bd4a42951466a01, type: 2}
     - target: {fileID: 9060658432605920723, guid: 1ae9be19aab8387409703de5fcc63a5e, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 19cb53b8a03012b42873962df104957c, type: 2}
+      objectReference: {fileID: 9100000, guid: bbb1fce9668a52d48b2c3e4d989dbaef, type: 2}
     - target: {fileID: 9060658432605920723, guid: 1ae9be19aab8387409703de5fcc63a5e, type: 3}
       propertyPath: m_WarningMessage
-      value: 
+      value: "\nBinding warning: Some generic clip(s) animate transforms that are
+        already bound by a Humanoid avatar. These transforms can only be changed
+        by Humanoid clips.\n\tTransform 'mixamorig:Hips'\n\tTransform 'mixamorig:LeftFoot'\n\tTransform
+        'mixamorig:LeftHandIndex1'\n\tTransform 'mixamorig:LeftHandPinky2'\n\tTransform
+        'mixamorig:Spine1'\n\tTransform 'mixamorig:LeftToeBase'\n\tTransform 'mixamorig:RightArm'\n\tTransform
+        'mixamorig:LeftLeg'\n\tTransform 'mixamorig:LeftHandMiddle3'\n\tTransform
+        'mixamorig:LeftShoulder'\n\tand more ...\n\tFrom animation clip 'ANM_Human_Gun_Run_Backwards'"
       objectReference: {fileID: 0}
     - target: {fileID: 9060658432605920723, guid: 1ae9be19aab8387409703de5fcc63a5e, type: 3}
       propertyPath: m_ApplyRootMotion
