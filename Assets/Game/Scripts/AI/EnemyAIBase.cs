@@ -40,6 +40,7 @@ public class EnemyAIBase : MonoBehaviour
     protected int _currentPatrolIndex = 0;
     protected float _waitTimer = 0f;
     protected bool _playerInSight = false;
+    protected Animator _animator;
 
     protected enum EnemyState
     {
@@ -50,6 +51,7 @@ public class EnemyAIBase : MonoBehaviour
 
     protected virtual void Start()
     {
+        _animator = gameObject.GetComponentInChildren<Animator>();
         _agent = GetComponent<NavMeshAgent>();
         _agent.updateRotation = false;
         GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
@@ -92,6 +94,12 @@ public class EnemyAIBase : MonoBehaviour
 
                 break;
         }
+        
+        Vector3 moveDirection = _agent.desiredVelocity.normalized;
+        Vector3 worldMove = new Vector3(moveDirection.x, 0f, moveDirection.z);
+        Vector3 localMove = transform.InverseTransformDirection(worldMove);
+        _animator.SetFloat("XDirection", localMove.x, dampTime: 0.1f, deltaTime: Time.deltaTime);
+        _animator.SetFloat("YDirection", localMove.z, dampTime: 0.1f, deltaTime: Time.deltaTime);
     }
 
     // --- PATROL ---

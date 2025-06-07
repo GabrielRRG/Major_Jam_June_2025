@@ -22,9 +22,9 @@ public sealed class PlayerMovement : MonoBehaviour
         _moveDirection = _move.action.ReadValue<Vector2>();
         
         Vector3 worldMove = new Vector3(_moveDirection.x, 0f, _moveDirection.y);
-        //Vector3 localMove = transform.InverseTransformDirection(worldMove);
-        animator.SetFloat("XDirection", worldMove.x);
-        animator.SetFloat("YDirection", worldMove.z);
+        Vector3 localMove = transform.InverseTransformDirection(worldMove);
+        animator.SetFloat("XDirection", localMove.x, dampTime: 0.1f, deltaTime: Time.deltaTime);
+        animator.SetFloat("YDirection", localMove.z, dampTime: 0.1f, deltaTime: Time.deltaTime);
     }
 
     private void FixedUpdate()
