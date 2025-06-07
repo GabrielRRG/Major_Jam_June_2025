@@ -6,7 +6,11 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<<< HEAD:Assets/Game/3D Assets/Characters/MC_Human/Animation/ANM_Human_Pistol_StrafeLeft.anim
   m_Name: ANM_Human_Pistol_StrafeLeft
+========
+  m_Name: ANM_Human_Pistol_StrafeRight
+>>>>>>>> EnemyAI:Assets/Game/3D Assets/Characters/MC_Human/Animation/ANM_Human_Pistol_StrafeRight.anim
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
