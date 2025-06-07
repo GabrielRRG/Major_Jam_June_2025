@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Game/3D Assets/Environment/Foliage/Textures/TextureMapTrees.png.meta
+guid: 71f5687f9ee2a134ebe6029151f1de43
+========
 guid: 9999c30ab35447c469d3da8bc4f32d90
+>>>>>>>> main:Assets/Game/3D Assets/Characters/MC_Human/Textures/Humans_TXT_M_CH_Humans_AlbedoTransparency.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}

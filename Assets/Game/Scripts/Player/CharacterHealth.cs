@@ -3,33 +3,56 @@ using UnityEngine.UI;
 
 public sealed class CharacterHealth : MonoBehaviour , IDamagable
 {
-    public int MaxHealth = 100;
+    public int maxHealth = 100;
+    private int health = 100;
     [SerializeField] private ParticleSystem _deathEffectPrefab;
     [SerializeField] private Slider _healthSlider;
-    private int _health = 100;
 
     private ParticleSystem _deathEffect;
 
-    public int Health { get => _health; set => _health = value; }
+    public int Health
+    {
+        get => health;
+        set
+        {
+            health = value;
+            UpdateSlider();
+
+            if (health > 0) return;
+            if (CompareTag("Player"))
+            {
+                GameObject.FindGameObjectWithTag("Inventory").GetComponent<CanvasGroup>().alpha = 0;
+                GameObject.FindGameObjectWithTag("UIBackground").GetComponent<CanvasGroup>().alpha = 1;
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
+        }
+    }
 
     void Start()
     {
-        _health = MaxHealth;
-        if(_healthSlider) _healthSlider.value = _health;
+        _healthSlider.value = (float)Health / maxHealth;
+        if(_healthSlider) _healthSlider.value = Health;
         _deathEffect = Instantiate(_deathEffectPrefab, transform.position, Quaternion.identity);
         _deathEffect.transform.SetParent(gameObject.transform);
     }
+    public void UpdateSlider()
+    {
+        if (_healthSlider) _healthSlider.value = (float)Health / maxHealth;
+    }
     public void TakeDamage(int amount)
     {
-        _health -= amount;
-        if (_healthSlider) _healthSlider.value = _health;
-        if (_deathEffect)
+        Health -= amount;
+
+        if (CompareTag("Enemy"))
         {
-            _deathEffect.Play(); 
+            EnemyAIBase enemyAI = GetComponent<EnemyAIBase>();
+            enemyAI.roomManager.SetAlarm(enemyAI.playerTransform.position);
         }
-        if(_health <= 0) 
-        { 
-            Destroy(gameObject); 
-        }
+        
+        if (_deathEffect)
+            _deathEffect.Play();
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public abstract class BuffDebuff : ScriptableObject
 {
     public string effectName;
-    public Image effectIcon;
+    public Sprite effectIcon;
     public int effectDuration;
 
     public abstract void Apply(GameObject target);

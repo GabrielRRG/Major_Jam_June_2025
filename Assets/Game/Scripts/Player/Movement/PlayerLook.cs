@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 public sealed class PlayerLook : MonoBehaviour
 {
     [SerializeField] private Camera _playerCamera;
-    [SerializeField] private float _rotationSpeed = 15f;
+    [SerializeField] private float _minLookDistance = 0.5f;
     [SerializeField] private Transform _headPoint;
     [SerializeField] private float _rayLength = 100f;
 
@@ -14,14 +14,6 @@ public sealed class PlayerLook : MonoBehaviour
     {
         if (_playerCamera == null)
             _playerCamera = Camera.main;
-
-        if (_headPoint == null)
-        {
-            GameObject headObj = new GameObject("HeadPoint");
-            headObj.transform.SetParent(transform);
-            headObj.transform.localPosition = Vector3.up * 0.6f;
-            _headPoint = headObj.transform;
-        }
     }
 
     private void Update()
@@ -47,12 +39,15 @@ public sealed class PlayerLook : MonoBehaviour
         Vector3 lookDirection = _mouseWorldPoint - transform.position;
         lookDirection.y = 0;
 
-        if (lookDirection != Vector3.zero)
-        {
-            Quaternion targetRotation = Quaternion.LookRotation(lookDirection);
-            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, _rotationSpeed * Time.deltaTime);
-        }
+        float distanceToCursor = lookDirection.magnitude;
+        
+        if (distanceToCursor < _minLookDistance)
+            return;
+        
+        Quaternion targetRotation = Quaternion.LookRotation(lookDirection);
+        transform.rotation = targetRotation;
     }
+
 
     private void DrawHeadRaycast()
     {
