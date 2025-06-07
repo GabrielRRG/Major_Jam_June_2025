@@ -6882,7 +6882,7 @@ MonoBehaviour:
   _minDuration: 10
   _maxDuration: 20
   applyForPlayer: 1
-  applyForEnemy: 0
+  applyForEnemy: 1
 --- !u!4 &1169918552
 Transform:
   m_ObjectHideFlags: 0
@@ -11507,6 +11507,10 @@ PrefabInstance:
     - target: {fileID: 2324244528833873060, guid: 9a44c12d036227243b47c7e671d3bb36, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2755464985482301819, guid: 9a44c12d036227243b47c7e671d3bb36, type: 3}
+      propertyPath: _timeBetweenTransforms
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 4056907519505539439, guid: 9a44c12d036227243b47c7e671d3bb36, type: 3}
       propertyPath: _playerCamera
