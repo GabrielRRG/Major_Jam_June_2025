@@ -129,7 +129,6 @@ public class Gun : Tool
 
     private void Shoot()
     {
-        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().animator.SetTrigger("Attack");
         for (int i = 0; i < gunData.bulletsPerShot; i++)
         {
             Vector3 spreadDir = transform.forward + UnityEngine.Random.insideUnitSphere * gunData.spread;
@@ -137,12 +136,14 @@ public class Gun : Tool
             bullet.damage = gunData.damage;
             bullet.enemyBullet = _enemyGun;
             Rigidbody rb = bullet.GetComponent<Rigidbody>();
+            spreadDir.y = 0;
             if (rb != null) rb.linearVelocity = spreadDir.normalized * 30;
         }
-        _ammoLeft -= gunData.bulletsPerShot; //We subtract the amount of bullets used!
+        _ammoLeft -= gunData.bulletsPerShot;
 
         if (!_enemyGun)
         {
+            GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().animator.SetTrigger("Attack");
             AudioPlayer soundSFX = AudioManager.Instance.GetAudioPlayer("SoundSFX");
             soundSFX.PlayAudioOnce((SoundTypes)SoundTypes.ToObject(typeof(SoundTypes), UnityEngine.Random.Range(3,5)));
             _ammoCountText.text = _ammoLeft + "/" + _magazineSize;
