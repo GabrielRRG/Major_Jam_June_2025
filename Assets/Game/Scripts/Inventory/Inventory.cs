@@ -61,7 +61,7 @@ public sealed class Inventory : MonoBehaviour
     {
         if (!PlayerPrefs.HasKey(PREFS_BACKPACK))
         {
-            Debug.Log("Inventory: данных для загрузки нет.");
+            Debug.Log("Inventory: no data to load.");
             return;
         }
 
