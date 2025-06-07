@@ -3,6 +3,8 @@ using UnityEngine.AI;
 
 public class EnemyAIBase : MonoBehaviour
 {
+    public EnemyRoomManager roomManager;
+
     [Header("Patrol Settings")] [Tooltip("A list of patrol points (which AI will walk on).")] [SerializeField]
     protected Transform[] _patrolPoints;
 
@@ -31,13 +33,14 @@ public class EnemyAIBase : MonoBehaviour
     [SerializeField]
     protected float _searchWaitTime = 3f;
 
+    public Transform playerTransform;
+    protected Vector3 lastKnownPlayerPos;
     protected NavMeshAgent _agent;
-    protected Transform _playerTransform;
     protected EnemyState _currentState = EnemyState.Patrol;
     protected int _currentPatrolIndex = 0;
     protected float _waitTimer = 0f;
-    protected Vector3 _lastKnownPlayerPos;
     protected bool _playerInSight = false;
+    protected Animator _animator;
 
     protected enum EnemyState
     {
@@ -48,11 +51,12 @@ public class EnemyAIBase : MonoBehaviour
 
     protected virtual void Start()
     {
+        _animator = gameObject.GetComponentInChildren<Animator>();
         _agent = GetComponent<NavMeshAgent>();
         _agent.updateRotation = false;
         GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
         if (playerObj != null)
-            _playerTransform = playerObj.transform;
+            playerTransform = playerObj.transform;
         else
             Debug.LogError("Player object not found. Make sure the player has the tag 'Player'.");
         _currentState = EnemyState.Patrol;
@@ -90,6 +94,12 @@ public class EnemyAIBase : MonoBehaviour
 
                 break;
         }
+        
+        Vector3 moveDirection = _agent.desiredVelocity.normalized;
+        Vector3 worldMove = new Vector3(moveDirection.x, 0f, moveDirection.z);
+        Vector3 localMove = transform.InverseTransformDirection(worldMove);
+        _animator.SetFloat("XDirection", localMove.x, dampTime: 0.1f, deltaTime: Time.deltaTime);
+        _animator.SetFloat("YDirection", localMove.z, dampTime: 0.1f, deltaTime: Time.deltaTime);
     }
 
     // --- PATROL ---
@@ -114,36 +124,26 @@ public class EnemyAIBase : MonoBehaviour
     // --- CHASE ---
     protected virtual void HandleChase()
     {
-        if (_playerTransform == null)
-            return;
+        if(playerTransform == null) return;
+        _agent.SetDestination(lastKnownPlayerPos);
 
-        _agent.SetDestination(_playerTransform.position);
+        RotateTowards(lastKnownPlayerPos);
 
-        RotateTowards(_playerTransform.position);
-
-        if (PlayerStillVisible())
+        if (!PlayerStillVisible())
         {
-            _lastKnownPlayerPos = _playerTransform.position;
-        }
-        else
-        {
-            _lastKnownPlayerPos = _playerTransform.position;
             EnterSearchState();
         }
     }
 
     private void RotateTowards(Vector3 target)
     {
-        if (target == null)
-            return;
-
         Vector3 direction = target - transform.position;
         direction.y = 0;
 
         if (direction.sqrMagnitude > 0.001f)
         {
             Quaternion targetRotation = Quaternion.LookRotation(direction);
-            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 100f);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 15);
         }
     }
 
@@ -153,7 +153,7 @@ public class EnemyAIBase : MonoBehaviour
     {
         if (!_agent.pathPending && _agent.remainingDistance < 1.1f)
         {
-            RotateTowards(_lastKnownPlayerPos);
+            RotateTowards(lastKnownPlayerPos);
 
             _waitTimer += Time.deltaTime;
 
@@ -179,9 +179,9 @@ public class EnemyAIBase : MonoBehaviour
 
     protected virtual void EnterChaseState()
     {
+        Debug.Log("Entering chase state");
         _currentState = EnemyState.Chase;
         _agent.speed = _chaseSpeed;
-        _playerInSight = true;
     }
 
     protected virtual void EnterSearchState()
@@ -189,52 +189,80 @@ public class EnemyAIBase : MonoBehaviour
         _currentState = EnemyState.Search;
         _agent.speed = _chaseSpeed;
         _waitTimer = 0f;
-        _agent.SetDestination(_lastKnownPlayerPos);
+        _agent.SetDestination(lastKnownPlayerPos);
     }
 
     // --- CHECK PLAYER DETECTION ---
     protected virtual bool CheckForPlayer()
     {
-        if (_playerTransform == null)
+        if (playerTransform == null)
             return false;
 
-        Vector3 directionToPlayer = _playerTransform.position - transform.position;
+        Vector3 directionToPlayer = playerTransform.position - transform.position;
         float distanceToPlayer = directionToPlayer.magnitude;
+        float angleToPlayer = Vector3.Angle(transform.forward, directionToPlayer);
         float closeRadius = 2f;
         Collider[] hits = Physics.OverlapSphere(transform.position, closeRadius, _playerMask);
-        foreach (var hit in hits)
+        foreach (var currentHit in hits)
         {
             Vector3 origin = transform.position + Vector3.up * 1.5f;
-            Vector3 target = hit.transform.position + Vector3.up * 0.5f;
+            Vector3 target = currentHit.transform.position + Vector3.up * 0.5f;
             Vector3 dir = (target - origin).normalized;
             float dist = Vector3.Distance(origin, target);
 
             if (!Physics.Raycast(origin, dir, dist, _obstacleMask))
             {
                 Debug.Log("Player detected in close range");
-                return true;
+                _playerInSight = true;
+                roomManager.SetAlarm(lastKnownPlayerPos);
             }
-        }
-        
-        if (distanceToPlayer > _viewDistance)
-            return false;
-
-        float angleToPlayer = Vector3.Angle(transform.forward, directionToPlayer);
-        if (angleToPlayer > _viewAngle)
-            return false;
-
-        Vector3 eye = transform.position + Vector3.up * 1.5f;
-        Vector3 targetPoint = _playerTransform.position + Vector3.up * 0.5f;
-        Vector3 rayDir = (targetPoint - eye).normalized;
-
-        if (Physics.Raycast(eye, rayDir, out RaycastHit rayHit, _viewDistance))
-        {
-            if (((1 << rayHit.collider.gameObject.layer) & _playerMask) != 0)
+            else
             {
-                Debug.Log("Player sighted");
-                return true;
+                _playerInSight = false;
             }
         }
+        if (distanceToPlayer <= _viewDistance && angleToPlayer <= _viewAngle)
+        {
+            Vector3 eye = transform.position + Vector3.up * 1.5f;
+            Vector3 targetPoint = playerTransform.position + Vector3.up * 0.5f;
+            Vector3 rayDir = (targetPoint - eye).normalized;
+
+            if (Physics.Raycast(eye, rayDir, out RaycastHit hit, _viewDistance, _playerMask))
+            {
+                float distToPlayer = Vector3.Distance(eye, hit.point);
+
+                if (!Physics.Raycast(eye, rayDir, distToPlayer, _obstacleMask))
+                {
+                    _playerInSight = true;
+                    roomManager.SetAlarm(lastKnownPlayerPos);
+                }
+                else
+                {
+                    _playerInSight = false;
+                }
+            }
+            else
+            {
+                _playerInSight = false;
+            }
+        }
+        else
+        {
+            _playerInSight = false;
+        }
+
+        if (_playerInSight)
+        {
+            lastKnownPlayerPos = playerTransform.position;
+            return true;
+        }
+
+        if (roomManager.alarm)
+        {
+            lastKnownPlayerPos = roomManager.alarmPosition;
+            return true;
+        }
+
 
         return false;
     }
@@ -259,8 +287,8 @@ public class EnemyAIBase : MonoBehaviour
         Gizmos.DrawRay(transform.position, rightBoundary * _viewDistance);
 
         Gizmos.color = Color.red;
-        Gizmos.DrawLine(_lastKnownPlayerPos + Vector3.up * 0.5f, _lastKnownPlayerPos + Vector3.down * 0.5f);
-        Gizmos.DrawLine(_lastKnownPlayerPos + Vector3.left * 0.5f, _lastKnownPlayerPos + Vector3.right * 0.5f);
+        Gizmos.DrawLine(lastKnownPlayerPos + Vector3.up * 0.5f, lastKnownPlayerPos + Vector3.down * 0.5f);
+        Gizmos.DrawLine(lastKnownPlayerPos + Vector3.left * 0.5f, lastKnownPlayerPos + Vector3.right * 0.5f);
 
         Gizmos.color = Color.magenta;
         Gizmos.DrawWireSphere(transform.position, 2f);

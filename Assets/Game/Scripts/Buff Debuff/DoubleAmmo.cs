@@ -3,22 +3,21 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Buffs | Debuffs/DoubleAmmo")]
 public class DoubleAmmo : BuffDebuff
 {
-    public AllGuns allGunsSO;
-    [Header("Buff Settings")]
-    public int multiplier = 2;
+    int originalAmmo;
     public override void Apply(GameObject target)
     {
-        foreach (GunData gunData in allGunsSO.allGuns)
+        foreach (Gun gun in target.GetComponentsInChildren<Gun>())
         {
-            gunData.magazineCap *= multiplier;
+            originalAmmo = gun._magazineSize;
+            gun._magazineSize *= 2;
         }
     }
 
     public override void Remove(GameObject target)
     {
-        foreach (GunData gunData in allGunsSO.allGuns)
+        foreach (Gun gun in target.GetComponentsInChildren<Gun>())
         {
-            gunData.magazineCap /= multiplier;
+            gun._magazineSize = originalAmmo;
         }
     }
 }

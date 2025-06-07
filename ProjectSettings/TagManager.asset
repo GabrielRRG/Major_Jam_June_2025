@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 3
   tags:
   - Backpack
+  - Inventory
+  - UIBackground
+  - Enemy
+  - Animal
   layers:
   - Default
   - TransparentFX
@@ -15,7 +19,7 @@ TagManager:
   - Ground
   - Player
   - Ignore Bullets
-  - 
+  - Walls
   - 
   - 
   - 
