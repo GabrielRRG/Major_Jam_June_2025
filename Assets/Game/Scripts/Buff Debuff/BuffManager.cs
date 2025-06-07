@@ -97,7 +97,7 @@ public class BuffManager : MonoBehaviour
             _effect.Remove(target);
         if (target.CompareTag("Player"))
         {
-            if(target.GetComponentInChildren<Gun>()) target.GetComponentInChildren<Gun>().ShowGunUI();
+            //if(target.GetComponentInChildren<Gun>()) target.GetComponentInChildren<Gun>().ShowGunUI();
             target.GetComponent<CharacterHealth>().UpdateSlider();
         }
         print($"Removing {_effect.effectName} from {target.name}");
