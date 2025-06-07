@@ -6,7 +6,11 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<<< HEAD:Assets/Game/3D Assets/Characters/MC_Human/Animation/ANM_Human_Pistol_StrafeLeft.anim
   m_Name: ANM_Human_Pistol_StrafeLeft
+========
+  m_Name: ANM_Human_Pistol_StrafeRight
+>>>>>>>> EnemyAI:Assets/Game/3D Assets/Characters/MC_Human/Animation/ANM_Human_Pistol_StrafeRight.anim
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -13769,7 +13773,7 @@ AnimationClip:
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
     m_StopTime: 0.5666667
-    m_OrientationOffsetY: -20
+    m_OrientationOffsetY: 10.5
     m_Level: 0
     m_CycleOffset: 0
     m_HasAdditiveReferencePose: 0
@@ -13778,7 +13782,7 @@ AnimationClip:
     m_LoopBlendOrientation: 1
     m_LoopBlendPositionY: 0
     m_LoopBlendPositionXZ: 0
-    m_KeepOriginalOrientation: 0
+    m_KeepOriginalOrientation: 1
     m_KeepOriginalPositionY: 1
     m_KeepOriginalPositionXZ: 0
     m_HeightFromFeet: 0

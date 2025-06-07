@@ -171,10 +171,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MDL_E_Jungle_Block_02 (5)
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: e7050c67deff2cc48986073cb7c5430b, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -341,10 +337,6 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 281855664364225751, guid: eea65d09b0678884c841601396cf20d3, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: eea65d09b0678884c841601396cf20d3, type: 3}
       propertyPath: m_Name
       value: MDL_E_LVL_Temple_Tunnel_01 (5)
@@ -353,17 +345,9 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: eea65d09b0678884c841601396cf20d3, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2997332575433746228, guid: eea65d09b0678884c841601396cf20d3, type: 3}
       propertyPath: m_Layer
       value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 2997332575433746228, guid: eea65d09b0678884c841601396cf20d3, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -539,10 +523,6 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e7050c67deff2cc48986073cb7c5430b, type: 3}
       propertyPath: m_Name
       value: MDL_E_Jungle_Block_02 (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: e7050c67deff2cc48986073cb7c5430b, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1014,10 +994,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MDL_E_LVL_Jungle_Tunnel_01 (27)
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 7da79fa76d6e08e4ba2f0a9ce2a44712, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1087,10 +1063,6 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7da79fa76d6e08e4ba2f0a9ce2a44712, type: 3}
       propertyPath: m_Name
       value: MDL_E_LVL_Jungle_Tunnel_01 (33)
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 7da79fa76d6e08e4ba2f0a9ce2a44712, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1246,10 +1218,6 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7da79fa76d6e08e4ba2f0a9ce2a44712, type: 3}
       propertyPath: m_Name
       value: MDL_E_LVL_Jungle_Tunnel_01 (50)
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 7da79fa76d6e08e4ba2f0a9ce2a44712, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1450,10 +1418,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MDL_E_LVL_Jungle_Tunnel_01 (24)
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 7da79fa76d6e08e4ba2f0a9ce2a44712, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1580,10 +1544,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MDL_E_Jungle_Block_01
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 100e7a65caa656e4e82ea607a4f936cf, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1628,7 +1588,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 483.5996, y: 173.4}
+  m_AnchoredPosition: {x: 483.6, y: 173.4}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &240195194
@@ -1690,10 +1650,6 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7da79fa76d6e08e4ba2f0a9ce2a44712, type: 3}
       propertyPath: m_Name
       value: MDL_E_LVL_Jungle_Tunnel_01 (32)
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 7da79fa76d6e08e4ba2f0a9ce2a44712, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1788,10 +1744,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MDL_E_LVL_Jungle_Tunnel_01 (10)
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 7da79fa76d6e08e4ba2f0a9ce2a44712, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1854,10 +1806,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MDL_E_Jungle_Block_04 (8)
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 23ee5560790c0ce4e9edc7240d4c7bab, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1919,10 +1867,6 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 100e7a65caa656e4e82ea607a4f936cf, type: 3}
       propertyPath: m_Name
       value: MDL_E_Jungle_Block_01 (5)
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 100e7a65caa656e4e82ea607a4f936cf, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2225,10 +2169,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MDL_E_Jungle_Block_04 (11)
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 23ee5560790c0ce4e9edc7240d4c7bab, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2299,10 +2239,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MDL_E_LVL_Jungle_Tunnel_01 (44)
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 7da79fa76d6e08e4ba2f0a9ce2a44712, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2364,10 +2300,6 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7da79fa76d6e08e4ba2f0a9ce2a44712, type: 3}
       propertyPath: m_Name
       value: MDL_E_LVL_Jungle_Tunnel_01 (12)
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 7da79fa76d6e08e4ba2f0a9ce2a44712, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2602,10 +2534,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MDL_E_LVL_Jungle_Tunnel_01 (15)
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 7da79fa76d6e08e4ba2f0a9ce2a44712, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2765,10 +2693,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MDL_E_LVL_Jungle_Tunnel_01 (21)
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 7da79fa76d6e08e4ba2f0a9ce2a44712, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2831,10 +2755,6 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 281855664364225751, guid: eea65d09b0678884c841601396cf20d3, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: eea65d09b0678884c841601396cf20d3, type: 3}
       propertyPath: m_Name
       value: MDL_E_LVL_Temple_Tunnel_01 (2)
@@ -2843,17 +2763,9 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: eea65d09b0678884c841601396cf20d3, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2997332575433746228, guid: eea65d09b0678884c841601396cf20d3, type: 3}
       propertyPath: m_Layer
       value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 2997332575433746228, guid: eea65d09b0678884c841601396cf20d3, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2916,10 +2828,6 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7da79fa76d6e08e4ba2f0a9ce2a44712, type: 3}
       propertyPath: m_Name
       value: MDL_E_LVL_Jungle_Tunnel_01 (5)
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 7da79fa76d6e08e4ba2f0a9ce2a44712, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3062,10 +2970,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MDL_E_LVL_Jungle_Tunnel_01 (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 7da79fa76d6e08e4ba2f0a9ce2a44712, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3158,10 +3062,6 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 23ee5560790c0ce4e9edc7240d4c7bab, type: 3}
       propertyPath: m_Name
       value: MDL_E_Jungle_Block_04 (12)
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 23ee5560790c0ce4e9edc7240d4c7bab, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3256,10 +3156,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MDL_E_Jungle_Block_02 (4)
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: e7050c67deff2cc48986073cb7c5430b, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3321,10 +3217,6 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 100e7a65caa656e4e82ea607a4f936cf, type: 3}
       propertyPath: m_Name
       value: MDL_E_Jungle_Block_01 (11)
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 100e7a65caa656e4e82ea607a4f936cf, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3441,10 +3333,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MDL_E_Jungle_Block_02 (9)
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: e7050c67deff2cc48986073cb7c5430b, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3507,10 +3395,6 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 281855664364225751, guid: eea65d09b0678884c841601396cf20d3, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: eea65d09b0678884c841601396cf20d3, type: 3}
       propertyPath: m_Name
       value: MDL_E_LVL_Temple_Tunnel_01
@@ -3519,17 +3403,9 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: eea65d09b0678884c841601396cf20d3, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2997332575433746228, guid: eea65d09b0678884c841601396cf20d3, type: 3}
       propertyPath: m_Layer
       value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 2997332575433746228, guid: eea65d09b0678884c841601396cf20d3, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3624,10 +3500,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MDL_E_LVL_Jungle_Tunnel_01 (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 7da79fa76d6e08e4ba2f0a9ce2a44712, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3720,10 +3592,6 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 88eb96f5ccd74484292da83972622dc9, type: 3}
       propertyPath: m_Name
       value: MDL_E_Jungle_Block_03 (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 88eb96f5ccd74484292da83972622dc9, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3866,10 +3734,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MDL_E_LVL_Jungle_Tunnel_01 (17)
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 7da79fa76d6e08e4ba2f0a9ce2a44712, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3963,10 +3827,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MDL_E_Jungle_Block_02
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: e7050c67deff2cc48986073cb7c5430b, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4029,17 +3889,9 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: -7395704305543789238, guid: d0dacf0974cd8754dbf11ec323eee208, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: -1244234205430477131, guid: d0dacf0974cd8754dbf11ec323eee208, type: 3}
       propertyPath: m_Layer
       value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: -1244234205430477131, guid: d0dacf0974cd8754dbf11ec323eee208, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d0dacf0974cd8754dbf11ec323eee208, type: 3}
       propertyPath: m_Name
@@ -4049,33 +3901,17 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: d0dacf0974cd8754dbf11ec323eee208, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2596957926113402938, guid: d0dacf0974cd8754dbf11ec323eee208, type: 3}
       propertyPath: m_Layer
       value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 2596957926113402938, guid: d0dacf0974cd8754dbf11ec323eee208, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7917349904687423284, guid: d0dacf0974cd8754dbf11ec323eee208, type: 3}
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 7917349904687423284, guid: d0dacf0974cd8754dbf11ec323eee208, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7975042476016782316, guid: d0dacf0974cd8754dbf11ec323eee208, type: 3}
       propertyPath: m_Layer
       value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 7975042476016782316, guid: d0dacf0974cd8754dbf11ec323eee208, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4214,10 +4050,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MDL_E_Jungle_Block_01 (7)
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 100e7a65caa656e4e82ea607a4f936cf, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4287,10 +4119,6 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7da79fa76d6e08e4ba2f0a9ce2a44712, type: 3}
       propertyPath: m_Name
       value: MDL_E_LVL_Jungle_Tunnel_01 (30)
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 7da79fa76d6e08e4ba2f0a9ce2a44712, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4459,10 +4287,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MDL_E_Jungle_Block_04 (5)
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 23ee5560790c0ce4e9edc7240d4c7bab, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4560,17 +4384,9 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: -466329591000292508, guid: e6a61d9a648170c429452b96d5b0c0c9, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 281855664364225751, guid: e6a61d9a648170c429452b96d5b0c0c9, type: 3}
       propertyPath: m_Layer
       value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 281855664364225751, guid: e6a61d9a648170c429452b96d5b0c0c9, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e6a61d9a648170c429452b96d5b0c0c9, type: 3}
       propertyPath: m_Name
@@ -4580,25 +4396,13 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: e6a61d9a648170c429452b96d5b0c0c9, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2997332575433746228, guid: e6a61d9a648170c429452b96d5b0c0c9, type: 3}
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 2997332575433746228, guid: e6a61d9a648170c429452b96d5b0c0c9, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7103153012782714218, guid: e6a61d9a648170c429452b96d5b0c0c9, type: 3}
       propertyPath: m_Layer
       value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 7103153012782714218, guid: e6a61d9a648170c429452b96d5b0c0c9, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4805,10 +4609,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MDL_E_Jungle_Block_03 (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 88eb96f5ccd74484292da83972622dc9, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4871,10 +4671,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MDL_E_Jungle_Block_04 (16)
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 23ee5560790c0ce4e9edc7240d4c7bab, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4936,10 +4732,6 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 23ee5560790c0ce4e9edc7240d4c7bab, type: 3}
       propertyPath: m_Name
       value: MDL_E_Jungle_Block_04 (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 23ee5560790c0ce4e9edc7240d4c7bab, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5034,10 +4826,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MDL_E_Jungle_Block_04 (17)
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 23ee5560790c0ce4e9edc7240d4c7bab, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5098,11 +4886,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1443613897919961046, guid: e9514cee2cb3763448bb23313211c058, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1443613897919961046, guid: e9514cee2cb3763448bb23313211c058, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5587446198773130802, guid: e9514cee2cb3763448bb23313211c058, type: 3}
       propertyPath: roomManager
@@ -5122,7 +4910,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6030370489567687667, guid: e9514cee2cb3763448bb23313211c058, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5242,10 +5030,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MDL_E_LVL_Jungle_Tunnel_01 (28)
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 7da79fa76d6e08e4ba2f0a9ce2a44712, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5312,10 +5096,6 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 281855664364225751, guid: eea65d09b0678884c841601396cf20d3, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: eea65d09b0678884c841601396cf20d3, type: 3}
       propertyPath: m_Name
       value: MDL_E_LVL_Temple_Tunnel_01 (6)
@@ -5324,17 +5104,9 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: eea65d09b0678884c841601396cf20d3, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2997332575433746228, guid: eea65d09b0678884c841601396cf20d3, type: 3}
       propertyPath: m_Layer
       value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 2997332575433746228, guid: eea65d09b0678884c841601396cf20d3, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5397,10 +5169,6 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 100e7a65caa656e4e82ea607a4f936cf, type: 3}
       propertyPath: m_Name
       value: MDL_E_Jungle_Block_01 (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 100e7a65caa656e4e82ea607a4f936cf, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5467,10 +5235,6 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7da79fa76d6e08e4ba2f0a9ce2a44712, type: 3}
       propertyPath: m_Name
       value: MDL_E_LVL_Jungle_Tunnel_01 (20)
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 7da79fa76d6e08e4ba2f0a9ce2a44712, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5542,10 +5306,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MDL_E_LVL_Jungle_Tunnel_01 (41)
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 7da79fa76d6e08e4ba2f0a9ce2a44712, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5607,10 +5367,6 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 100e7a65caa656e4e82ea607a4f936cf, type: 3}
       propertyPath: m_Name
       value: MDL_E_Jungle_Block_01 (10)
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 100e7a65caa656e4e82ea607a4f936cf, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5786,10 +5542,6 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7da79fa76d6e08e4ba2f0a9ce2a44712, type: 3}
       propertyPath: m_Name
       value: MDL_E_LVL_Jungle_Tunnel_01 (8)
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 7da79fa76d6e08e4ba2f0a9ce2a44712, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5993,10 +5745,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MDL_E_Jungle_Block_02 (3)
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: e7050c67deff2cc48986073cb7c5430b, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6075,10 +5823,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MDL_E_LVL_Jungle_Tunnel_01 (4)
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 7da79fa76d6e08e4ba2f0a9ce2a44712, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6141,17 +5885,9 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: -1244234205430477131, guid: fd0f4c377ed3e954c8b6cb6e672bd31d, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: -652209905907201759, guid: fd0f4c377ed3e954c8b6cb6e672bd31d, type: 3}
       propertyPath: m_Layer
       value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: -652209905907201759, guid: fd0f4c377ed3e954c8b6cb6e672bd31d, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: fd0f4c377ed3e954c8b6cb6e672bd31d, type: 3}
       propertyPath: m_Name
@@ -6161,17 +5897,9 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: fd0f4c377ed3e954c8b6cb6e672bd31d, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2596957926113402938, guid: fd0f4c377ed3e954c8b6cb6e672bd31d, type: 3}
       propertyPath: m_Layer
       value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 2596957926113402938, guid: fd0f4c377ed3e954c8b6cb6e672bd31d, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6407,10 +6135,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MDL_E_LVL_Jungle_Tunnel_01 (26)
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 7da79fa76d6e08e4ba2f0a9ce2a44712, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6552,10 +6276,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MDL_E_LVL_Jungle_Tunnel_01 (16)
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 7da79fa76d6e08e4ba2f0a9ce2a44712, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6617,10 +6337,6 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7da79fa76d6e08e4ba2f0a9ce2a44712, type: 3}
       propertyPath: m_Name
       value: MDL_E_LVL_Jungle_Tunnel_01
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 7da79fa76d6e08e4ba2f0a9ce2a44712, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6691,10 +6407,6 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7da79fa76d6e08e4ba2f0a9ce2a44712, type: 3}
       propertyPath: m_Name
       value: MDL_E_LVL_Jungle_Tunnel_01 (46)
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 7da79fa76d6e08e4ba2f0a9ce2a44712, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6774,10 +6486,6 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 281855664364225751, guid: eea65d09b0678884c841601396cf20d3, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: eea65d09b0678884c841601396cf20d3, type: 3}
       propertyPath: m_Name
       value: MDL_E_LVL_Temple_Tunnel_01 (4)
@@ -6786,17 +6494,9 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: eea65d09b0678884c841601396cf20d3, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2997332575433746228, guid: eea65d09b0678884c841601396cf20d3, type: 3}
       propertyPath: m_Layer
       value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 2997332575433746228, guid: eea65d09b0678884c841601396cf20d3, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6870,10 +6570,6 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 100e7a65caa656e4e82ea607a4f936cf, type: 3}
       propertyPath: m_Name
       value: MDL_E_Jungle_Block_01 (4)
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 100e7a65caa656e4e82ea607a4f936cf, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6976,10 +6672,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MDL_E_LVL_Jungle_Tunnel_01 (29)
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 7da79fa76d6e08e4ba2f0a9ce2a44712, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7049,10 +6741,6 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7da79fa76d6e08e4ba2f0a9ce2a44712, type: 3}
       propertyPath: m_Name
       value: MDL_E_LVL_Jungle_Tunnel_01 (43)
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 7da79fa76d6e08e4ba2f0a9ce2a44712, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7493,10 +7181,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MDL_E_LVL_Jungle_Tunnel_01 (11)
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 7da79fa76d6e08e4ba2f0a9ce2a44712, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7559,17 +7243,9 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: -1244234205430477131, guid: fd0f4c377ed3e954c8b6cb6e672bd31d, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: -652209905907201759, guid: fd0f4c377ed3e954c8b6cb6e672bd31d, type: 3}
       propertyPath: m_Layer
       value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: -652209905907201759, guid: fd0f4c377ed3e954c8b6cb6e672bd31d, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: fd0f4c377ed3e954c8b6cb6e672bd31d, type: 3}
       propertyPath: m_Name
@@ -7579,17 +7255,9 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: fd0f4c377ed3e954c8b6cb6e672bd31d, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2596957926113402938, guid: fd0f4c377ed3e954c8b6cb6e672bd31d, type: 3}
       propertyPath: m_Layer
       value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 2596957926113402938, guid: fd0f4c377ed3e954c8b6cb6e672bd31d, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7801,10 +7469,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MDL_E_LVL_Jungle_Tunnel_01 (22)
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 7da79fa76d6e08e4ba2f0a9ce2a44712, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7901,10 +7565,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MDL_E_Jungle_Block_01 (8)
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 100e7a65caa656e4e82ea607a4f936cf, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7966,10 +7626,6 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7da79fa76d6e08e4ba2f0a9ce2a44712, type: 3}
       propertyPath: m_Name
       value: MDL_E_LVL_Jungle_Tunnel_01 (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 7da79fa76d6e08e4ba2f0a9ce2a44712, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8632,25 +8288,13 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: -8455728280606582528, guid: ba91b24aa7fbd9c4b9165608e901230d, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: -1244234205430477131, guid: ba91b24aa7fbd9c4b9165608e901230d, type: 3}
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: -1244234205430477131, guid: ba91b24aa7fbd9c4b9165608e901230d, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: -652209905907201759, guid: ba91b24aa7fbd9c4b9165608e901230d, type: 3}
       propertyPath: m_Layer
       value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: -652209905907201759, guid: ba91b24aa7fbd9c4b9165608e901230d, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ba91b24aa7fbd9c4b9165608e901230d, type: 3}
       propertyPath: m_Name
@@ -8660,17 +8304,9 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: ba91b24aa7fbd9c4b9165608e901230d, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7917349904687423284, guid: ba91b24aa7fbd9c4b9165608e901230d, type: 3}
       propertyPath: m_Layer
       value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 7917349904687423284, guid: ba91b24aa7fbd9c4b9165608e901230d, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8734,10 +8370,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MDL_E_Jungle_Block_04 (3)
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 23ee5560790c0ce4e9edc7240d4c7bab, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8799,10 +8431,6 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 23ee5560790c0ce4e9edc7240d4c7bab, type: 3}
       propertyPath: m_Name
       value: MDL_E_Jungle_Block_04
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 23ee5560790c0ce4e9edc7240d4c7bab, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8885,46 +8513,6 @@ PrefabInstance:
     - target: {fileID: 6030370489567687667, guid: e9514cee2cb3763448bb23313211c058, type: 3}
       propertyPath: m_Name
       value: RifleEnemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 8853415267757614660, guid: e9514cee2cb3763448bb23313211c058, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.105
-      objectReference: {fileID: 0}
-    - target: {fileID: 8853415267757614660, guid: e9514cee2cb3763448bb23313211c058, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.061
-      objectReference: {fileID: 0}
-    - target: {fileID: 8853415267757614660, guid: e9514cee2cb3763448bb23313211c058, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.182
-      objectReference: {fileID: 0}
-    - target: {fileID: 8853415267757614660, guid: e9514cee2cb3763448bb23313211c058, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.43536645
-      objectReference: {fileID: 0}
-    - target: {fileID: 8853415267757614660, guid: e9514cee2cb3763448bb23313211c058, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.5234477
-      objectReference: {fileID: 0}
-    - target: {fileID: 8853415267757614660, guid: e9514cee2cb3763448bb23313211c058, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.64007384
-      objectReference: {fileID: 0}
-    - target: {fileID: 8853415267757614660, guid: e9514cee2cb3763448bb23313211c058, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.35603952
-      objectReference: {fileID: 0}
-    - target: {fileID: 8853415267757614660, guid: e9514cee2cb3763448bb23313211c058, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -65.723
-      objectReference: {fileID: 0}
-    - target: {fileID: 8853415267757614660, guid: e9514cee2cb3763448bb23313211c058, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 153.322
-      objectReference: {fileID: 0}
-    - target: {fileID: 8853415267757614660, guid: e9514cee2cb3763448bb23313211c058, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: -61.136
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9160,10 +8748,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3a4b3c3778f562e48afa5a947db4d5c3, type: 2}
   - {fileID: 11400000, guid: fb11b420c91a9214b94cb73947c5b304, type: 2}
   - {fileID: 11400000, guid: 3b86536e84f20fa4ca15c8af9159ac49, type: 2}
-  _minDuration: 1
-  _maxDuration: 2
+  _minDuration: 10
+  _maxDuration: 20
   applyForPlayer: 1
-  applyForEnemy: 1
+  applyForEnemy: 0
 --- !u!4 &1169918552
 Transform:
   m_ObjectHideFlags: 0
@@ -9231,10 +8819,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MDL_E_Jungle_Block_04 (14)
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 23ee5560790c0ce4e9edc7240d4c7bab, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9296,10 +8880,6 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 88eb96f5ccd74484292da83972622dc9, type: 3}
       propertyPath: m_Name
       value: MDL_E_Jungle_Block_03 (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 88eb96f5ccd74484292da83972622dc9, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9363,17 +8943,9 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: -7395704305543789238, guid: d0dacf0974cd8754dbf11ec323eee208, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: -1244234205430477131, guid: d0dacf0974cd8754dbf11ec323eee208, type: 3}
       propertyPath: m_Layer
       value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: -1244234205430477131, guid: d0dacf0974cd8754dbf11ec323eee208, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d0dacf0974cd8754dbf11ec323eee208, type: 3}
       propertyPath: m_Name
@@ -9383,33 +8955,17 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: d0dacf0974cd8754dbf11ec323eee208, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2596957926113402938, guid: d0dacf0974cd8754dbf11ec323eee208, type: 3}
       propertyPath: m_Layer
       value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 2596957926113402938, guid: d0dacf0974cd8754dbf11ec323eee208, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7917349904687423284, guid: d0dacf0974cd8754dbf11ec323eee208, type: 3}
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 7917349904687423284, guid: d0dacf0974cd8754dbf11ec323eee208, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7975042476016782316, guid: d0dacf0974cd8754dbf11ec323eee208, type: 3}
       propertyPath: m_Layer
       value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 7975042476016782316, guid: d0dacf0974cd8754dbf11ec323eee208, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9546,10 +9102,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MDL_E_LVL_Jungle_Tunnel_01 (48)
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 7da79fa76d6e08e4ba2f0a9ce2a44712, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9611,10 +9163,6 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 23ee5560790c0ce4e9edc7240d4c7bab, type: 3}
       propertyPath: m_Name
       value: MDL_E_Jungle_Block_04 (4)
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 23ee5560790c0ce4e9edc7240d4c7bab, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9719,10 +9267,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MDL_E_LVL_Jungle_Tunnel_01 (34)
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 7da79fa76d6e08e4ba2f0a9ce2a44712, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9798,10 +9342,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MDL_E_LVL_Jungle_Tunnel_01 (39)
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 7da79fa76d6e08e4ba2f0a9ce2a44712, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9864,17 +9404,9 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: -7395704305543789238, guid: d0dacf0974cd8754dbf11ec323eee208, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: -1244234205430477131, guid: d0dacf0974cd8754dbf11ec323eee208, type: 3}
       propertyPath: m_Layer
       value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: -1244234205430477131, guid: d0dacf0974cd8754dbf11ec323eee208, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d0dacf0974cd8754dbf11ec323eee208, type: 3}
       propertyPath: m_Name
@@ -9884,33 +9416,17 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: d0dacf0974cd8754dbf11ec323eee208, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2596957926113402938, guid: d0dacf0974cd8754dbf11ec323eee208, type: 3}
       propertyPath: m_Layer
       value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 2596957926113402938, guid: d0dacf0974cd8754dbf11ec323eee208, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7917349904687423284, guid: d0dacf0974cd8754dbf11ec323eee208, type: 3}
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 7917349904687423284, guid: d0dacf0974cd8754dbf11ec323eee208, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7975042476016782316, guid: d0dacf0974cd8754dbf11ec323eee208, type: 3}
       propertyPath: m_Layer
       value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 7975042476016782316, guid: d0dacf0974cd8754dbf11ec323eee208, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9981,10 +9497,6 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7da79fa76d6e08e4ba2f0a9ce2a44712, type: 3}
       propertyPath: m_Name
       value: MDL_E_LVL_Jungle_Tunnel_01 (45)
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 7da79fa76d6e08e4ba2f0a9ce2a44712, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10189,10 +9701,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MDL_E_Jungle_Block_04 (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 23ee5560790c0ce4e9edc7240d4c7bab, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10263,10 +9771,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MDL_E_LVL_Jungle_Tunnel_01 (49)
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 7da79fa76d6e08e4ba2f0a9ce2a44712, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10291,7 +9795,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8be243c2f0842e742996b734f1869bc4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.001
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8be243c2f0842e742996b734f1869bc4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -10329,25 +9833,13 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: -8455728280606582528, guid: 8be243c2f0842e742996b734f1869bc4, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: -1244234205430477131, guid: 8be243c2f0842e742996b734f1869bc4, type: 3}
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: -1244234205430477131, guid: 8be243c2f0842e742996b734f1869bc4, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: -652209905907201759, guid: 8be243c2f0842e742996b734f1869bc4, type: 3}
       propertyPath: m_Layer
       value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: -652209905907201759, guid: 8be243c2f0842e742996b734f1869bc4, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 8be243c2f0842e742996b734f1869bc4, type: 3}
       propertyPath: m_Name
@@ -10357,17 +9849,9 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 8be243c2f0842e742996b734f1869bc4, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2596957926113402938, guid: 8be243c2f0842e742996b734f1869bc4, type: 3}
       propertyPath: m_Layer
       value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 2596957926113402938, guid: 8be243c2f0842e742996b734f1869bc4, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10461,10 +9945,6 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7da79fa76d6e08e4ba2f0a9ce2a44712, type: 3}
       propertyPath: m_Name
       value: MDL_E_LVL_Jungle_Tunnel_01 (13)
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 7da79fa76d6e08e4ba2f0a9ce2a44712, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10570,10 +10050,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MDL_E_LVL_Jungle_Tunnel_01 (37)
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 7da79fa76d6e08e4ba2f0a9ce2a44712, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10636,10 +10112,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MDL_E_Jungle_Block_03 (4)
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 88eb96f5ccd74484292da83972622dc9, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10674,52 +10146,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1023923907}
     m_Modifications:
-    - target: {fileID: 496404453469860866, guid: 6e1ffb37d939d484db2dab0aa321e26c, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.17
-      objectReference: {fileID: 0}
-    - target: {fileID: 496404453469860866, guid: 6e1ffb37d939d484db2dab0aa321e26c, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.142
-      objectReference: {fileID: 0}
-    - target: {fileID: 496404453469860866, guid: 6e1ffb37d939d484db2dab0aa321e26c, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 496404453469860866, guid: 6e1ffb37d939d484db2dab0aa321e26c, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.52451694
-      objectReference: {fileID: 0}
-    - target: {fileID: 496404453469860866, guid: 6e1ffb37d939d484db2dab0aa321e26c, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.4742174
-      objectReference: {fileID: 0}
-    - target: {fileID: 496404453469860866, guid: 6e1ffb37d939d484db2dab0aa321e26c, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.524517
-      objectReference: {fileID: 0}
-    - target: {fileID: 496404453469860866, guid: 6e1ffb37d939d484db2dab0aa321e26c, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.47421715
-      objectReference: {fileID: 0}
-    - target: {fileID: 496404453469860866, guid: 6e1ffb37d939d484db2dab0aa321e26c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -95.766
-      objectReference: {fileID: 0}
-    - target: {fileID: 496404453469860866, guid: 6e1ffb37d939d484db2dab0aa321e26c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 496404453469860866, guid: 6e1ffb37d939d484db2dab0aa321e26c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 180
-      objectReference: {fileID: 0}
     - target: {fileID: 1943500469414843549, guid: 6e1ffb37d939d484db2dab0aa321e26c, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1943500469414843549, guid: 6e1ffb37d939d484db2dab0aa321e26c, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1943500469414843549, guid: 6e1ffb37d939d484db2dab0aa321e26c, type: 3}
+      propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5357998007734735391, guid: 6e1ffb37d939d484db2dab0aa321e26c, type: 3}
@@ -10770,6 +10206,14 @@ PrefabInstance:
       propertyPath: roomManager
       value: 
       objectReference: {fileID: 1685172548}
+    - target: {fileID: 7905776580687819836, guid: 6e1ffb37d939d484db2dab0aa321e26c, type: 3}
+      propertyPath: _roomManager
+      value: 
+      objectReference: {fileID: 1685172548}
+    - target: {fileID: 7905776580687819836, guid: 6e1ffb37d939d484db2dab0aa321e26c, type: 3}
+      propertyPath: _patrolPoints.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7905776580687819836, guid: 6e1ffb37d939d484db2dab0aa321e26c, type: 3}
       propertyPath: '_patrolPoints.Array.data[0]'
       value: 
@@ -11048,10 +10492,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MDL_E_Jungle_Block_01 (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 100e7a65caa656e4e82ea607a4f936cf, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11224,10 +10664,6 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7da79fa76d6e08e4ba2f0a9ce2a44712, type: 3}
       propertyPath: m_Name
       value: MDL_E_LVL_Jungle_Tunnel_01 (42)
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 7da79fa76d6e08e4ba2f0a9ce2a44712, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11470,10 +10906,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MDL_E_Jungle_Block_01 (9)
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 100e7a65caa656e4e82ea607a4f936cf, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11536,10 +10968,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MDL_E_Jungle_Block_04 (9)
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 23ee5560790c0ce4e9edc7240d4c7bab, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11601,10 +11029,6 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 23ee5560790c0ce4e9edc7240d4c7bab, type: 3}
       propertyPath: m_Name
       value: MDL_E_Jungle_Block_04 (7)
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 23ee5560790c0ce4e9edc7240d4c7bab, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11707,10 +11131,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MDL_E_LVL_Jungle_Tunnel_01 (47)
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 7da79fa76d6e08e4ba2f0a9ce2a44712, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11790,7 +11210,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7667737413779960101, guid: 662eb9affb675d84382494d3da9a7456, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.2
+      value: 31.718239
       objectReference: {fileID: 0}
     - target: {fileID: 7667737413779960101, guid: 662eb9affb675d84382494d3da9a7456, type: 3}
       propertyPath: m_LocalPosition.y
@@ -11798,7 +11218,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7667737413779960101, guid: 662eb9affb675d84382494d3da9a7456, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 6.6
+      value: 67.22253
       objectReference: {fileID: 0}
     - target: {fileID: 7667737413779960101, guid: 662eb9affb675d84382494d3da9a7456, type: 3}
       propertyPath: m_LocalRotation.w
@@ -11885,10 +11305,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MDL_E_Jungle_Block_01 (6)
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 100e7a65caa656e4e82ea607a4f936cf, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11950,10 +11366,6 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7da79fa76d6e08e4ba2f0a9ce2a44712, type: 3}
       propertyPath: m_Name
       value: MDL_E_LVL_Jungle_Tunnel_01 (7)
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 7da79fa76d6e08e4ba2f0a9ce2a44712, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12017,17 +11429,9 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: -466329591000292508, guid: e6a61d9a648170c429452b96d5b0c0c9, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 281855664364225751, guid: e6a61d9a648170c429452b96d5b0c0c9, type: 3}
       propertyPath: m_Layer
       value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 281855664364225751, guid: e6a61d9a648170c429452b96d5b0c0c9, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e6a61d9a648170c429452b96d5b0c0c9, type: 3}
       propertyPath: m_Name
@@ -12037,25 +11441,13 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: e6a61d9a648170c429452b96d5b0c0c9, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2997332575433746228, guid: e6a61d9a648170c429452b96d5b0c0c9, type: 3}
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 2997332575433746228, guid: e6a61d9a648170c429452b96d5b0c0c9, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7103153012782714218, guid: e6a61d9a648170c429452b96d5b0c0c9, type: 3}
       propertyPath: m_Layer
       value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 7103153012782714218, guid: e6a61d9a648170c429452b96d5b0c0c9, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12216,10 +11608,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MDL_E_LVL_Jungle_Tunnel_01 (23)
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 7da79fa76d6e08e4ba2f0a9ce2a44712, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12363,10 +11751,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MDL_E_Jungle_Block_04 (13)
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 23ee5560790c0ce4e9edc7240d4c7bab, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12436,10 +11820,6 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7da79fa76d6e08e4ba2f0a9ce2a44712, type: 3}
       propertyPath: m_Name
       value: MDL_E_LVL_Jungle_Tunnel_01 (36)
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 7da79fa76d6e08e4ba2f0a9ce2a44712, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12511,10 +11891,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MDL_E_LVL_Jungle_Tunnel_01 (31)
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 7da79fa76d6e08e4ba2f0a9ce2a44712, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12577,10 +11953,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MDL_E_Jungle_Block_03
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 88eb96f5ccd74484292da83972622dc9, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12642,10 +12014,6 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 100e7a65caa656e4e82ea607a4f936cf, type: 3}
       propertyPath: m_Name
       value: MDL_E_Jungle_Block_01 (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 100e7a65caa656e4e82ea607a4f936cf, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12957,10 +12325,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MDL_E_Jungle_Block_03 (5)
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 88eb96f5ccd74484292da83972622dc9, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13030,10 +12394,6 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7da79fa76d6e08e4ba2f0a9ce2a44712, type: 3}
       propertyPath: m_Name
       value: MDL_E_LVL_Jungle_Tunnel_01 (38)
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 7da79fa76d6e08e4ba2f0a9ce2a44712, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13112,10 +12472,6 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7da79fa76d6e08e4ba2f0a9ce2a44712, type: 3}
       propertyPath: m_Name
       value: MDL_E_LVL_Jungle_Tunnel_01 (6)
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 7da79fa76d6e08e4ba2f0a9ce2a44712, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13244,10 +12600,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MDL_E_Jungle_Block_02 (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: e7050c67deff2cc48986073cb7c5430b, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13348,10 +12700,6 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7da79fa76d6e08e4ba2f0a9ce2a44712, type: 3}
       propertyPath: m_Name
       value: MDL_E_LVL_Jungle_Tunnel_01 (40)
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 7da79fa76d6e08e4ba2f0a9ce2a44712, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13680,10 +13028,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MDL_E_LVL_Jungle_Tunnel_01 (14)
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 7da79fa76d6e08e4ba2f0a9ce2a44712, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13746,10 +13090,6 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 281855664364225751, guid: eea65d09b0678884c841601396cf20d3, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: eea65d09b0678884c841601396cf20d3, type: 3}
       propertyPath: m_Name
       value: MDL_E_LVL_Temple_Tunnel_01 (3)
@@ -13758,17 +13098,9 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: eea65d09b0678884c841601396cf20d3, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2997332575433746228, guid: eea65d09b0678884c841601396cf20d3, type: 3}
       propertyPath: m_Layer
       value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 2997332575433746228, guid: eea65d09b0678884c841601396cf20d3, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13921,10 +13253,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MDL_E_Jungle_Block_04 (15)
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 23ee5560790c0ce4e9edc7240d4c7bab, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14059,25 +13387,13 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: -8455728280606582528, guid: ba91b24aa7fbd9c4b9165608e901230d, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: -1244234205430477131, guid: ba91b24aa7fbd9c4b9165608e901230d, type: 3}
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: -1244234205430477131, guid: ba91b24aa7fbd9c4b9165608e901230d, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: -652209905907201759, guid: ba91b24aa7fbd9c4b9165608e901230d, type: 3}
       propertyPath: m_Layer
       value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: -652209905907201759, guid: ba91b24aa7fbd9c4b9165608e901230d, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ba91b24aa7fbd9c4b9165608e901230d, type: 3}
       propertyPath: m_Name
@@ -14087,17 +13403,9 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: ba91b24aa7fbd9c4b9165608e901230d, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7917349904687423284, guid: ba91b24aa7fbd9c4b9165608e901230d, type: 3}
       propertyPath: m_Layer
       value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 7917349904687423284, guid: ba91b24aa7fbd9c4b9165608e901230d, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14164,10 +13472,6 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7da79fa76d6e08e4ba2f0a9ce2a44712, type: 3}
       propertyPath: m_Name
       value: MDL_E_LVL_Jungle_Tunnel_01 (19)
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 7da79fa76d6e08e4ba2f0a9ce2a44712, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14371,10 +13675,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MDL_E_Jungle_Block_02 (8)
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: e7050c67deff2cc48986073cb7c5430b, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14444,10 +13744,6 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7da79fa76d6e08e4ba2f0a9ce2a44712, type: 3}
       propertyPath: m_Name
       value: MDL_E_LVL_Jungle_Tunnel_01 (35)
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 7da79fa76d6e08e4ba2f0a9ce2a44712, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14616,10 +13912,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MDL_E_Jungle_Block_01 (12)
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 100e7a65caa656e4e82ea607a4f936cf, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14682,10 +13974,6 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 281855664364225751, guid: eea65d09b0678884c841601396cf20d3, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: eea65d09b0678884c841601396cf20d3, type: 3}
       propertyPath: m_Name
       value: MDL_E_LVL_Temple_Tunnel_01 (1)
@@ -14694,17 +13982,9 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: eea65d09b0678884c841601396cf20d3, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2997332575433746228, guid: eea65d09b0678884c841601396cf20d3, type: 3}
       propertyPath: m_Layer
       value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 2997332575433746228, guid: eea65d09b0678884c841601396cf20d3, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14771,10 +14051,6 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7da79fa76d6e08e4ba2f0a9ce2a44712, type: 3}
       propertyPath: m_Name
       value: MDL_E_LVL_Jungle_Tunnel_01 (18)
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 7da79fa76d6e08e4ba2f0a9ce2a44712, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14894,10 +14170,6 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e7050c67deff2cc48986073cb7c5430b, type: 3}
       propertyPath: m_Name
       value: MDL_E_Jungle_Block_02 (7)
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: e7050c67deff2cc48986073cb7c5430b, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15036,10 +14308,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MDL_E_LVL_Jungle_Tunnel_01 (9)
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 7da79fa76d6e08e4ba2f0a9ce2a44712, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15109,10 +14377,6 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7da79fa76d6e08e4ba2f0a9ce2a44712, type: 3}
       propertyPath: m_Name
       value: MDL_E_LVL_Jungle_Tunnel_01 (25)
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 7da79fa76d6e08e4ba2f0a9ce2a44712, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15322,10 +14586,6 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e7050c67deff2cc48986073cb7c5430b, type: 3}
       propertyPath: m_Name
       value: MDL_E_Jungle_Block_02 (6)
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: e7050c67deff2cc48986073cb7c5430b, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15593,10 +14853,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MDL_E_Jungle_Block_04 (10)
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 23ee5560790c0ce4e9edc7240d4c7bab, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15659,17 +14915,9 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: -7395704305543789238, guid: d0dacf0974cd8754dbf11ec323eee208, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: -1244234205430477131, guid: d0dacf0974cd8754dbf11ec323eee208, type: 3}
       propertyPath: m_Layer
       value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: -1244234205430477131, guid: d0dacf0974cd8754dbf11ec323eee208, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d0dacf0974cd8754dbf11ec323eee208, type: 3}
       propertyPath: m_Name
@@ -15679,33 +14927,17 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: d0dacf0974cd8754dbf11ec323eee208, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2596957926113402938, guid: d0dacf0974cd8754dbf11ec323eee208, type: 3}
       propertyPath: m_Layer
       value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 2596957926113402938, guid: d0dacf0974cd8754dbf11ec323eee208, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7917349904687423284, guid: d0dacf0974cd8754dbf11ec323eee208, type: 3}
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 7917349904687423284, guid: d0dacf0974cd8754dbf11ec323eee208, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7975042476016782316, guid: d0dacf0974cd8754dbf11ec323eee208, type: 3}
       propertyPath: m_Layer
       value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 7975042476016782316, guid: d0dacf0974cd8754dbf11ec323eee208, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
