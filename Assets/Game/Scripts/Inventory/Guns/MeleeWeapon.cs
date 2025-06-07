@@ -56,8 +56,6 @@ public class MeleeWeapon : Tool
     }
     private void Attack()
     {
-        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().animator.SetTrigger("Attack");
-
         if (!_enemyWeapon)
         {
             AudioPlayer soundSFX = AudioManager.Instance.GetAudioPlayer("SoundSFX");
