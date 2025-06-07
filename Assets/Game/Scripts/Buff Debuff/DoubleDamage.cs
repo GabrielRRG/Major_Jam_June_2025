@@ -8,8 +8,8 @@ public class DoubleDamage : BuffDebuff
     {
         foreach (Gun gun in target.GetComponentsInChildren<Gun>())
         {
-            originalDamage = gun._damage;
-            gun._damage *= 2;
+            originalDamage = gun.damage;
+            gun.damage *= 2;
         }
     }
 
@@ -17,7 +17,7 @@ public class DoubleDamage : BuffDebuff
     {
         foreach (Gun gun in target.GetComponentsInChildren<Gun>())
         {
-            gun._damage = originalDamage;
+            gun.damage = originalDamage;
         }
     }
 }

@@ -1,8 +1,6 @@
 using RadiantTools.AudioSystem;
-using System;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Audio;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
@@ -11,7 +9,7 @@ public class Gun : Tool
     [Header("References")]
     public GunData gunData;
 
-    public int _damage;
+    public int damage;
     public int _magazineSize;
 
     [SerializeField] private Transform _shootPos;
@@ -35,7 +33,7 @@ public class Gun : Tool
 
     private void Awake()
     {
-        _damage = gunData.damage;
+        damage = gunData.damage;
         _magazineSize = gunData.magazineCap;
 
         _ammoLeft = _magazineSize;
@@ -51,7 +49,7 @@ public class Gun : Tool
         {
             animator.SetBool("Gun", true);
         }
-        switch (gunData.gunName)
+        switch (gunData.weaponName)
         {
             case "Pistol":
             {
@@ -70,7 +68,7 @@ public class Gun : Tool
                 break;
         }
         _inventoryGroup.alpha = 1;
-        _gunImage.sprite = gunData.gunIcon;
+        _gunImage.sprite = gunData.weaponIcon;
         _ammoCountText.text = _ammoLeft + "/" + _magazineSize;
     }
 

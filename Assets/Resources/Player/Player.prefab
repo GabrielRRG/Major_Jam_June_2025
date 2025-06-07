@@ -109,6 +109,7 @@ GameObject:
   - component: {fileID: 2755464985482301819}
   - component: {fileID: 6105352105386080833}
   - component: {fileID: 7699888629973052033}
+  - component: {fileID: 8219430952326969747}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -237,31 +238,13 @@ MonoBehaviour:
   _playerModel: {fileID: 4874759754663921436}
   _animalForms:
   - {fileID: 11400000, guid: e31bc188d370b36409fe3464b3ad3d68, type: 2}
+  - {fileID: 11400000, guid: bcfa9984774fd57409cc65469b67fa33, type: 2}
+  - {fileID: 11400000, guid: c6d2bbf364fa91240a3704d915aedca2, type: 2}
   _spawnPostion: {fileID: 997724747486493923}
-  _transformsChance: 10
+  _transformsChance: 0
   _timeBetweenTransforms: 1
-  _transformationDuration: 2
+  _transformationDuration: 5
   isTransformed: 0
---- !u!114 &8219430952326969747
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7980714475689117944}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1772cb678d2150478b8b0d57614f36a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gunsTarget: {fileID: 2293963889244164221}
-  _backpack:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  _interact: {fileID: 1781555164194001046, guid: 7993c538d382ed84da2e8ddf2e133f76, type: 3}
-  _useTool: {fileID: 1120369429361536294, guid: 7993c538d382ed84da2e8ddf2e133f76, type: 3}
-  _cycleTools: {fileID: -7383063986470616470, guid: 7993c538d382ed84da2e8ddf2e133f76, type: 3}
 --- !u!114 &6105352105386080833
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -276,7 +259,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   health: 100
-  _deathEffectPrefab: {fileID: 0}
+  _deathEffectPrefab: {fileID: 6526853395447287458, guid: 61c8203d57e05be46bdd1eed6ec351d0, type: 3}
   _healthSlider: {fileID: 0}
 --- !u!136 &7699888629973052033
 CapsuleCollider:
@@ -301,6 +284,26 @@ CapsuleCollider:
   m_Height: 2.5
   m_Direction: 1
   m_Center: {x: 0, y: 0.79, z: 0}
+--- !u!114 &8219430952326969747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7980714475689117944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1772cb678d2150478b8b0d57614f36a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gunsTarget: {fileID: 2293963889244164221}
+  backpack:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  _interact: {fileID: 1781555164194001046, guid: 7993c538d382ed84da2e8ddf2e133f76, type: 3}
+  _useTool: {fileID: 1120369429361536294, guid: 7993c538d382ed84da2e8ddf2e133f76, type: 3}
+  _cycleTools: {fileID: -7383063986470616470, guid: 7993c538d382ed84da2e8ddf2e133f76, type: 3}
 --- !u!1001 &3863990884006765637
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -373,6 +376,16 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: bbb1fce9668a52d48b2c3e4d989dbaef, type: 2}
+    - target: {fileID: 9060658432605920723, guid: 1ae9be19aab8387409703de5fcc63a5e, type: 3}
+      propertyPath: m_WarningMessage
+      value: "\nBinding warning: Some generic clip(s) animate transforms that are
+        already bound by a Humanoid avatar. These transforms can only be changed
+        by Humanoid clips.\n\tTransform 'mixamorig:Hips'\n\tTransform 'mixamorig:LeftFoot'\n\tTransform
+        'mixamorig:LeftHandIndex1'\n\tTransform 'mixamorig:LeftHandPinky2'\n\tTransform
+        'mixamorig:Spine1'\n\tTransform 'mixamorig:LeftToeBase'\n\tTransform 'mixamorig:RightArm'\n\tTransform
+        'mixamorig:LeftLeg'\n\tTransform 'mixamorig:LeftHandMiddle3'\n\tTransform
+        'mixamorig:LeftShoulder'\n\tand more ...\n\tFrom animation clip 'ANM_Human_Gun_Run_Backwards'"
+      objectReference: {fileID: 0}
     - target: {fileID: 9060658432605920723, guid: 1ae9be19aab8387409703de5fcc63a5e, type: 3}
       propertyPath: m_ApplyRootMotion
       value: 0
