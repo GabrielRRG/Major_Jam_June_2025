@@ -40,7 +40,7 @@ public class AnimalBase : MonoBehaviour
         _initialMaxHP = characterHealth.maxHealth;
         _initialMoveSpeed = playerMovement.moveSpeed;
         
-        characterHealth.Health = Mathf.RoundToInt(characterHealth.Health * ((float)_animalFormData.maxHP / characterHealth.maxHealth));
+        characterHealth.health = Mathf.RoundToInt(characterHealth.health * ((float)_animalFormData.maxHP / characterHealth.maxHealth));
         characterHealth.maxHealth = _animalFormData.maxHP;
         playerMovement.moveSpeed = _animalFormData.moveSpeed;
     }
@@ -50,7 +50,7 @@ public class AnimalBase : MonoBehaviour
         CharacterHealth characterHealth = _player.GetComponent<CharacterHealth>();
         PlayerMovement playerMovement = _player.GetComponent<PlayerMovement>();
         
-        characterHealth.Health = Mathf.RoundToInt(characterHealth.Health * ((float)_initialMaxHP / characterHealth.maxHealth));
+        characterHealth.health = Mathf.RoundToInt(characterHealth.health * ((float)_initialMaxHP / characterHealth.maxHealth));
         characterHealth.maxHealth = _initialMaxHP;
 
         playerMovement.moveSpeed = _initialMoveSpeed;
