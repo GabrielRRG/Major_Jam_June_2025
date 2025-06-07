@@ -18,6 +18,6 @@ MonoBehaviour:
   fireRate: 0.2
   spread: 0.4
   reloadTime: 1
-  damage: 18
+  damage: 6
   bulletsPerShot: 3
   magazineCap: 9
