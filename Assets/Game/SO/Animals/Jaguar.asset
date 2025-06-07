@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: Jaguar
   m_EditorClassIdentifier: 
   prefab: {fileID: 4025986160481908304, guid: 9d57d675a77516a42bd3733f0bec7de1, type: 3}
-  maxHP: 0
+  maxHP: 3200
+  moveSpeed: 6
+  damage: 45

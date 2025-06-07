@@ -2,6 +2,7 @@
 
 public sealed class MeleeEnemy : EnemyAIBase
 {
+    [SerializeField] private MeleeWeapon _weapon;
     [SerializeField] private float _attackRange = 2f;
     [SerializeField] private float _attackCooldown = 1f;
 
@@ -11,13 +12,13 @@ public sealed class MeleeEnemy : EnemyAIBase
     {
         base.HandleChase();
         
-        if (_playerTransform == null)
+        if (playerTransform == null)
         {
             EnterPatrolState();
             return;
         }
         
-        float distanceToPlayer = Vector3.Distance(transform.position, _playerTransform.position);
+        float distanceToPlayer = Vector3.Distance(transform.position, playerTransform.position);
         if (distanceToPlayer <= _attackRange)
         {
             _attackTimer += Time.deltaTime;
@@ -31,6 +32,6 @@ public sealed class MeleeEnemy : EnemyAIBase
 
     private void AttackPlayer()
     {
-        Debug.Log("Melee attack!");
+        GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterHealth>().TakeDamage(_weapon.damage);
     }
 }

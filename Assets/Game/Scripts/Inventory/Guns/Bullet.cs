@@ -7,14 +7,16 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.GetComponent<IDamagable>() != null && enemyBullet && other.gameObject.CompareTag("Enemy"))
+        if(other.gameObject.layer == 9) { Destroy(gameObject); }
+        if (other.gameObject.GetComponent<IDamagable>() != null && enemyBullet && !other.gameObject.CompareTag("Enemy"))
         {
             other.gameObject.GetComponent<IDamagable>().TakeDamage(damage);
+            Destroy(gameObject);
         }
-        else if(other.gameObject.GetComponent<IDamagable>() != null)
+        else if(other.gameObject.GetComponent<IDamagable>() != null && !enemyBullet && !other.gameObject.CompareTag("Player"))
         {
             other.gameObject.GetComponent<IDamagable>().TakeDamage(damage);
+            Destroy(gameObject);
         }
-        Destroy(gameObject);
     }
 }
