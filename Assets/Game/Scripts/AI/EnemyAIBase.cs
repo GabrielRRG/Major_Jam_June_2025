@@ -63,7 +63,7 @@ public class EnemyAIBase : MonoBehaviour
         _agent.speed = _patrolSpeed;
 
         if (_patrolPoints.Length > 0)
-        {
+        { 
             _agent.SetDestination(_patrolPoints[_currentPatrolIndex].position);
         }
     }
