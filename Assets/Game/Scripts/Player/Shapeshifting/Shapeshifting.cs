@@ -46,7 +46,6 @@ public sealed class Shapeshifting : MonoBehaviour
         
         isTransformed = true;
         InventoryBehavior.DisableInventory();
-        
         var selectedForm = _animalForms[Random.Range(0, _animalForms.Count)];
         
         _currentAnimalInstance = Instantiate(
@@ -65,8 +64,8 @@ public sealed class Shapeshifting : MonoBehaviour
 
         isTransformed = false;
         InventoryBehavior.EnableInventory();
-
         _playerModel.SetActive(true);
+        print("Setting gun to true");
         
         if (_currentAnimalInstance != null)
             Destroy(_currentAnimalInstance);

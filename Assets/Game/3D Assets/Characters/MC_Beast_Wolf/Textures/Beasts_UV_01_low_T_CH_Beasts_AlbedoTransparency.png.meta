@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: 276754cb47c6d62409a0bd7725f9e75d
+<<<<<<<< HEAD:Assets/Game/3D Assets/Characters/MC_Human/Textures/Humans_TXT_M_CH_Humans_AlbedoTransparency.png.meta
+guid: 9999c30ab35447c469d3da8bc4f32d90
+========
+guid: 0e0b96dbc9c9cf84999da8c0107f16fd
+>>>>>>>> Animation:Assets/Game/3D Assets/Characters/MC_Beast_Wolf/Textures/Beasts_UV_01_low_T_CH_Beasts_AlbedoTransparency.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -120,7 +124,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: WindowsStoreApps
+    buildTarget: iOS
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1

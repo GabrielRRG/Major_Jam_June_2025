@@ -3,7 +3,7 @@ using UnityEngine.AI;
 
 public class EnemyAIBase : MonoBehaviour
 {
-    [SerializeField] protected EnemyRoomManager _roomManager;
+    public EnemyRoomManager roomManager;
 
     [Header("Patrol Settings")] [Tooltip("A list of patrol points (which AI will walk on).")] [SerializeField]
     protected Transform[] _patrolPoints;
@@ -33,13 +33,14 @@ public class EnemyAIBase : MonoBehaviour
     [SerializeField]
     protected float _searchWaitTime = 3f;
 
+    public Transform playerTransform;
     protected Vector3 lastKnownPlayerPos;
     protected NavMeshAgent _agent;
-    protected Transform _playerTransform;
     protected EnemyState _currentState = EnemyState.Patrol;
     protected int _currentPatrolIndex = 0;
     protected float _waitTimer = 0f;
     protected bool _playerInSight = false;
+    protected Animator _animator;
 
     protected enum EnemyState
     {
@@ -50,11 +51,12 @@ public class EnemyAIBase : MonoBehaviour
 
     protected virtual void Start()
     {
+        _animator = gameObject.GetComponentInChildren<Animator>();
         _agent = GetComponent<NavMeshAgent>();
         _agent.updateRotation = false;
         GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
         if (playerObj != null)
-            _playerTransform = playerObj.transform;
+            playerTransform = playerObj.transform;
         else
             Debug.LogError("Player object not found. Make sure the player has the tag 'Player'.");
         _currentState = EnemyState.Patrol;
@@ -92,6 +94,12 @@ public class EnemyAIBase : MonoBehaviour
 
                 break;
         }
+        
+        Vector3 moveDirection = _agent.desiredVelocity.normalized;
+        Vector3 worldMove = new Vector3(moveDirection.x, 0f, moveDirection.z);
+        Vector3 localMove = transform.InverseTransformDirection(worldMove);
+        _animator.SetFloat("XDirection", localMove.x, dampTime: 0.1f, deltaTime: Time.deltaTime);
+        _animator.SetFloat("YDirection", localMove.z, dampTime: 0.1f, deltaTime: Time.deltaTime);
     }
 
     // --- PATROL ---
@@ -116,7 +124,7 @@ public class EnemyAIBase : MonoBehaviour
     // --- CHASE ---
     protected virtual void HandleChase()
     {
-        if(_playerTransform == null) return;
+        if(playerTransform == null) return;
         _agent.SetDestination(lastKnownPlayerPos);
 
         RotateTowards(lastKnownPlayerPos);
@@ -187,40 +195,36 @@ public class EnemyAIBase : MonoBehaviour
     // --- CHECK PLAYER DETECTION ---
     protected virtual bool CheckForPlayer()
     {
-        if (_playerTransform == null)
+        if (playerTransform == null)
             return false;
 
-        Debug.Log(lastKnownPlayerPos);
-
-        Vector3 directionToPlayer = _playerTransform.position - transform.position;
+        Vector3 directionToPlayer = playerTransform.position - transform.position;
         float distanceToPlayer = directionToPlayer.magnitude;
         float angleToPlayer = Vector3.Angle(transform.forward, directionToPlayer);
+        float closeRadius = 2f;
+        Collider[] hits = Physics.OverlapSphere(transform.position, closeRadius, _playerMask);
+        foreach (var currentHit in hits)
+        {
+            Vector3 origin = transform.position + Vector3.up * 1.5f;
+            Vector3 target = currentHit.transform.position + Vector3.up * 0.5f;
+            Vector3 dir = (target - origin).normalized;
+            float dist = Vector3.Distance(origin, target);
+
+            if (!Physics.Raycast(origin, dir, dist, _obstacleMask))
+            {
+                Debug.Log("Player detected in close range");
+                _playerInSight = true;
+                roomManager.SetAlarm(lastKnownPlayerPos);
+            }
+            else
+            {
+                _playerInSight = false;
+            }
+        }
         if (distanceToPlayer <= _viewDistance && angleToPlayer <= _viewAngle)
         {
-            float closeRadius = 2f;
-            Collider[] hits = Physics.OverlapSphere(transform.position, closeRadius, _playerMask);
-            foreach (var currentHit in hits)
-            {
-                Vector3 origin = transform.position + Vector3.up * 1.5f;
-                Vector3 target = currentHit.transform.position + Vector3.up * 0.5f;
-                Vector3 dir = (target - origin).normalized;
-                float dist = Vector3.Distance(origin, target);
-
-                if (!Physics.Raycast(origin, dir, dist, _obstacleMask))
-                {
-                    Debug.Log("Player detected in close range");
-                    //_playerInSight = true;
-                    _roomManager.SetAlarm(lastKnownPlayerPos);
-                }
-                else
-                {
-                    _playerInSight = false;
-                }
-            }
-
-
             Vector3 eye = transform.position + Vector3.up * 1.5f;
-            Vector3 targetPoint = _playerTransform.position + Vector3.up * 0.5f;
+            Vector3 targetPoint = playerTransform.position + Vector3.up * 0.5f;
             Vector3 rayDir = (targetPoint - eye).normalized;
 
             if (Physics.Raycast(eye, rayDir, out RaycastHit hit, _viewDistance, _playerMask))
@@ -230,7 +234,7 @@ public class EnemyAIBase : MonoBehaviour
                 if (!Physics.Raycast(eye, rayDir, distToPlayer, _obstacleMask))
                 {
                     _playerInSight = true;
-                    _roomManager.SetAlarm(lastKnownPlayerPos);
+                    roomManager.SetAlarm(lastKnownPlayerPos);
                 }
                 else
                 {
@@ -249,13 +253,13 @@ public class EnemyAIBase : MonoBehaviour
 
         if (_playerInSight)
         {
-            lastKnownPlayerPos = _playerTransform.position;
+            lastKnownPlayerPos = playerTransform.position;
             return true;
         }
 
-        if (_roomManager.alarm)
+        if (roomManager.alarm)
         {
-            lastKnownPlayerPos = _roomManager.alarmPosition;
+            lastKnownPlayerPos = roomManager.alarmPosition;
             return true;
         }
 

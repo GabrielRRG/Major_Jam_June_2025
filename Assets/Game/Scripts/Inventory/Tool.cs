@@ -2,11 +2,14 @@ using UnityEngine;
 
 public abstract class Tool : MonoBehaviour
 {
-    public bool isPossessed = false;
+    public string toolName;
+    
+    public bool isPossessed;
 
     private float _rotSpeed = 30f;
     public virtual void Update()
     {
+        //transform.localRotation = Quaternion.Euler(-90, 0, 90);
         if(isPossessed) { return; }
         transform.Rotate(0, _rotSpeed * Time.deltaTime, 0);
     }
@@ -14,19 +17,7 @@ public abstract class Tool : MonoBehaviour
 
     public void EquipTool()
     {
-        isPossessed = true;
-        GameObject _backpack = GameObject.FindGameObjectWithTag("Backpack");
-        GameObject _player = GameObject.FindGameObjectWithTag("Player");
-        Inventory _playerInventory = _player.GetComponent<Inventory>();
-        
-        transform.SetParent(_backpack.transform);
-
-        transform.localPosition = Vector3.right;
-        transform.localRotation = Quaternion.identity;
-        transform.Rotate(_player.transform.forward);
-
-        _playerInventory.AddToBackpack(this);
-        transform.localPosition += new Vector3(-0.2f, 1, 0);
-        
+        Inventory.instance.AddToBackpack(this);
     }
+
 }

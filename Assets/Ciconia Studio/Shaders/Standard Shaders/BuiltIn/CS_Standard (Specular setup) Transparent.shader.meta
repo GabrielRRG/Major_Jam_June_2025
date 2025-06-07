@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 5b28157a93a89d845bfbaf5b29faecc7
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 23087
+  packageName: Free Double Sided Shaders
+  packageVersion: 2020.2
+  assetPath: Assets/Ciconia Studio/Shaders/Standard Shaders/BuiltIn/CS_Standard (Specular
+    setup) Transparent.shader
+  uploadId: 641283

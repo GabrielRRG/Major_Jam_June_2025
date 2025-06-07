@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Game/3D Assets/Characters/MC_Human/Animation/ANM_Human_Gun_Shoot_Walk.anim.meta
+guid: bee3d1660467f4349950ce7851eecb4d
+========
+guid: 8bfb164911eddfb4892b8c5d421cd164
+>>>>>>>> Animation:Assets/Game/3D Assets/Characters/MC_Human/Animation/ANM_Human_Gun_RunRight.anim.meta
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

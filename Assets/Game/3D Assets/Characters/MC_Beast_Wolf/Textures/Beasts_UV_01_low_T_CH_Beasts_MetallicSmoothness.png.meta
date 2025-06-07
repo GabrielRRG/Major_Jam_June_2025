@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: d2e196781c3191d4cafc2877c86f427a
+<<<<<<<< HEAD:Assets/Game/3D Assets/Characters/MC_Human/Textures/Humans_TXT_M_CH_Humans_MetallicSmoothness.png.meta
+guid: 9a88c4eab5be732439149500bcaf278d
+========
+guid: 41cf86ad9ff415547ac72bb893b16975
+>>>>>>>> Animation:Assets/Game/3D Assets/Characters/MC_Beast_Wolf/Textures/Beasts_UV_01_low_T_CH_Beasts_MetallicSmoothness.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -120,7 +124,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: WindowsStoreApps
+    buildTarget: iOS
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
