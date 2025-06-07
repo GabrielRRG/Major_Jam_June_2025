@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1d23eb7032002b246b6f67b59173473d, type: 3}
-  m_Name: PistolData
+  m_Name: AssaultRifle
   m_EditorClassIdentifier: 
-  gunName: Pistol
-  gunIcon: {fileID: -280095728, guid: 9969f27e4c32fcd40907bfd31e3618a1, type: 3}
-  fireMode: 0
+  weaponName: AssaultRifle
+  weaponIcon: {fileID: 2092494399, guid: 9969f27e4c32fcd40907bfd31e3618a1, type: 3}
+  fireMode: 1
   fireRate: 0.2
-  spread: 0
-  reloadTime: 1
-  damage: 2
+  spread: 0.1
+  reloadTime: 3
+  damage: 10
   bulletsPerShot: 1
-  magazineCap: 16
+  magazineCap: 24

@@ -8,6 +8,21 @@ public sealed class RangedEnemy : EnemyAIBase
     [SerializeField] private Transform _shootPoint;
     private float _shootTimer = 0f;
 
+    protected override void Start()
+    {
+        base.Start();
+        _animator.SetBool("Gun", true);
+        switch (_gun.gunData.weaponName)
+        {
+            case "Pistol":
+                _animator.SetBool("Pistol", true);
+                break;
+            default:
+                _animator.SetBool("Pistol", false);
+                break;
+        }
+    }
+
     protected override void Update()
     {
         base.Update();
@@ -21,20 +36,21 @@ public sealed class RangedEnemy : EnemyAIBase
     {
         base.HandleChase();
 
-        if (_playerTransform == null)
+        if (playerTransform == null)
         {
             _agent.isStopped = false;
             EnterPatrolState();
             return;
         }
-        float distanceToPlayer = Vector3.Distance(transform.position, _playerTransform.position);
+
+        float distanceToPlayer = Vector3.Distance(transform.position, playerTransform.position);
         if (distanceToPlayer <= _shootRange && _playerInSight)
         {
             ShootProjectile();
             if (distanceToPlayer <= _shootRange / 2)
             {
                 _agent.isStopped = false;
-                Vector3 directionAwayFromPlayer = (transform.position - _playerTransform.position).normalized;
+                Vector3 directionAwayFromPlayer = (transform.position - playerTransform.position).normalized;
                 float retreatDistance = 5f;
 
                 Vector3 retreatPosition = transform.position + directionAwayFromPlayer * retreatDistance;
@@ -56,6 +72,7 @@ public sealed class RangedEnemy : EnemyAIBase
     {
         if (_projectilePrefab != null && _shootPoint != null)
         {
+            _animator.SetTrigger("Attack");
             _gun.Use();
             Debug.Log("Ranged attack!");
         }

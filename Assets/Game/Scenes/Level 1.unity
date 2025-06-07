@@ -2820,10 +2820,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: KnifeEnemy
       objectReference: {fileID: 0}
-    - target: {fileID: 2642560633631457240, guid: cb18914892fbc4d41b3859b55322dbad, type: 3}
-      propertyPath: _deathEffectPrefab
-      value: 
-      objectReference: {fileID: 497446590}
     - target: {fileID: 3349647718879973964, guid: cb18914892fbc4d41b3859b55322dbad, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -2870,14 +2866,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3658014523350050956, guid: cb18914892fbc4d41b3859b55322dbad, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5803050794904034892, guid: cb18914892fbc4d41b3859b55322dbad, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: bbb1fce9668a52d48b2c3e4d989dbaef, type: 2}
-    - target: {fileID: 5803050794904034892, guid: cb18914892fbc4d41b3859b55322dbad, type: 3}
-      propertyPath: m_ApplyRootMotion
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7559801941255676374, guid: cb18914892fbc4d41b3859b55322dbad, type: 3}

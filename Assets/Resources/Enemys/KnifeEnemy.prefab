@@ -142,7 +142,7 @@ NavMeshAgent:
   m_AngularSpeed: 120
   m_StoppingDistance: 1
   m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 0
+  m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 1.84
   m_BaseOffset: 0
@@ -160,7 +160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91a300769fad40bf8299e6003ea284ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _roomManager: {fileID: 0}
+  roomManager: {fileID: 0}
   _patrolPoints:
   - {fileID: 0}
   - {fileID: 0}
@@ -176,8 +176,10 @@ MonoBehaviour:
   _chaseSpeed: 4
   _patrolSpeed: 2
   _searchWaitTime: 3
+  playerTransform: {fileID: 0}
+  _weapon: {fileID: 6495928773500782225}
   _attackRange: 2
-  _attackCooldown: 1
+  _attackCooldown: 1.035
 --- !u!136 &900773838860261732
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -214,7 +216,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 10
-  health: 10
   _deathEffectPrefab: {fileID: 6526853395447287458, guid: 61c8203d57e05be46bdd1eed6ec351d0, type: 3}
   _healthSlider: {fileID: 475157241348314774}
 --- !u!1 &2409815200638584532
@@ -518,10 +519,21 @@ PrefabInstance:
     - target: {fileID: 5866666021909216657, guid: 53c83879273f9bb49bbaedbb5d98097f, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 17276b9a4cfc02e4497858b828d946b6, type: 2}
+      objectReference: {fileID: 9100000, guid: bbb1fce9668a52d48b2c3e4d989dbaef, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 53c83879273f9bb49bbaedbb5d98097f, type: 3}
+      propertyPath: m_WarningMessage
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 53c83879273f9bb49bbaedbb5d98097f, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 1852576806548013000, guid: 53c83879273f9bb49bbaedbb5d98097f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8515220597714491222}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53c83879273f9bb49bbaedbb5d98097f, type: 3}
 --- !u!4 &461829137081844790 stripped
@@ -529,3 +541,112 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 53c83879273f9bb49bbaedbb5d98097f, type: 3}
   m_PrefabInstance: {fileID: 135677923465962461}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1754058115493846037 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1852576806548013000, guid: 53c83879273f9bb49bbaedbb5d98097f, type: 3}
+  m_PrefabInstance: {fileID: 135677923465962461}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7941352286478400658
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1754058115493846037}
+    m_Modifications:
+    - target: {fileID: 1392365984302182782, guid: af9a9986dd4d87b41a58c02c657764de, type: 3}
+      propertyPath: m_Name
+      value: Knife
+      objectReference: {fileID: 0}
+    - target: {fileID: 1736557467008723908, guid: af9a9986dd4d87b41a58c02c657764de, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1736557467008723908, guid: af9a9986dd4d87b41a58c02c657764de, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1736557467008723908, guid: af9a9986dd4d87b41a58c02c657764de, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1736557467008723908, guid: af9a9986dd4d87b41a58c02c657764de, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 1736557467008723908, guid: af9a9986dd4d87b41a58c02c657764de, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.111
+      objectReference: {fileID: 0}
+    - target: {fileID: 1736557467008723908, guid: af9a9986dd4d87b41a58c02c657764de, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.033
+      objectReference: {fileID: 0}
+    - target: {fileID: 1736557467008723908, guid: af9a9986dd4d87b41a58c02c657764de, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.70710725
+      objectReference: {fileID: 0}
+    - target: {fileID: 1736557467008723908, guid: af9a9986dd4d87b41a58c02c657764de, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.7071064
+      objectReference: {fileID: 0}
+    - target: {fileID: 1736557467008723908, guid: af9a9986dd4d87b41a58c02c657764de, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.00000017648559
+      objectReference: {fileID: 0}
+    - target: {fileID: 1736557467008723908, guid: af9a9986dd4d87b41a58c02c657764de, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.00000005503533
+      objectReference: {fileID: 0}
+    - target: {fileID: 1736557467008723908, guid: af9a9986dd4d87b41a58c02c657764de, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1736557467008723908, guid: af9a9986dd4d87b41a58c02c657764de, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1736557467008723908, guid: af9a9986dd4d87b41a58c02c657764de, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1736557467008723908, guid: af9a9986dd4d87b41a58c02c657764de, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1392365984302182782, guid: af9a9986dd4d87b41a58c02c657764de, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6495928773500782225}
+  m_SourcePrefab: {fileID: 100100000, guid: af9a9986dd4d87b41a58c02c657764de, type: 3}
+--- !u!4 &8515220597714491222 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1736557467008723908, guid: af9a9986dd4d87b41a58c02c657764de, type: 3}
+  m_PrefabInstance: {fileID: 7941352286478400658}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &9036460179808112108 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1392365984302182782, guid: af9a9986dd4d87b41a58c02c657764de, type: 3}
+  m_PrefabInstance: {fileID: 7941352286478400658}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6495928773500782225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9036460179808112108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d25c3aa2b03c48ac897375c02dded3ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toolName: Knife
+  isPossessed: 1
+  weaponData: {fileID: 11400000, guid: 610f1a1e0b6585f4ea3ffbbe2e7effe8, type: 2}
+  _enemyWeapon: 1
+  damage: 0
+  _muzzleFlash: {fileID: 0}
