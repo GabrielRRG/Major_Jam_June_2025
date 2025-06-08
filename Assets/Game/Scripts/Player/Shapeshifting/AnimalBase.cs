@@ -13,7 +13,7 @@ public class AnimalBase : MonoBehaviour
     protected GameObject _player;
 
     private float _attackCooldown = 0f;
-    
+    private int _originalPlayerHealth;
     private int _initialHealth;
     private int _initialMaxHP;
     private float _initialMoveSpeed;
@@ -21,6 +21,7 @@ public class AnimalBase : MonoBehaviour
     private void Awake()
     {
         _player = GameObject.FindGameObjectWithTag("Player");
+        _originalPlayerHealth = _player.GetComponent<CharacterHealth>().maxHealth;
 
         if (_player == null)
         {
@@ -37,12 +38,14 @@ public class AnimalBase : MonoBehaviour
         CharacterHealth characterHealth = _player.GetComponent<CharacterHealth>();
         PlayerMovement playerMovement = _player.GetComponent<PlayerMovement>();
 
-        _initialMaxHP = characterHealth.maxHealth;
+        _initialMaxHP = _originalPlayerHealth;
         _initialMoveSpeed = playerMovement.moveSpeed;
         
         characterHealth.Health = Mathf.RoundToInt(characterHealth.Health * ((float)_animalFormData.maxHP / characterHealth.maxHealth));
         characterHealth.maxHealth = _animalFormData.maxHP;
         playerMovement.moveSpeed = _animalFormData.moveSpeed;
+        
+        characterHealth.UpdateSlider();
     }
 
     private void RevertStats()
@@ -54,6 +57,8 @@ public class AnimalBase : MonoBehaviour
         characterHealth.maxHealth = _initialMaxHP;
 
         playerMovement.moveSpeed = _initialMoveSpeed;
+        
+        characterHealth.UpdateSlider();
     }
 
     private void OnEnable()

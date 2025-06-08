@@ -16,8 +16,7 @@ public sealed class Inventory : MonoBehaviour
     private const string PREFS_BACKPACK = "Player_Backpack";
     private const string PREFS_CURRENT_INDEX = "Player_CurrentTool";
 
-    
-    
+
     private void Awake()
     {
         if (instance != null && instance != this)
@@ -98,6 +97,7 @@ public sealed class Inventory : MonoBehaviour
                     Destroy(tool);
                     continue;
                 }
+
                 AddToBackpack(toolComponent);
             }
         }
@@ -117,6 +117,11 @@ public sealed class Inventory : MonoBehaviour
 
     private void SwitchTools(int newToolIndex)
     {
+        for (int i = 0; i < backpack.Length; i++)
+        {
+            if (backpack[i] != null) backpack[i].gameObject.SetActive(false);
+        }
+
         if (_currentToolIndex >= 0 && _currentToolIndex < backpack.Length && backpack[_currentToolIndex] != null)
         {
             backpack[_currentToolIndex].gameObject.SetActive(false);
@@ -149,14 +154,19 @@ public sealed class Inventory : MonoBehaviour
     {
         for (int i = 0; i < backpack.Length; i++)
         {
+            if (backpack[i] != null) backpack[i].gameObject.SetActive(false);
+        }
+
+        for (int i = 0; i < backpack.Length; i++)
+        {
             if (backpack[i] == null)
             {
                 GameObject instanceGO = Instantiate(tool.gameObject, gunsTarget);
-                
+
                 instanceGO.transform.localPosition = Vector3.zero;
                 instanceGO.transform.localRotation = Quaternion.Euler(-90f, 0f, 90f);
-                if(tool != null) Destroy(tool.gameObject);
-                
+                if (tool != null) Destroy(tool.gameObject);
+
 
                 Tool instTool = instanceGO.GetComponent<Tool>();
                 instTool.isPossessed = true;
@@ -167,6 +177,7 @@ public sealed class Inventory : MonoBehaviour
 
                 backpack[i] = instTool;
                 _currentToolIndex = i;
+                instanceGO.gameObject.transform.localScale *= 0.5f;
                 return;
             }
         }

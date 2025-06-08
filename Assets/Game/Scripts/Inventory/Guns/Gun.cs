@@ -10,7 +10,8 @@ public class Gun : Tool
     public GunData gunData;
 
     public int damage;
-    public int _magazineSize;
+    public int magazineSize;
+    public int ammoLeft = 0;
 
     [SerializeField] private Transform _shootPos;
     [SerializeField] private GameObject _bulletPrefab;
@@ -26,17 +27,20 @@ public class Gun : Tool
     private bool _isFiring = false;
     private bool _isReloading = false;
     private float _nextTimeToFire = 0f;
-    private int _ammoLeft = 0;
 
     [Header("Effects")]
     [SerializeField] private ParticleSystem _muzzleFlash;
 
     private void Awake()
     {
+        if (isPossessed && _enemyGun)
+        {
+            transform.localScale *= 0.5f;
+        }
         damage = gunData.damage;
-        _magazineSize = gunData.magazineCap;
+        magazineSize = gunData.magazineCap;
 
-        _ammoLeft = _magazineSize;
+        ammoLeft = magazineSize;
         _inventoryGroup = GameObject.FindGameObjectWithTag("Inventory").GetComponent<CanvasGroup>();
         _gunImage = _inventoryGroup.transform.Find("GunImage").GetComponent<Image>();
         _ammoCountText = _inventoryGroup.transform.Find("AmmoCount").GetComponent<TMP_Text>();
@@ -68,8 +72,8 @@ public class Gun : Tool
                 break;
         }
         _inventoryGroup.alpha = 1;
-        _gunImage.sprite = gunData.weaponIcon;
-        _ammoCountText.text = _ammoLeft + "/" + _magazineSize;
+        if(gameObject.activeSelf) _gunImage.sprite = gunData.weaponIcon;
+        _ammoCountText.text = ammoLeft + "/" + magazineSize;
     }
 
     public override void Use()
@@ -86,13 +90,13 @@ public class Gun : Tool
         base.Update();
         if (_enemyGun)
         {
-            if (_ammoLeft <= 0)
+            if (ammoLeft <= 0)
             {
                 _isReloading = true;
                 Invoke(nameof(SetReloadingState), gunData.reloadTime);
             }
         }
-        if(_isFiring && Time.time >= _nextTimeToFire && _ammoLeft != 0 && !_isReloading)
+        if(_isFiring && Time.time >= _nextTimeToFire && ammoLeft != 0 && !_isReloading)
         {
             switch (gunData.fireMode)
             {
@@ -122,9 +126,9 @@ public class Gun : Tool
     }
     private void SetReloadingState()
     {
-        _ammoLeft = _magazineSize;
+        ammoLeft = magazineSize;
         _isReloading = false;
-        if(!_enemyGun) _ammoCountText.text = _ammoLeft + "/" + _magazineSize;
+        if(!_enemyGun) _ammoCountText.text = ammoLeft + "/" + magazineSize;
     }
 
     private void Shoot()
@@ -139,14 +143,14 @@ public class Gun : Tool
             spreadDir.y = 0;
             if (rb != null) rb.linearVelocity = spreadDir.normalized * 30;
         }
-        _ammoLeft -= gunData.bulletsPerShot;
+        ammoLeft -= gunData.bulletsPerShot;
 
         if (!_enemyGun)
         {
             GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().animator.SetTrigger("Attack");
             AudioPlayer soundSFX = AudioManager.Instance.GetAudioPlayer("SoundSFX");
             soundSFX.PlayAudioOnce((SoundTypes)SoundTypes.ToObject(typeof(SoundTypes), UnityEngine.Random.Range(3,5)));
-            _ammoCountText.text = _ammoLeft + "/" + _magazineSize;
+            _ammoCountText.text = ammoLeft + "/" + magazineSize;
         }
         if (_muzzleFlash) _muzzleFlash.Play();
     }

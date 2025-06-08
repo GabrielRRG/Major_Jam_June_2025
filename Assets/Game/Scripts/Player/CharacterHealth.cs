@@ -5,6 +5,7 @@ public sealed class CharacterHealth : MonoBehaviour , IDamagable
 {
     public int maxHealth = 100;
     private int health = 100;
+    public Transform buffsFolder;
     [SerializeField] private ParticleSystem _deathEffectPrefab;
     [SerializeField] private Slider _healthSlider;
 

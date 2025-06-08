@@ -3,15 +3,19 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Buffs | Debuffs/DoubleHealth")]
 public class DoubleHealth : BuffDebuff
 {
-    int originalHealth;
     public override void Apply(GameObject target)
     {
-        originalHealth = target.GetComponent<CharacterHealth>().Health;
+        if (target == null) return;
         target.GetComponent<CharacterHealth>().Health *= 2;
+        target.GetComponent<CharacterHealth>().maxHealth *= 2;
     }
 
     public override void Remove(GameObject target)
     {
-        target.GetComponent<CharacterHealth>().Health = originalHealth;
+        if (target != null)
+        {
+            target.GetComponent<CharacterHealth>().Health /= 2;
+            target.GetComponent<CharacterHealth>().maxHealth /= 2;
+        }
     }
 }

@@ -5,6 +5,7 @@ using System;
 public class SettingsManager : MonoBehaviour
 {
     public Action SaveAll;
+    [SerializeField] private GameObject[] settingMenuButtons;
     [Header("Options")]
     [SerializeField] private ArrowOption[] arrowOptions;
     [SerializeField] private SliderOption[] sliderOptions;
@@ -31,6 +32,7 @@ public class SettingsManager : MonoBehaviour
             Destroy(gameObject);
         }
         LoadSaves();
+        ChangeMenu(settingMenuButtons[0]);
     }
 
     public void Save()
@@ -113,5 +115,14 @@ public class SettingsManager : MonoBehaviour
         
         //------ AudioLD ------
         masterVolume = PlayerPrefs.GetFloat("MasterVolume_value");
+    }
+
+    public void ChangeMenu(GameObject menu)
+    {
+        for (int i = 0; i < settingMenuButtons.Length; i++)
+        {
+            settingMenuButtons[i].SetActive(false);
+        }
+        menu.SetActive(true);
     }
 }
