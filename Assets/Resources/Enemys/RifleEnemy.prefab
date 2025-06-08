@@ -494,7 +494,7 @@ MonoBehaviour:
   roomManager: {fileID: 0}
   _patrolPoints: []
   _patrolWaitTime: 2
-  _viewDistance: 20
+  _viewDistance: 10
   _viewAngle: 45
   _obstacleMask:
     serializedVersion: 2
@@ -522,7 +522,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 726c1a6ff5e63604c9274caad787728a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 20
+  maxHealth: 140
   buffsFolder: {fileID: 7208266326404205118}
   _deathEffectPrefab: {fileID: 6526853395447287458, guid: 61c8203d57e05be46bdd1eed6ec351d0, type: 3}
   _healthSlider: {fileID: 8089878896297925084}

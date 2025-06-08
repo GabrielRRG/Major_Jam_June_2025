@@ -15,9 +15,9 @@ MonoBehaviour:
   weaponName: Pistol
   weaponIcon: {fileID: -280095728, guid: 9969f27e4c32fcd40907bfd31e3618a1, type: 3}
   fireMode: 0
-  fireRate: 0.2
+  fireRate: 0.6
   spread: 0
   reloadTime: 1
-  damage: 2
+  damage: 40
   bulletsPerShot: 1
   magazineCap: 16
