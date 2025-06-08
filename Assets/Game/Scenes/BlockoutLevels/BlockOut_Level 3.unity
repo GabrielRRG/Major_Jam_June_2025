@@ -14488,14 +14488,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1733281120}
     - target: {fileID: 5587446198773130802, guid: e9514cee2cb3763448bb23313211c058, type: 3}
-      propertyPath: _roomManager
-      value: 
-      objectReference: {fileID: 1733281120}
-    - target: {fileID: 5587446198773130802, guid: e9514cee2cb3763448bb23313211c058, type: 3}
-      propertyPath: _patrolPoints.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5587446198773130802, guid: e9514cee2cb3763448bb23313211c058, type: 3}
       propertyPath: '_patrolPoints.Array.data[0]'
       value: 
       objectReference: {fileID: 997832928}
@@ -18381,6 +18373,10 @@ PrefabInstance:
       propertyPath: '_patrolPoints.Array.data[1]'
       value: 
       objectReference: {fileID: 1821042331}
+    - target: {fileID: 7265010943821175117, guid: 708dec44248ad6d42989c922d3b9a887, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9129104029029443854, guid: 708dec44248ad6d42989c922d3b9a887, type: 3}
       propertyPath: m_LocalPosition.x
       value: 14.503508
@@ -51964,6 +51960,10 @@ PrefabInstance:
       propertyPath: '_patrolPoints.Array.data[1]'
       value: 
       objectReference: {fileID: 1682108834}
+    - target: {fileID: 7265010943821175117, guid: 708dec44248ad6d42989c922d3b9a887, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9129104029029443854, guid: 708dec44248ad6d42989c922d3b9a887, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.1639476
@@ -61347,6 +61347,10 @@ PrefabInstance:
       propertyPath: '_patrolPoints.Array.data[1]'
       value: 
       objectReference: {fileID: 998834637}
+    - target: {fileID: 7265010943821175117, guid: 708dec44248ad6d42989c922d3b9a887, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9129104029029443854, guid: 708dec44248ad6d42989c922d3b9a887, type: 3}
       propertyPath: m_LocalPosition.x
       value: -165.4671
@@ -63470,3 +63474,4 @@ SceneRoots:
   - {fileID: 1294472211}
   - {fileID: 669810377}
   - {fileID: 380209379}
+  - {fileID: 347829070}

@@ -463,11 +463,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerModel: {fileID: 4874759754663921436}
   _animalForms:
-  - {fileID: 11400000, guid: e31bc188d370b36409fe3464b3ad3d68, type: 2}
-  - {fileID: 11400000, guid: bcfa9984774fd57409cc65469b67fa33, type: 2}
   - {fileID: 11400000, guid: c6d2bbf364fa91240a3704d915aedca2, type: 2}
+  - {fileID: 11400000, guid: bcfa9984774fd57409cc65469b67fa33, type: 2}
+  - {fileID: 11400000, guid: e31bc188d370b36409fe3464b3ad3d68, type: 2}
   _spawnPostion: {fileID: 997724747486493923}
-  _transformsChance: 30
+  _transformsChance: 0
   _timeBetweenTransforms: 10
   _transformationDuration: 5
   isTransformed: 0
@@ -483,6 +483,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 726c1a6ff5e63604c9274caad787728a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 2300
   buffsFolder: {fileID: 0}
   _deathEffectPrefab: {fileID: 6526853395447287458, guid: 61c8203d57e05be46bdd1eed6ec351d0, type: 3}
   _healthSlider: {fileID: 0}
