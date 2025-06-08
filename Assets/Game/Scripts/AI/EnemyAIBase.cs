@@ -214,7 +214,7 @@ public class EnemyAIBase : MonoBehaviour
             {
                 Debug.Log("Player detected in close range");
                 _playerInSight = true;
-                roomManager.SetAlarm(lastKnownPlayerPos);
+                roomManager.SetAlarm(playerTransform.position);
             }
             else
             {
@@ -234,7 +234,7 @@ public class EnemyAIBase : MonoBehaviour
                 if (!Physics.Raycast(eye, rayDir, distToPlayer, _obstacleMask))
                 {
                     _playerInSight = true;
-                    roomManager.SetAlarm(lastKnownPlayerPos);
+                    roomManager.SetAlarm(playerTransform.position);
                 }
                 else
                 {
