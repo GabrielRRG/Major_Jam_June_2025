@@ -215,7 +215,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 726c1a6ff5e63604c9274caad787728a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 10
+  maxHealth: 100
   buffsFolder: {fileID: 5982143880859177390}
   _deathEffectPrefab: {fileID: 6526853395447287458, guid: 61c8203d57e05be46bdd1eed6ec351d0, type: 3}
   _healthSlider: {fileID: 475157241348314774}
@@ -617,7 +617,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 1852576806548013000, guid: 53c83879273f9bb49bbaedbb5d98097f, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 6502182839619065283, guid: 53c83879273f9bb49bbaedbb5d98097f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8515220597714491222}
     m_AddedComponents: []
@@ -627,9 +627,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 53c83879273f9bb49bbaedbb5d98097f, type: 3}
   m_PrefabInstance: {fileID: 135677923465962461}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1754058115493846037 stripped
+--- !u!4 &6619836864107886110 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 1852576806548013000, guid: 53c83879273f9bb49bbaedbb5d98097f, type: 3}
+  m_CorrespondingSourceObject: {fileID: 6502182839619065283, guid: 53c83879273f9bb49bbaedbb5d98097f, type: 3}
   m_PrefabInstance: {fileID: 135677923465962461}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7941352286478400658
@@ -638,7 +638,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1754058115493846037}
+    m_TransformParent: {fileID: 6619836864107886110}
     m_Modifications:
     - target: {fileID: 1392365984302182782, guid: af9a9986dd4d87b41a58c02c657764de, type: 3}
       propertyPath: m_Name
@@ -658,43 +658,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1736557467008723908, guid: af9a9986dd4d87b41a58c02c657764de, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.05
+      value: 0.043344826
       objectReference: {fileID: 0}
     - target: {fileID: 1736557467008723908, guid: af9a9986dd4d87b41a58c02c657764de, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.111
+      value: 0.106345475
       objectReference: {fileID: 0}
     - target: {fileID: 1736557467008723908, guid: af9a9986dd4d87b41a58c02c657764de, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.033
+      value: 0.02913029
       objectReference: {fileID: 0}
     - target: {fileID: 1736557467008723908, guid: af9a9986dd4d87b41a58c02c657764de, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.70710725
+      value: 0.06744613
       objectReference: {fileID: 0}
     - target: {fileID: 1736557467008723908, guid: af9a9986dd4d87b41a58c02c657764de, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.7071064
+      value: 0.049415275
       objectReference: {fileID: 0}
     - target: {fileID: 1736557467008723908, guid: af9a9986dd4d87b41a58c02c657764de, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.00000017648559
+      value: -0.5108723
       objectReference: {fileID: 0}
     - target: {fileID: 1736557467008723908, guid: af9a9986dd4d87b41a58c02c657764de, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.00000005503533
+      value: -0.8555809
       objectReference: {fileID: 0}
     - target: {fileID: 1736557467008723908, guid: af9a9986dd4d87b41a58c02c657764de, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 90
+      value: -420.172
       objectReference: {fileID: 0}
     - target: {fileID: 1736557467008723908, guid: af9a9986dd4d87b41a58c02c657764de, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -17.971
       objectReference: {fileID: 0}
     - target: {fileID: 1736557467008723908, guid: af9a9986dd4d87b41a58c02c657764de, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: -520.51697
       objectReference: {fileID: 0}
     - target: {fileID: 1736557467008723908, guid: af9a9986dd4d87b41a58c02c657764de, type: 3}
       propertyPath: m_ConstrainProportionsScale
@@ -739,5 +739,5 @@ MonoBehaviour:
   isPossessed: 1
   weaponData: {fileID: 11400000, guid: 610f1a1e0b6585f4ea3ffbbe2e7effe8, type: 2}
   _enemyWeapon: 1
-  damage: 0
+  damage: 20
   _muzzleFlash: {fileID: 0}

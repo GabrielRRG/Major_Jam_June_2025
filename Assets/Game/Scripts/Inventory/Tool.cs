@@ -2,6 +2,7 @@ using UnityEngine;
 
 public abstract class Tool : MonoBehaviour
 {
+
     public string toolName;
     
     public bool isPossessed;

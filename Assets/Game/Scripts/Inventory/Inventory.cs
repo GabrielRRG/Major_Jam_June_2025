@@ -1,8 +1,14 @@
 using UnityEngine;
+using UnityEngine.Animations.Rigging;
 using UnityEngine.InputSystem;
 
 public sealed class Inventory : MonoBehaviour
 {
+    [Header("Character IK Targets")]
+    [SerializeField] private RigLayer _rigLayer;
+    [SerializeField] private Transform leftHandTarget;
+    [SerializeField] private Transform rightHandTarget;
+
     public static Inventory instance;
     public Transform gunsTarget;
     public Tool[] backpack = new Tool[3];
@@ -131,11 +137,25 @@ public sealed class Inventory : MonoBehaviour
 
         if (backpack[_currentToolIndex] != null && backpack[_currentToolIndex].GetComponent<Gun>())
         {
+            Debug.Log("ShowGunUI" + backpack[_currentToolIndex].name);
             backpack[_currentToolIndex].GetComponent<Gun>().ShowGunUI();
         }
 
         if (backpack[_currentToolIndex] != null)
             backpack[_currentToolIndex].gameObject.SetActive(true);
+        
+        Transform lhAnchor = backpack[_currentToolIndex].transform.Find("LeftHandTargetAnchor");
+        Transform rhAnchor = backpack[_currentToolIndex].transform.Find("RightHandTargetAnchor");
+        _rigLayer.rig.weight = 1;
+                
+        if (lhAnchor) {
+            rightHandTarget.localPosition = rhAnchor.localPosition;
+            rightHandTarget.localRotation = rhAnchor.localRotation;
+        }
+        if (lhAnchor) {
+            leftHandTarget.localPosition = lhAnchor.localPosition;
+            leftHandTarget.localRotation = lhAnchor.localRotation;
+        }
     }
 
     public void UseCurrentTool()
@@ -164,7 +184,7 @@ public sealed class Inventory : MonoBehaviour
                 GameObject instanceGO = Instantiate(tool.gameObject, gunsTarget);
 
                 instanceGO.transform.localPosition = Vector3.zero;
-                instanceGO.transform.localRotation = Quaternion.Euler(-90f, 0f, 90f);
+                instanceGO.transform.localRotation = Quaternion.identity;
                 if (tool != null) Destroy(tool.gameObject);
 
 
@@ -174,6 +194,20 @@ public sealed class Inventory : MonoBehaviour
                 {
                     instTool.GetComponent<Gun>().ShowGunUI();
                 }
+                
+                Transform lhAnchor = instanceGO.transform.Find("LeftHandTargetAnchor");
+                Transform rhAnchor = instanceGO.transform.Find("RightHandTargetAnchor");
+                
+                if (lhAnchor) {
+                    rightHandTarget.localPosition = rhAnchor.localPosition;
+                    rightHandTarget.localRotation = rhAnchor.localRotation;
+                }
+                if (lhAnchor) {
+                    leftHandTarget.localPosition = lhAnchor.localPosition;
+                    leftHandTarget.localRotation = lhAnchor.localRotation;
+                }
+                
+                _rigLayer.rig.weight = 1;
 
                 backpack[i] = instTool;
                 _currentToolIndex = i;

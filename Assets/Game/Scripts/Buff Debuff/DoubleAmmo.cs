@@ -15,7 +15,6 @@ public class DoubleAmmo : BuffDebuff
 
     public override void Remove(GameObject target)
     {
-        if (target == null) return;
         foreach (Gun gun in target.GetComponentsInChildren<Gun>())
         {
             gun.magazineSize = gun.gunData.magazineCap;

@@ -39,7 +39,6 @@ public class Gun : Tool
         }
         damage = gunData.damage;
         magazineSize = gunData.magazineCap;
-
         ammoLeft = magazineSize;
         _inventoryGroup = GameObject.FindGameObjectWithTag("Inventory").GetComponent<CanvasGroup>();
         _gunImage = _inventoryGroup.transform.Find("GunImage").GetComponent<Image>();
@@ -71,9 +70,9 @@ public class Gun : Tool
             }
                 break;
         }
-        _inventoryGroup.alpha = 1;
-        if(gameObject.activeSelf) _gunImage.sprite = gunData.weaponIcon;
-        _ammoCountText.text = ammoLeft + "/" + magazineSize;
+        _inventoryGroup.alpha = 1; 
+        _gunImage.sprite = gunData.weaponIcon;
+        if(!_isReloading)_ammoCountText.text = ammoLeft + "/" + magazineSize;
     }
 
     public override void Use()
@@ -96,7 +95,7 @@ public class Gun : Tool
                 Invoke(nameof(SetReloadingState), gunData.reloadTime);
             }
         }
-        if(_isFiring && Time.time >= _nextTimeToFire && ammoLeft != 0 && !_isReloading)
+        if(_isFiring && Time.time >= _nextTimeToFire && ammoLeft >= gunData.bulletsPerShot && !_isReloading)
         {
             switch (gunData.fireMode)
             {
@@ -115,7 +114,8 @@ public class Gun : Tool
     }
     private void ReloadGun(InputAction.CallbackContext obj)
     {
-        if(!isPossessed && !_enemyGun) { return; }
+        if(!isPossessed || _enemyGun || _isReloading) { return; }
+        Debug.Log("Reloading");
         _isReloading = true;
         _ammoCountText.text = "Reloading";
 
