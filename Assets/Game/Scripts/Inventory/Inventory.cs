@@ -139,23 +139,22 @@ public sealed class Inventory : MonoBehaviour
         {
             Debug.Log("ShowGunUI" + backpack[_currentToolIndex].name);
             backpack[_currentToolIndex].GetComponent<Gun>().ShowGunUI();
+            Transform lhAnchor = backpack[_currentToolIndex].transform.Find("LeftHandTargetAnchor");
+            Transform rhAnchor = backpack[_currentToolIndex].transform.Find("RightHandTargetAnchor");
+            _rigLayer.rig.weight = 1;
+                
+            if (lhAnchor) {
+                rightHandTarget.localPosition = rhAnchor.localPosition;
+                rightHandTarget.localRotation = rhAnchor.localRotation;
+            }
+            if (lhAnchor) {
+                leftHandTarget.localPosition = lhAnchor.localPosition;
+                leftHandTarget.localRotation = lhAnchor.localRotation;
+            }
         }
 
         if (backpack[_currentToolIndex] != null)
             backpack[_currentToolIndex].gameObject.SetActive(true);
-        
-        Transform lhAnchor = backpack[_currentToolIndex].transform.Find("LeftHandTargetAnchor");
-        Transform rhAnchor = backpack[_currentToolIndex].transform.Find("RightHandTargetAnchor");
-        _rigLayer.rig.weight = 1;
-                
-        if (lhAnchor) {
-            rightHandTarget.localPosition = rhAnchor.localPosition;
-            rightHandTarget.localRotation = rhAnchor.localRotation;
-        }
-        if (lhAnchor) {
-            leftHandTarget.localPosition = lhAnchor.localPosition;
-            leftHandTarget.localRotation = lhAnchor.localRotation;
-        }
     }
 
     public void UseCurrentTool()
@@ -182,13 +181,13 @@ public sealed class Inventory : MonoBehaviour
             if (backpack[i] == null)
             {
                 GameObject instanceGO = Instantiate(tool.gameObject, gunsTarget);
-
                 instanceGO.transform.localPosition = Vector3.zero;
                 instanceGO.transform.localRotation = Quaternion.identity;
                 if (tool != null) Destroy(tool.gameObject);
 
 
                 Tool instTool = instanceGO.GetComponent<Tool>();
+                instTool.GetComponent<Gun>().enemyGun = false;
                 instTool.isPossessed = true;
                 if (instTool.GetComponent<Gun>())
                 {

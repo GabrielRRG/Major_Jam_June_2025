@@ -9,6 +9,7 @@ TagManager:
   - UIBackground
   - Enemy
   - Animal
+  - Weapon
   layers:
   - Default
   - TransparentFX

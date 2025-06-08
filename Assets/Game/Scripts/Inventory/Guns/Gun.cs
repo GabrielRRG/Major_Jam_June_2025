@@ -13,10 +13,10 @@ public class Gun : Tool
     public int magazineSize;
     public int ammoLeft = 0;
 
+    public bool enemyGun;
     [SerializeField] private Transform _shootPos;
     [SerializeField] private GameObject _bulletPrefab;
     [SerializeField] private InputActionReference _reloadInput;
-    [SerializeField] private bool _enemyGun;
 
     [Header("UI")]
     private CanvasGroup _inventoryGroup;
@@ -33,7 +33,7 @@ public class Gun : Tool
 
     private void Awake()
     {
-        if (isPossessed && _enemyGun)
+        if (isPossessed && enemyGun)
         {
             transform.localScale *= 0.5f;
         }
@@ -87,7 +87,7 @@ public class Gun : Tool
     public override void Update()
     {
         base.Update();
-        if (_enemyGun)
+        if (enemyGun)
         {
             if (ammoLeft <= 0)
             {
@@ -114,7 +114,7 @@ public class Gun : Tool
     }
     private void ReloadGun(InputAction.CallbackContext obj)
     {
-        if(!isPossessed || _enemyGun || _isReloading) { return; }
+        if(!isPossessed || enemyGun || _isReloading) { return; }
         Debug.Log("Reloading");
         _isReloading = true;
         _ammoCountText.text = "Reloading";
@@ -128,7 +128,7 @@ public class Gun : Tool
     {
         ammoLeft = magazineSize;
         _isReloading = false;
-        if(!_enemyGun) _ammoCountText.text = ammoLeft + "/" + magazineSize;
+        if(!enemyGun) _ammoCountText.text = ammoLeft + "/" + magazineSize;
     }
 
     private void Shoot()
@@ -138,14 +138,14 @@ public class Gun : Tool
             Vector3 spreadDir = transform.forward + UnityEngine.Random.insideUnitSphere * gunData.spread;
             Bullet bullet = Instantiate(_bulletPrefab, _shootPos.position, Quaternion.LookRotation(spreadDir)).GetComponent<Bullet>();
             bullet.damage = gunData.damage;
-            bullet.enemyBullet = _enemyGun;
+            bullet.enemyBullet = enemyGun;
             Rigidbody rb = bullet.GetComponent<Rigidbody>();
             spreadDir.y = 0;
             if (rb != null) rb.linearVelocity = spreadDir.normalized * 30;
         }
         ammoLeft -= gunData.bulletsPerShot;
 
-        if (!_enemyGun)
+        if (!enemyGun)
         {
             GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().animator.SetTrigger("Attack");
             AudioPlayer soundSFX = AudioManager.Instance.GetAudioPlayer("SoundSFX");
@@ -157,6 +157,7 @@ public class Gun : Tool
 
     private void OnEnable()
     {
+        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().animator.ResetTrigger("Attack");
         _reloadInput.action.started += ReloadGun;
     }
     private void OnDisable()

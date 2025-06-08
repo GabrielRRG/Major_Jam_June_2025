@@ -8,6 +8,8 @@ public sealed class MainMenuManager : MonoBehaviour
     [SerializeField] private GameObject _warningPopup;
     
     private const string LOADING_KEY = "SceneToLoad";
+    private const string PREFS_BACKPACK = "Player_Backpack";
+    private const string PREFS_CURRENT_INDEX = "Player_CurrentTool";
     private void Awake()
     {
         if (PlayerPrefs.HasKey(LOADING_KEY))
@@ -31,6 +33,8 @@ public sealed class MainMenuManager : MonoBehaviour
     public void NewGame()
     {
         PlayerPrefs.DeleteKey(LOADING_KEY);
+        PlayerPrefs.DeleteKey(PREFS_BACKPACK);
+        PlayerPrefs.DeleteKey(PREFS_CURRENT_INDEX);
         PlayerPrefs.SetInt(LOADING_KEY, 1);
         PlayerPrefs.Save();
         SceneManager.LoadScene("LoadingScene");

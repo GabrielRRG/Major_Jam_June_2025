@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 3228966383473278181}
   m_Layer: 8
   m_Name: Bullet
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -150,6 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cab67d17b9bbed448a6b41013083a2ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyBullet: 0
   damage: 5
 --- !u!96 &3228966383473278181
 TrailRenderer:

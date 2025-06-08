@@ -4,6 +4,12 @@ using UnityEngine.SceneManagement;
 
 public class SaveLoad : MonoBehaviour
 {
+    public static SaveLoad instance;
+    private void Awake()
+    {
+        if (instance == null) instance = this;
+    }
+
     private const string LOADING_KEY = "SceneToLoad";
 
     public void NextLevel()

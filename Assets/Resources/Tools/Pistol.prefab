@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 5240232112476703194}
   m_Layer: 8
   m_Name: Pistol
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -149,10 +149,10 @@ MonoBehaviour:
   damage: 0
   magazineSize: 0
   ammoLeft: 0
+  enemyGun: 1
   _shootPos: {fileID: 730190568403665389}
   _bulletPrefab: {fileID: 9079524557305973991, guid: cd4754ef2e7f6814fa48eb40a77e1370, type: 3}
   _reloadInput: {fileID: 4210030843415687448, guid: 7993c538d382ed84da2e8ddf2e133f76, type: 3}
-  _enemyGun: 1
   _muzzleFlash: {fileID: 0}
 --- !u!135 &4442960853740144663
 SphereCollider:
