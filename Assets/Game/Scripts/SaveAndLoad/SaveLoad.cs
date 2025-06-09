@@ -21,6 +21,11 @@ public class SaveLoad : MonoBehaviour
     {
         if(Inventory.instance != null) Inventory.instance.SaveBackpack();
         PlayerPrefs.SetInt(LOADING_KEY, PlayerPrefs.GetInt(LOADING_KEY) + 1);
+        if (PlayerPrefs.GetInt(LOADING_KEY) >= 5)
+        {
+            SceneManager.LoadScene("MainMenu");
+            return;
+        }
         SceneManager.LoadScene("LoadingScene");
     }
 }
