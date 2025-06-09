@@ -15,9 +15,9 @@ MonoBehaviour:
   weaponName: Shotgun
   weaponIcon: {fileID: 2096793803, guid: 9969f27e4c32fcd40907bfd31e3618a1, type: 3}
   fireMode: 0
-  fireRate: 1.5
+  fireRate: 1
   spread: 0.4
   reloadTime: 1
-  damage: 12
+  damage: 25
   bulletsPerShot: 3
   magazineCap: 9

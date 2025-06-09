@@ -14198,42 +14198,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2755464985482301819, guid: 9a44c12d036227243b47c7e671d3bb36, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2755464985482301819, guid: 9a44c12d036227243b47c7e671d3bb36, type: 3}
-      propertyPath: _transformsChance
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 2755464985482301819, guid: 9a44c12d036227243b47c7e671d3bb36, type: 3}
-      propertyPath: _timeBetweenTransforms
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2755464985482301819, guid: 9a44c12d036227243b47c7e671d3bb36, type: 3}
-      propertyPath: _animalForms.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2755464985482301819, guid: 9a44c12d036227243b47c7e671d3bb36, type: 3}
-      propertyPath: _transformationDuration
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 2755464985482301819, guid: 9a44c12d036227243b47c7e671d3bb36, type: 3}
-      propertyPath: '_animalForms.Array.data[1]'
-      value: 
-      objectReference: {fileID: 11400000, guid: bcfa9984774fd57409cc65469b67fa33, type: 2}
-    - target: {fileID: 2755464985482301819, guid: 9a44c12d036227243b47c7e671d3bb36, type: 3}
-      propertyPath: '_animalForms.Array.data[2]'
-      value: 
-      objectReference: {fileID: 11400000, guid: c6d2bbf364fa91240a3704d915aedca2, type: 2}
     - target: {fileID: 4056907519505539439, guid: 9a44c12d036227243b47c7e671d3bb36, type: 3}
       propertyPath: _playerCamera
       value: 
       objectReference: {fileID: 93468579}
-    - target: {fileID: 6105352105386080833, guid: 9a44c12d036227243b47c7e671d3bb36, type: 3}
-      propertyPath: maxHealth
-      value: 2500
-      objectReference: {fileID: 0}
     - target: {fileID: 6105352105386080833, guid: 9a44c12d036227243b47c7e671d3bb36, type: 3}
       propertyPath: buffsFolder
       value: 
@@ -14242,25 +14210,9 @@ PrefabInstance:
       propertyPath: _healthSlider
       value: 
       objectReference: {fileID: 4172682538408460852}
-    - target: {fileID: 6105352105386080833, guid: 9a44c12d036227243b47c7e671d3bb36, type: 3}
-      propertyPath: _deathEffectPrefab
-      value: 
-      objectReference: {fileID: 6526853395447287458, guid: 61c8203d57e05be46bdd1eed6ec351d0, type: 3}
     - target: {fileID: 7980714475689117944, guid: 9a44c12d036227243b47c7e671d3bb36, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 7980714475689117944, guid: 9a44c12d036227243b47c7e671d3bb36, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8151283994702756856, guid: 9a44c12d036227243b47c7e671d3bb36, type: 3}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8219430952326969747, guid: 9a44c12d036227243b47c7e671d3bb36, type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

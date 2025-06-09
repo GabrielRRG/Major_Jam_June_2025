@@ -465,11 +465,11 @@ MonoBehaviour:
   _animalForms:
   - {fileID: 11400000, guid: c6d2bbf364fa91240a3704d915aedca2, type: 2}
   - {fileID: 11400000, guid: bcfa9984774fd57409cc65469b67fa33, type: 2}
-  - {fileID: 11400000, guid: e31bc188d370b36409fe3464b3ad3d68, type: 2}
+  - {fileID: 11400000, guid: c6d2bbf364fa91240a3704d915aedca2, type: 2}
   _spawnPostion: {fileID: 997724747486493923}
-  _transformsChance: 0
+  _transformsChance: 100
   _timeBetweenTransforms: 10
-  _transformationDuration: 5
+  _transformationDuration: 20
   isTransformed: 0
 --- !u!114 &6105352105386080833
 MonoBehaviour:
@@ -535,6 +535,7 @@ MonoBehaviour:
   _interact: {fileID: 1781555164194001046, guid: 7993c538d382ed84da2e8ddf2e133f76, type: 3}
   _useTool: {fileID: 1120369429361536294, guid: 7993c538d382ed84da2e8ddf2e133f76, type: 3}
   _cycleTools: {fileID: -7383063986470616470, guid: 7993c538d382ed84da2e8ddf2e133f76, type: 3}
+  currentToolIndex: 0
 --- !u!114 &6315254011048310932
 MonoBehaviour:
   m_ObjectHideFlags: 0
