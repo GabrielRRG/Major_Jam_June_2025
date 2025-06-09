@@ -62,7 +62,7 @@ public class EnemyAIBase : MonoBehaviour
         _currentState = EnemyState.Patrol;
         _agent.speed = _patrolSpeed;
 
-        if (_patrolPoints.Length > 0)
+        if (_patrolPoints.Length > 0 && _patrolPoints[_currentPatrolIndex] != null)
         { 
             _agent.SetDestination(_patrolPoints[_currentPatrolIndex].position);
         }
@@ -105,7 +105,7 @@ public class EnemyAIBase : MonoBehaviour
     // --- PATROL ---
     protected virtual void HandlePatrol()
     {
-        if (_patrolPoints.Length == 0)
+        if (_patrolPoints.Length == 0 || _patrolPoints[_currentPatrolIndex] == null)
             return;
 
         RotateTowards(_patrolPoints[_currentPatrolIndex].position);

@@ -1778,6 +1778,10 @@ PrefabInstance:
       propertyPath: '_patrolPoints.Array.data[1]'
       value: 
       objectReference: {fileID: 115439064}
+    - target: {fileID: 7265010943821175117, guid: 708dec44248ad6d42989c922d3b9a887, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9129104029029443854, guid: 708dec44248ad6d42989c922d3b9a887, type: 3}
       propertyPath: m_LocalPosition.x
       value: 241.03
@@ -3563,6 +3567,10 @@ PrefabInstance:
       propertyPath: '_patrolPoints.Array.data[1]'
       value: 
       objectReference: {fileID: 588261714}
+    - target: {fileID: 7265010943821175117, guid: 708dec44248ad6d42989c922d3b9a887, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9129104029029443854, guid: 708dec44248ad6d42989c922d3b9a887, type: 3}
       propertyPath: m_LocalPosition.x
       value: 239.11032
@@ -12741,6 +12749,10 @@ PrefabInstance:
       propertyPath: '_patrolPoints.Array.data[1]'
       value: 
       objectReference: {fileID: 143044275}
+    - target: {fileID: 7265010943821175117, guid: 708dec44248ad6d42989c922d3b9a887, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9129104029029443854, guid: 708dec44248ad6d42989c922d3b9a887, type: 3}
       propertyPath: m_LocalPosition.x
       value: 250.41032
@@ -20075,6 +20087,10 @@ PrefabInstance:
       propertyPath: '_patrolPoints.Array.data[1]'
       value: 
       objectReference: {fileID: 1330562627}
+    - target: {fileID: 7265010943821175117, guid: 708dec44248ad6d42989c922d3b9a887, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9129104029029443854, guid: 708dec44248ad6d42989c922d3b9a887, type: 3}
       propertyPath: m_LocalPosition.x
       value: 238.71033
@@ -20795,6 +20811,10 @@ PrefabInstance:
       propertyPath: '_patrolPoints.Array.data[1]'
       value: 
       objectReference: {fileID: 897086656}
+    - target: {fileID: 7265010943821175117, guid: 708dec44248ad6d42989c922d3b9a887, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9129104029029443854, guid: 708dec44248ad6d42989c922d3b9a887, type: 3}
       propertyPath: m_LocalPosition.x
       value: 235.46
@@ -25241,6 +25261,10 @@ PrefabInstance:
       propertyPath: '_patrolPoints.Array.data[1]'
       value: 
       objectReference: {fileID: 37007051}
+    - target: {fileID: 7265010943821175117, guid: 708dec44248ad6d42989c922d3b9a887, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9129104029029443854, guid: 708dec44248ad6d42989c922d3b9a887, type: 3}
       propertyPath: m_LocalPosition.x
       value: 223.00032

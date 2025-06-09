@@ -12,6 +12,11 @@ public class SaveLoad : MonoBehaviour
 
     private const string LOADING_KEY = "SceneToLoad";
 
+    public void RestartLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
     public void NextLevel()
     {
         if(Inventory.instance != null) Inventory.instance.SaveBackpack();

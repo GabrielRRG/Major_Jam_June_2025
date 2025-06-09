@@ -281,5 +281,5 @@ QualitySettings:
     Android: 0
     Server: 0
     Standalone: 3
-    WebGL: 0
+    WebGL: 2
     Windows Store Apps: 0
