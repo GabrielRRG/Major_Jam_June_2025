@@ -24,7 +24,7 @@ public class Gun : Tool
     private TMP_Text _ammoCountText;
 
 
-    private bool _isFiring = false;
+    public bool isFiring = false;
     private bool _isReloading = false;
     private float _nextTimeToFire = 0f;
 
@@ -35,7 +35,7 @@ public class Gun : Tool
     {
         if (isPossessed && enemyGun)
         {
-            transform.localScale *= 0.5f;
+            transform.localScale = new Vector3(1, 1, 1);
         }
         damage = gunData.damage;
         magazineSize = gunData.magazineCap;
@@ -77,11 +77,11 @@ public class Gun : Tool
 
     public override void Use()
     {
-        _isFiring = true;
+        isFiring = true;
     }
     public void StopFire()
     {
-        _isFiring = false;
+        isFiring = false;
     }
 
     public override void Update()
@@ -95,13 +95,13 @@ public class Gun : Tool
                 Invoke(nameof(SetReloadingState), gunData.reloadTime);
             }
         }
-        if(_isFiring && Time.time >= _nextTimeToFire && ammoLeft >= gunData.bulletsPerShot && !_isReloading)
+        if(isFiring && Time.time >= _nextTimeToFire && ammoLeft >= gunData.bulletsPerShot && !_isReloading)
         {
             switch (gunData.fireMode)
             {
                 case FireMode.Single:
                     Shoot();
-                    _isFiring = false; // Stop firing until next input
+                    isFiring = false; // Stop firing until next input
                     _nextTimeToFire = Time.time + gunData.fireRate;
                     break;
 

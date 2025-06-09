@@ -3992,6 +3992,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 985650263}
     m_Modifications:
+    - target: {fileID: 714527675412617450, guid: 6e1ffb37d939d484db2dab0aa321e26c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1943500469414843549, guid: 6e1ffb37d939d484db2dab0aa321e26c, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -4051,6 +4055,14 @@ PrefabInstance:
     - target: {fileID: 5791350116473488662, guid: 6e1ffb37d939d484db2dab0aa321e26c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6721219711434386455, guid: 6e1ffb37d939d484db2dab0aa321e26c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7905776580687819836, guid: 6e1ffb37d939d484db2dab0aa321e26c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7905776580687819836, guid: 6e1ffb37d939d484db2dab0aa321e26c, type: 3}
       propertyPath: roomManager
@@ -7799,6 +7811,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rifle
       objectReference: {fileID: 0}
+    - target: {fileID: 5638320329330280533, guid: 6bdda6c4fd7d5da439b81f5a670ff51a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7290097959676708712, guid: 6bdda6c4fd7d5da439b81f5a670ff51a, type: 3}
       propertyPath: _enemyGun
       value: 0
@@ -9433,6 +9449,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pistol
       objectReference: {fileID: 0}
+    - target: {fileID: 8781386196503213810, guid: b5dd39facaeef7f48920a893a2a8b697, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9985,10 +10005,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PistolEnemy (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 5357998007734735391, guid: 6e1ffb37d939d484db2dab0aa321e26c, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5791350116473488662, guid: 6e1ffb37d939d484db2dab0aa321e26c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.34
@@ -10029,18 +10045,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6721219711434386455, guid: 6e1ffb37d939d484db2dab0aa321e26c, type: 3}
+      propertyPath: isPossessed
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7905776580687819836, guid: 6e1ffb37d939d484db2dab0aa321e26c, type: 3}
       propertyPath: roomManager
       value: 
       objectReference: {fileID: 1471469751}
-    - target: {fileID: 7905776580687819836, guid: 6e1ffb37d939d484db2dab0aa321e26c, type: 3}
-      propertyPath: _roomManager
-      value: 
-      objectReference: {fileID: 1471469751}
-    - target: {fileID: 7905776580687819836, guid: 6e1ffb37d939d484db2dab0aa321e26c, type: 3}
-      propertyPath: _patrolPoints.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 7905776580687819836, guid: 6e1ffb37d939d484db2dab0aa321e26c, type: 3}
       propertyPath: '_patrolPoints.Array.data[0]'
       value: 
@@ -13282,6 +13294,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shotgun
       objectReference: {fileID: 0}
+    - target: {fileID: 5967162175216982226, guid: 662eb9affb675d84382494d3da9a7456, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7667737413779960101, guid: 662eb9affb675d84382494d3da9a7456, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.57
@@ -14234,9 +14250,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 7980714475689117944, guid: 9a44c12d036227243b47c7e671d3bb36, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8151283994702756856, guid: 9a44c12d036227243b47c7e671d3bb36, type: 3}
       propertyPath: m_Camera
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8219430952326969747, guid: 9a44c12d036227243b47c7e671d3bb36, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15713,6 +15737,10 @@ PrefabInstance:
     - target: {fileID: 2858323967383046385, guid: f84e8c120a1b0af4c88911995f060160, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 2858323967383046385, guid: f84e8c120a1b0af4c88911995f060160, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3634669662548547874, guid: f84e8c120a1b0af4c88911995f060160, type: 3}
       propertyPath: m_SizeDelta.x

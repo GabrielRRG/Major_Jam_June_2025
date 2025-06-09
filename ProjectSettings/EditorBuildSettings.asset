@@ -21,10 +21,10 @@ EditorBuildSettings:
     path: Assets/Game/Scenes/BlockoutLevels/BlockOut_Level 3.unity
     guid: c2af3652b2168244e829efcbbbe37a77
   - enabled: 1
-    path: Assets/Game/Scenes/BlockoutLevels/BlockOut_Level 4.unity
+    path: Assets/Game/Scenes/BlockoutLevels/BlockOut_Level 4().unity
     guid: 8f9beb93e8f5eb24698dfb564f8b5707
   - enabled: 1
-    path: Assets/Game/Scenes/BlockoutLevels/BlockOut_Level 5.unity
+    path: Assets/Game/Scenes/BlockoutLevels/BlockOut_Level 4.unity
     guid: 183d1bf85e95f644493f66fc5bed8583
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}

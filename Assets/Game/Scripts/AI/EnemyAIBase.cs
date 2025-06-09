@@ -154,7 +154,6 @@ public class EnemyAIBase : MonoBehaviour
         if (!_agent.pathPending && _agent.remainingDistance < 1.1f)
         {
             RotateTowards(lastKnownPlayerPos);
-
             _waitTimer += Time.deltaTime;
 
             if (_waitTimer >= _searchWaitTime)

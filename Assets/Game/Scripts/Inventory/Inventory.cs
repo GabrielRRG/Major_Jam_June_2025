@@ -16,7 +16,7 @@ public sealed class Inventory : MonoBehaviour
     [SerializeField] private InputActionReference _useTool;
     [SerializeField] private InputActionReference _cycleTools;
 
-    private int _currentToolIndex = 0;
+    public int currentToolIndex = 0;
     private Tool _toolInRange = null;
 
     private const string PREFS_BACKPACK = "Player_Backpack";
@@ -56,10 +56,10 @@ public sealed class Inventory : MonoBehaviour
         string allIDs = sb.ToString();
         Debug.Log(allIDs);
         PlayerPrefs.SetString(PREFS_BACKPACK, allIDs);
-        PlayerPrefs.SetInt(PREFS_CURRENT_INDEX, _currentToolIndex);
+        PlayerPrefs.SetInt(PREFS_CURRENT_INDEX, currentToolIndex);
         PlayerPrefs.Save();
 
-        Debug.Log($"Inventory retained: „{allIDs}“, currentIndex={_currentToolIndex}");
+        Debug.Log($"Inventory retained: „{allIDs}“, currentIndex={currentToolIndex}");
     }
 
     public void LoadBackpack()
@@ -110,12 +110,12 @@ public sealed class Inventory : MonoBehaviour
 
         if (savedIndex >= 0 && savedIndex < backpack.Length && backpack[savedIndex] != null)
         {
-            _currentToolIndex = savedIndex;
-            SwitchTools(_currentToolIndex);
+            currentToolIndex = savedIndex;
+            SwitchTools(currentToolIndex);
         }
         else
         {
-            _currentToolIndex = 0;
+            currentToolIndex = 0;
             if (backpack[0] != null)
                 SwitchTools(0);
         }
@@ -128,19 +128,19 @@ public sealed class Inventory : MonoBehaviour
             if (backpack[i] != null) backpack[i].gameObject.SetActive(false);
         }
 
-        if (_currentToolIndex >= 0 && _currentToolIndex < backpack.Length && backpack[_currentToolIndex] != null)
+        if (currentToolIndex >= 0 && currentToolIndex < backpack.Length && backpack[currentToolIndex] != null)
         {
-            backpack[_currentToolIndex].gameObject.SetActive(false);
+            backpack[currentToolIndex].gameObject.SetActive(false);
         }
 
-        _currentToolIndex = newToolIndex;
+        currentToolIndex = newToolIndex;
 
-        if (backpack[_currentToolIndex] != null && backpack[_currentToolIndex].GetComponent<Gun>())
+        if (backpack[currentToolIndex] != null && backpack[currentToolIndex].GetComponent<Gun>())
         {
-            Debug.Log("ShowGunUI" + backpack[_currentToolIndex].name);
-            backpack[_currentToolIndex].GetComponent<Gun>().ShowGunUI();
-            Transform lhAnchor = backpack[_currentToolIndex].transform.Find("LeftHandTargetAnchor");
-            Transform rhAnchor = backpack[_currentToolIndex].transform.Find("RightHandTargetAnchor");
+            Debug.Log("ShowGunUI" + backpack[currentToolIndex].name);
+            backpack[currentToolIndex].GetComponent<Gun>().ShowGunUI();
+            Transform lhAnchor = backpack[currentToolIndex].transform.Find("LeftHandTargetAnchor");
+            Transform rhAnchor = backpack[currentToolIndex].transform.Find("RightHandTargetAnchor");
             _rigLayer.rig.weight = 1;
                 
             if (lhAnchor) {
@@ -153,15 +153,15 @@ public sealed class Inventory : MonoBehaviour
             }
         }
 
-        if (backpack[_currentToolIndex] != null)
-            backpack[_currentToolIndex].gameObject.SetActive(true);
+        if (backpack[currentToolIndex] != null)
+            backpack[currentToolIndex].gameObject.SetActive(true);
     }
 
     public void UseCurrentTool()
     {
-        if (backpack[_currentToolIndex] != null)
+        if (backpack[currentToolIndex] != null)
         {
-            backpack[_currentToolIndex].Use();
+            backpack[currentToolIndex].Use();
         }
         else
         {
@@ -209,8 +209,8 @@ public sealed class Inventory : MonoBehaviour
                 _rigLayer.rig.weight = 1;
 
                 backpack[i] = instTool;
-                _currentToolIndex = i;
-                instanceGO.gameObject.transform.localScale *= 0.5f;
+                currentToolIndex = i;
+                instanceGO.gameObject.transform.localScale = new Vector3(1, 1, 1);
                 return;
             }
         }
@@ -250,7 +250,7 @@ public sealed class Inventory : MonoBehaviour
 
     private void UseToolAction(InputAction.CallbackContext obj)
     {
-        if (backpack[_currentToolIndex] == null)
+        if (backpack[currentToolIndex] == null)
         {
             return;
         }
@@ -260,12 +260,12 @@ public sealed class Inventory : MonoBehaviour
 
     private void StopFiring(InputAction.CallbackContext obj)
     {
-        if (backpack[_currentToolIndex] == null)
+        if (backpack[currentToolIndex] == null)
         {
             return;
         }
 
-        Gun gunScript = backpack[_currentToolIndex].GetComponent<Gun>();
+        Gun gunScript = backpack[currentToolIndex].GetComponent<Gun>();
         if (!gunScript)
         {
             return;
@@ -280,7 +280,7 @@ public sealed class Inventory : MonoBehaviour
         if (int.TryParse(key, out int index))
         {
             index -= 1;
-            if (index >= 0 && index < backpack.Length && index != _currentToolIndex)
+            if (index >= 0 && index < backpack.Length && index != currentToolIndex)
             {
                 SwitchTools(index);
             }

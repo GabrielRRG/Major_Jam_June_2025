@@ -19682,6 +19682,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pistol
       objectReference: {fileID: 0}
+    - target: {fileID: 8781386196503213810, guid: b5dd39facaeef7f48920a893a2a8b697, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -29317,6 +29321,10 @@ PrefabInstance:
     - target: {fileID: 5967162175216982226, guid: 662eb9affb675d84382494d3da9a7456, type: 3}
       propertyPath: m_Name
       value: Shotgun
+      objectReference: {fileID: 0}
+    - target: {fileID: 5967162175216982226, guid: 662eb9affb675d84382494d3da9a7456, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7667737413779960101, guid: 662eb9affb675d84382494d3da9a7456, type: 3}
       propertyPath: m_LocalPosition.x
@@ -57452,6 +57460,10 @@ PrefabInstance:
     - target: {fileID: 5638320329330280533, guid: 6bdda6c4fd7d5da439b81f5a670ff51a, type: 3}
       propertyPath: m_Name
       value: Rifle
+      objectReference: {fileID: 0}
+    - target: {fileID: 5638320329330280533, guid: 6bdda6c4fd7d5da439b81f5a670ff51a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7290097959676708712, guid: 6bdda6c4fd7d5da439b81f5a670ff51a, type: 3}
       propertyPath: enemyGun

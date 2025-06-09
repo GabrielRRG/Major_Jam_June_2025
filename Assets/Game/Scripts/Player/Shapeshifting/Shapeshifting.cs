@@ -65,10 +65,10 @@ public sealed class Shapeshifting : MonoBehaviour
         isTransformed = false;
         InventoryBehavior.EnableInventory();
         _playerModel.SetActive(true);
+        Inventory.instance.backpack[Inventory.instance.currentToolIndex].GetComponent<Gun>().isFiring = false;
         print("Setting gun to true");
         
         if (_currentAnimalInstance != null)
             Destroy(_currentAnimalInstance);
-        
     }
 }
